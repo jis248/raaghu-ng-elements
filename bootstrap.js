@@ -4,7 +4,7 @@ const { readFile, existsSync } = require('fs');
 const util = require('util');
 const http = require('http');
 const exec = util.promisify(require('child_process').exec);
-const projectRootFolder = 'rds';
+const projectRootFolder = 'rds-projects';
 const distPath = path.join(__dirname, 'dist');
 
 const buildAllProjects = async (directories) => {
@@ -62,6 +62,7 @@ async function start() {
     //     const directories = await getDirectories(path.join(__dirname, projectRootFolder));
     //     await setLocalDevValue(directories, args.localDev);
     // }
+    console.log(args)
     if (args?.build !== "false") {
         await fs.rm(path.join(__dirname, 'dist'), { recursive: true, force: true });
         await fs.mkdir(path.join(__dirname, 'dist'));

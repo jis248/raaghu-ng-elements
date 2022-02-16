@@ -6,6 +6,7 @@
     "start": "ng serve --project=%npm_config_project%",
     "build": "ng build --single-bundle --output-hashing none --vendor-chunk false --project=%npm_config_project% --base-href=%npm_config_href%",
     "buildrun": "npm run build --project=%npm_config_project% && lite-server --baseDir=dist",
+    "bootstrap": "node bootstrap",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
