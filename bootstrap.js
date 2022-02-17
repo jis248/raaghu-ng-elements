@@ -7,10 +7,15 @@ const exec = util.promisify(require('child_process').exec);
 const projectRootFolder = 'rds-projects';
 const distPath = path.join(__dirname, 'dist');
 
-const buildAllProjects = async (directories) => {
-    for (const dir of directories) {
-        console.log('building ' + dir + '...')
-        await exec(`npm run build --project="${dir}" --href=/${dir}/`, { cwd: path.join(__dirname) });
+const buildAllProjects = async (directories, projectToBuild) => {
+    if (projectToBuild) {
+        console.log('building ' + projectToBuild + '...')
+        await exec(`npm run build --project="${projectToBuild}" --href=/${projectToBuild}/`, { cwd: path.join(__dirname) });
+    } else {
+        for (const dir of directories) {
+            console.log('building ' + dir + '...')
+            await exec(`npm run build --project="${dir}" --href=/${dir}/`, { cwd: path.join(__dirname) });
+        }
     }
 }
 
@@ -58,17 +63,18 @@ const startServer = () => {
 
 async function start() {
     const args = getArgs();
-    // if (args?.localDev === 'true' || args?.localDev === 'false') {
-    //     const directories = await getDirectories(path.join(__dirname, projectRootFolder));
-    //     await setLocalDevValue(directories, args.localDev);
-    // }
     console.log(args)
     if (args?.build !== "false") {
+        const directories = await getDirectories(path.join(__dirname, projectRootFolder));
+        const projectToBuild = args?.project;
+        if (projectToBuild && !directories.includes(projectToBuild)) {
+            console.log("invalid project name");
+            return;
+        }
         await fs.rm(path.join(__dirname, 'dist'), { recursive: true, force: true });
         await fs.mkdir(path.join(__dirname, 'dist'));
         console.log('Building projects from ' + projectRootFolder);
-        const directories = await getDirectories(path.join(__dirname, projectRootFolder));
-        await buildAllProjects(directories);
+        await buildAllProjects(directories, projectToBuild);
     }
     startServer();
 }
