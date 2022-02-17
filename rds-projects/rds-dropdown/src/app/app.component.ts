@@ -37,7 +37,7 @@ export class AppComponent implements OnInit  {
   ngOnInit(): void {
   }
 
-  public get button1():any[]{
+  public get button1():string{
 
      var customClasses =['btn', `${this.dropdownStyle}`]
 
@@ -60,7 +60,7 @@ export class AppComponent implements OnInit  {
         var index = customClasses.indexOf(`${this.dropdownStyle}`)
         customClasses.splice(index,1)
      }
-return customClasses
+return customClasses.join(' ')
    }
 
   public get splitdown():any[]{
