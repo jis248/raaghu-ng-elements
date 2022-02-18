@@ -1,0 +1,6 @@
+<div class="slidecontainer">
+  <span *ngIf="customstyle==='style3'" id="tooltip" class="tooltip_3" [attr.data-tooltip]="vale"></span>
+  <span *ngIf="customstyle==='style2'" id="tooltip" class="tooltip_2" [attr.data-tooltip]="vale"></span>
+  <span *ngIf="customstyle==='style1'" id="tooltip" class="tooltip_1" [attr.data-tooltip]="vale"></span>
+  <input type="range" [min]="min" [max]="max" value="vale" [ngClass]="slider" id="myRange" (input)="css()">
+</div>
