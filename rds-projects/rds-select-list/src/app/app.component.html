@@ -1,0 +1,26 @@
+<div [ngClass]="icon">
+  <select
+    id="select"
+    [ngClass]="classesForSelect"
+    aria-label="Default select example"
+    [disabled]="disabled"
+    [multiple]="multiple"
+    (change)="onSelect($event)"
+  >
+    <ng-container
+      *ngFor="let item of listItems"
+      [ngTemplateOutlet]="DropdownItems"
+      [ngTemplateOutletContext]="{ $implicit: item }"
+    ></ng-container>
+  </select>
+  <span [ngClass]="iconPosition">
+    <i [ngClass]="bootstrapIcon"></i>
+  </span>
+  <label *ngIf="floatingcontent" for="floatingInput">{{
+    floatinginputLabel
+  }}</label>
+</div>
+
+<ng-template #DropdownItems let-val>
+  <option>{{ val.value }}</option>
+</ng-template>
