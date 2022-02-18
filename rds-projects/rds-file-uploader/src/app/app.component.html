@@ -1,0 +1,8 @@
+<div class="row pb">
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label for="formFile" class="form-label">{{label}} </label>
+      <input [ngClass]="classes" type="file" id="formFile" (input)="getValue($event)" [multiple]="multipleFiles">
+  </div>
+  </div>
+</div>
