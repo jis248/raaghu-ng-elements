@@ -1,0 +1,53 @@
+.dark-mode{
+    background-color: #232933;
+}
+.light-mode .form-check{
+    padding: 40px 0px 40px 40px;
+    border-bottom: 1px solid ;
+}
+.light-mode .form-check:nth-child(5){
+    border-bottom: 0px solid ;
+}
+.dark-mode .form-check:nth-child(5){
+    border-bottom: 0px solid ;
+}
+.dark-mode .form-check{
+    padding: 40px 0px 40px 40px;
+    border-bottom: 1px solid white;
+}
+h6{
+    padding-bottom: 20px;
+}
+input[type=flexCheckIndeterminate]:indeterminate::before {
+    content: "-";
+    display: block;
+    color: white;
+    width: 17px;
+    height: 17px;
+    background-color:#3B99FC;
+}
+.inder .form-check-input[type=checkbox] {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+label.form-check-label {
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #343B46;
+}
+.col-md-6.light-mode {
+    padding-right: 60px;
+}
+.form-check-input:focus {
+    box-shadow: 0 0 0 0rem rgb(13 110 253 / 25%);
+    border: 1pxsolid #1F8EEE;
+    border-radius: 4px;
+}
+.errorche label.form-check-label {
+    color: #FF6060 !important;
+}
+.errorche .form-check-input:checked {
+    background-color: #FF6060;
+    border-color: #FF6060;
+}

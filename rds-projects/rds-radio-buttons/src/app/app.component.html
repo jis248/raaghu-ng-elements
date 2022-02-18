@@ -1,0 +1,8 @@
+<div [ngClass]="classes">
+  <input type="radio"  class="form-check-input"  [name]="name" [value]="label"  [checked]="checked" [id]="id"
+  [disabled]="disabled" (input)="getValue($event)">
+  <label class="form-check-label" [for]="id">
+      {{label}}
+  </label> 
+</div>
+
