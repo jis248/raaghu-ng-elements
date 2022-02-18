@@ -1,0 +1,25 @@
+<label class="dropdown">
+
+  <div class="dd-button" [ngClass]="type">
+    {{placeholder}}
+  </div>
+
+  <input type="checkbox" class="dd-input" id="test">
+
+  <ul class="dd-menu bind-dropdown" [ngClass]="variation">
+    <ng-container *ngFor="let item of listItems; index as i;" [ngTemplateOutlet]="DropdownItems" [ngTemplateOutletContext]="{ $implicit: item ,index:i}"> </ng-container>
+  </ul>
+
+</label>
+
+<ng-template #DropdownItems let-val let-index="index">
+  <li [class.active]="index === 1">
+
+    <div class="d-flex align-items-center bind-center-div1 group-list">
+      <input type="checkbox" />
+      <img class="drop-round-img bind-avtar" src="https://placekitten.com/50/50">
+      <span class="mr-auto">{{val.some}}<br></span>
+    </div>
+  </li>
+
+</ng-template>
