@@ -152,97 +152,7 @@
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-909ccb96241f7ee5f9e4204f93443cf1a451db9a2d5c4fb9a91e9d44fa58706dd3ca39a7b6c723b3141bdf973a9e1707aeecaafaa72f7e70b6d8144d494c7c24-1",
-            "file": "rds-projects/rds-button/src/app/app.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-root",
-            "styleUrls": [
-                "./app.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./app.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "label",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 11,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "size",
-                    "defaultValue": "'sm'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "\"sm\" | \"md\" | \"lg\"",
-                    "decorators": []
-                },
-                {
-                    "name": "type",
-                    "defaultValue": "'primary'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 12,
-                    "type": "\"primary\" | \"secondary\" | \"light\"",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "click",
-                    "defaultValue": "new EventEmitter<void>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 14,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss'],\r\n})\r\nexport class AppComponent {\r\n\r\n  // Add the inputs and outputs for the component here\r\n  @Input() label: string;\r\n  @Input() type: 'primary' | 'secondary' | 'light' = 'primary';\r\n  @Input() size: 'sm' | 'md' | 'lg' = 'sm';\r\n  @Output() click = new EventEmitter<void>();\r\n\r\n  // Configure the button styles based on the inputs\r\n  // This logic will vary according to the component\r\n  get classes() {\r\n    return [`btn-${this.type}`, `btn-${this.size}`].join(' ');\r\n  }\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "// Add component specific styles here",
-                    "styleUrl": "./app.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "accessors": {
-                "classes": {
-                    "name": "classes",
-                    "getSignature": {
-                        "name": "classes",
-                        "type": "",
-                        "returnType": "",
-                        "line": 18
-                    }
-                }
-            },
-            "isDuplicate": true,
-            "duplicateId": 1,
-            "duplicateName": "AppComponent-1",
-            "templateData": "<!-- Template for the micro front end component -->\r\n<button class=\"btn\" [ngClass]=\"classes\" (click)=\"click.emit()\">{{ label || 'Button' }}</button>"
-        },
-        {
-            "name": "AppComponent",
-            "id": "component-AppComponent-256823312c7a80b99adc377cfe8db5fcb423052058319d7921f8c0412bceaae947a1b5ad56c90dd32b1462fa408449d45d7fcf3f4618cb14ed4eda1cd1ad1c86-2",
+            "id": "component-AppComponent-256823312c7a80b99adc377cfe8db5fcb423052058319d7921f8c0412bceaae947a1b5ad56c90dd32b1462fa408449d45d7fcf3f4618cb14ed4eda1cd1ad1c86-1",
             "file": "rds-projects/rds-color-picker/src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -462,13 +372,419 @@
                 "ControlValueAccessor"
             ],
             "isDuplicate": true,
-            "duplicateId": 2,
-            "duplicateName": "AppComponent-2",
+            "duplicateId": 1,
+            "duplicateName": "AppComponent-1",
             "templateData": "<label for=\"exampleColorInput\" class=\"form-label\">Color picker</label>\r\n<input type=\"color\" class=\"form-control form-control-color\" id=\"exampleColorInput\" [value]=\"value\" title=\"Choose your color\" (input)=\"changedValue($event)\">\r\n    \r\n"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-cebc2665b99d1e5303b32ec9419db647c775ef4fa89fba510ba347a492b988e01777cbae6b4d97bbae156af2f6a388a4b0d2a9f20c0269a9b18c5bddff93ca7f-3",
+            "id": "component-AppComponent-909ccb96241f7ee5f9e4204f93443cf1a451db9a2d5c4fb9a91e9d44fa58706dd3ca39a7b6c723b3141bdf973a9e1707aeecaafaa72f7e70b6d8144d494c7c24-2",
+            "file": "rds-projects/rds-button/src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'sm'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "\"sm\" | \"md\" | \"lg\"",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "\"primary\" | \"secondary\" | \"light\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "click",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss'],\r\n})\r\nexport class AppComponent {\r\n\r\n  // Add the inputs and outputs for the component here\r\n  @Input() label: string;\r\n  @Input() type: 'primary' | 'secondary' | 'light' = 'primary';\r\n  @Input() size: 'sm' | 'md' | 'lg' = 'sm';\r\n  @Output() click = new EventEmitter<void>();\r\n\r\n  // Configure the button styles based on the inputs\r\n  // This logic will vary according to the component\r\n  get classes() {\r\n    return [`btn-${this.type}`, `btn-${this.size}`].join(' ');\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "// Add component specific styles here",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "",
+                        "returnType": "",
+                        "line": 18
+                    }
+                }
+            },
+            "isDuplicate": true,
+            "duplicateId": 2,
+            "duplicateName": "AppComponent-2",
+            "templateData": "<!-- Template for the micro front end component -->\r\n<button class=\"btn\" [ngClass]=\"classes\" (click)=\"click.emit()\">{{ label || 'Button' }}</button>"
+        },
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-344d6729e24182a5e926b21d4a7b1d36516886abb1c4259f539244e0b6d0811076a94a5c003ceaa9cce7789bd23bf4d492abc0ae2693359076a8f8a4a6c181b0-3",
+            "file": "rds-projects/rds-dropdownlist/src/app/app.component.ts",
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "DropdownItems",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "TemplateRef<any>",
+                    "decorators": []
+                },
+                {
+                    "name": "listItems",
+                    "defaultValue": "[{ value: 'India', some: 'value 1', status: 'Billable' }, { value: 'USA', some: 'value 2', status: 'Non-Blillable' }, { value: 'Canada', some: 'value 3' }]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "{}",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "\"Filter by user\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "split",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "variations",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'rds-dropdownlist'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 29,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit, TemplateRef, ViewEncapsulation } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class AppComponent implements OnInit {\r\n  title = 'rds-dropdownlist';\r\n\r\n  @Input()\r\n  placeholder = \"Filter by user\"\r\n\r\n  @Input()\r\n  split = false\r\n\r\n  @Input()\r\n  variations = ''\r\n\r\n  @Input()\r\n  DropdownItems!: TemplateRef<any>\r\n\r\n  @Input()\r\n  listItems = [{ value: 'India', some: 'value 1', status: 'Billable' }, { value: 'USA', some: 'value 2', status: 'Non-Blillable' }, { value: 'Canada', some: 'value 3' }];\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n\r\n  }\r\n\r\n  public get variation(): string[] {\r\n    let values = [`${this.variations}`]\r\n    return values\r\n  }\r\n\r\n  public get type(): string {\r\n    return this.split ? 'split-button' : ''\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "/* css after binding */\r\n\r\nul.dd-menu.bind-dropdown img {\r\n  border-radius: 50px;\r\n}\r\n\r\nul.dd-menu.bind-dropdown {\r\n  width: 100%;\r\n  /* padding: 10px 15px; */\r\n  cursor: pointer;\r\n  white-space: nowrap;\r\n}\r\n\r\nul.dd-menu.bind-dropdown img {\r\n  width: 40px;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #000000;\r\n}\r\n\r\na:hover {\r\n  color: #222222\r\n}\r\n\r\n/* Dropdown */\r\n\r\n.dropdown {\r\n  display: inline-block;\r\n  position: relative;\r\n}\r\n\r\n.dd-button {\r\n  display: inline-block;\r\n  border: 1px solid #23293352;\r\n  border-radius: 4px 4px 0px 0px;\r\n  padding: 7px 10px 7px 15px;\r\n  background-color: #ffffff;\r\n  cursor: pointer;\r\n  white-space: nowrap;\r\n  width: 40vh;\r\n  color: #9FA4AB;\r\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e\");\r\n  background-repeat: no-repeat;\r\n  background-position: right 0.75rem center;\r\n  background-size: 26px 15px;\r\n  border: 1px solid #ced4da;\r\n  border-radius: 0.25rem;\r\n  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;\r\n  -webkit-appearance: none;\r\n  -moz-appearance: none;\r\n  appearance: none;\r\n}\r\n\r\n/* .dd-button:after {\r\n    content: '';\r\n    position: absolute;\r\n    top: 50%;\r\n    right: 15px;\r\n    transform: translateY(-50%);\r\n    width: 0; \r\n    height: 0; \r\n    border-left: 5px solid transparent;\r\n    border-right: 5px solid transparent;\r\n    border-top: 5px solid black;\r\n  }\r\n   */\r\n.dd-button:hover {\r\n  background-color: #fff;\r\n}\r\n\r\n\r\n.dd-input {\r\n  display: none;\r\n}\r\n\r\n.dd-menu {\r\n  position: absolute;\r\n  top: 100%;\r\n  border: 1px solid #ccc;\r\n  border-radius: 0px 0px 4px 4px;\r\n  padding: 0;\r\n  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);\r\n  background-color: #ffffff;\r\n  list-style-type: none;\r\n}\r\n\r\nli.active {\r\n  background-color: #EBF0FF;\r\n  border-left: 4px solid #4EA1FF;\r\n  padding-left: 11px !important;\r\n}\r\n\r\n.dd-input + .dd-menu {\r\n  display: none;\r\n}\r\n\r\n.dd-input:checked + .dd-menu {\r\n  display: block;\r\n}\r\n\r\n.dd-menu li {\r\n  padding: 10px 15px;\r\n  cursor: pointer;\r\n  white-space: nowrap;\r\n}\r\n\r\n.dd-menu li:hover {\r\n  background-color: #EBF0FF;\r\n}\r\n\r\n.dd-menu li a {\r\n  display: block;\r\n  margin: -10px -20px;\r\n  padding: 10px 20px;\r\n}\r\n\r\n.dd-menu li.divider {\r\n  padding: 0;\r\n  border-bottom: 1px solid #cccccc;\r\n}\r\n\r\n/* new variation custom css */\r\n.drop-round-img {\r\n  width: 20%;\r\n  border-radius: 50px;\r\n  margin-left: 10px;\r\n  margin-right: 10px;\r\n}\r\n\r\nspan.mr-auto {\r\n  font-size: 16px;\r\n  color: #424A50;\r\n  line-height: 26px;\r\n  font-weight: normal;\r\n}\r\n\r\ninput[type=\"checkbox\"] {\r\n  width: 18px;\r\n  height: 18px;\r\n  border: 1px solid #3D4D60;\r\n}\r\n\r\ninput[type=\"checkbox\"] {\r\n  width: 18px;\r\n  height: 18px;\r\n  border: 1px solid #3D4D60;\r\n}\r\n\r\n.container {\r\n  padding-top: 50px;\r\n}\r\n\r\nh5 {\r\n  padding-bottom: 30px;\r\n}\r\n\r\n.mb-10 {\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.dark-mode {\r\n  padding-top: 40px;\r\n  background-color: #232933;\r\n  padding-bottom: 450px;\r\n}\r\n\r\n.dark-mode h6, .dark-mode h5 {\r\n  color: #fff;\r\n}\r\n\r\n.light-mode {\r\n  padding-top: 40px;\r\n  padding-bottom: 40px;\r\n}\r\n/* variation two with billable nonbillable bar */\r\n.bill-nonbillbar {\r\n  width: 100%;\r\n}\r\n\r\n.bill-nonbillbar li {\r\n  padding: 8px 15px;\r\n}\r\n\r\n.bill-nonbillbar li.active {\r\n  border-left: 7px solid #EA2745;\r\n}\r\n\r\n.bill-nonbillbar li {\r\n  border-left: 7px solid #01AE9D;\r\n}\r\n\r\n.vari-two .dark-mode {\r\n  padding-bottom: 120px;\r\n}\r\n\r\n/* variation three with bullet point */\r\n.dot-red {\r\n  height: 16px;\r\n  width: 16px;\r\n  background-color: #EA2745;\r\n  border-radius: 50%;\r\n  display: inline-block;\r\n  margin-right: 15px;\r\n}\r\n\r\n.dot-green {\r\n  height: 16px;\r\n  width: 16px;\r\n  background-color: #01AE9D !important;\r\n  border-radius: 50%;\r\n  display: inline-block;\r\n  margin-right: 15px;\r\n}\r\n\r\n.vari-three li.active {\r\n  border-left: 0px solid;\r\n}\r\n\r\n.vari-three li {\r\n  border-left: 0px solid;\r\n}\r\n\r\n/* flags variation dropdown list */\r\n.flag-variation {\r\n  width: 100%;\r\n}\r\n\r\n.flag-img {\r\n  margin-right: 10px;\r\n}\r\n\r\n.flag-variation li {\r\n  padding: 6px 15px !important;\r\n}\r\n\r\n.flag-variation li.active {\r\n  border-left: 4px solid #4EA1FF;\r\n}\r\n\r\n.vari-three .dark-mode {\r\n  padding-bottom: 250px;\r\n}\r\n\r\n/* split button variation */\r\n/* .split-button{\r\n    background-image: url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>\") !important;\r\n} */\r\n/* split button variation */\r\n.split-variation {\r\n  position: absolute;\r\n  top: 100%;\r\n  border: 1px solid #ccc;\r\n  border-radius: 0px 0px 4px 4px;\r\n  padding: 0;\r\n  box-shadow: 0 0 6px 0 rgb(0 0 0 / 10%);\r\n  background-color: #ffffff;\r\n  list-style-type: none;\r\n  right: -139px !important;\r\n  width: 65% !important;\r\n}\r\n",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 25
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "variation": {
+                    "name": "variation",
+                    "getSignature": {
+                        "name": "variation",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 33
+                    }
+                },
+                "type": {
+                    "name": "type",
+                    "getSignature": {
+                        "name": "type",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 38
+                    }
+                }
+            },
+            "isDuplicate": true,
+            "duplicateId": 3,
+            "duplicateName": "AppComponent-3",
+            "templateData": "<label class=\"dropdown\">\r\n\r\n  <div class=\"dd-button\" [ngClass]=\"type\">\r\n    {{placeholder}}\r\n  </div>\r\n\r\n  <input type=\"checkbox\" class=\"dd-input\" id=\"test\">\r\n\r\n  <ul class=\"dd-menu bind-dropdown\" [ngClass]=\"variation\">\r\n    <ng-container *ngFor=\"let item of listItems; index as i;\" [ngTemplateOutlet]=\"DropdownItems\" [ngTemplateOutletContext]=\"{ $implicit: item ,index:i}\"> </ng-container>\r\n  </ul>\r\n\r\n</label>\r\n\r\n<ng-template #DropdownItems let-val let-index=\"index\">\r\n\r\n  <li [class.active]=\"index === 1\">\r\n\r\n    <div class=\"d-flex align-items-center bind-center-div1 group-list\">\r\n      <input type=\"checkbox\" />\r\n      <img class=\"drop-round-img bind-avtar\" src=\"https://placekitten.com/50/50\">\r\n      <span class=\"mr-auto\">{{val.some}}<br></span>\r\n    </div>\r\n  </li>\r\n\r\n</ng-template>\r\n"
+        },
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-bf8af0954cd3c0b9af16810ba3c95f18af32ebbaa55d17119d5ec12e1e3e026e7f9c7791058ea0f571b4d9afd89cdae83f9b818cd4a29b9eec5ebbfc3d6c80df-4",
+            "file": "rds-projects/rds-floating-labels/src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "'floatingInput'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Floating Label'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "listItems",
+                    "defaultValue": "['one', 'two', 'three']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "{}",
+                    "decorators": []
+                },
+                {
+                    "name": "multiple",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "'floatingInputName'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "required",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "\"email\" | \"text\" | \"number\" | \"password\" | \"textarea\" | \"selection\"",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'rds-floating-labels'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onSelect",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'rds-floating-labels';\r\n  @Input() label: string = 'Floating Label';\r\n  @Input() id: string = 'floatingInput';\r\n  @Input() name: string = 'floatingInputName';\r\n  @Input() value: string;\r\n  @Input() required: boolean = false;\r\n  @Input() disabled: boolean = false;\r\n  @Input() multiple: boolean = false;\r\n  @Input() placeholder: string = '';\r\n  @Input() type: 'email' | 'text' | 'number' | 'password' | 'textarea' | 'selection' = 'text';\r\n  @Input() listItems = ['one', 'two', 'three'];\r\n  onSelect(event:any){\r\n  \r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "isDuplicate": true,
+            "duplicateId": 4,
+            "duplicateName": "AppComponent-4",
+            "templateData": "<div class=\"form-floating\">\r\n  <ng-container *ngIf=\"type==='textarea'; else selection_template\">\r\n    <textarea class=\"form-control\" [value]=\"value\" [id]=\"id\" [name]=\"name\"></textarea>\r\n  </ng-container>\r\n  <ng-template #selection_template>\r\n    <ng-container *ngIf=\"type==='selection';else other_template\">\r\n      <select class=\"form-select\" [id]=\"id\" [name]=\"name\" (change)=\"onSelect($event)\"  [disabled]=\"disabled\" [multiple]=\"multiple\"  aria-label=\"Floating label select example\"\r\n        [required]=\"required\">\r\n        <ng-container *ngFor=\"let item of listItems\"  [ngTemplateOutlet]=\"DropdownItems\" [ngTemplateOutletContext]=\"{ $implicit: item}\"></ng-container>\r\n        <ng-template #DropdownItems  let-val>\r\n          <option >{{val}}</option>\r\n          </ng-template>\r\n      </select>\r\n    </ng-container>\r\n    <ng-template #other_template>\r\n      <input [type]=\"type\" class=\"form-control\" [id]=\"id\" [name]=\"name\" [value]=\"value\" [required]=\"required\">\r\n    </ng-template>\r\n  </ng-template>\r\n\r\n  <label [for]=\"id\">{{label}}</label>\r\n</div>"
+        },
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-cebc2665b99d1e5303b32ec9419db647c775ef4fa89fba510ba347a492b988e01777cbae6b4d97bbae156af2f6a388a4b0d2a9f20c0269a9b18c5bddff93ca7f-5",
             "file": "rds-projects/rds-file-uploader/src/app/app.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -807,367 +1123,9 @@
                 }
             },
             "isDuplicate": true,
-            "duplicateId": 3,
-            "duplicateName": "AppComponent-3",
-            "templateData": "<div class=\"row pb\">\r\n  <div class=\"col-md-6\">\r\n    <div class=\"mb-3\">\r\n      <label for=\"formFile\" class=\"form-label\">{{label}} </label>\r\n      <input [ngClass]=\"classes\" type=\"file\" id=\"formFile\" (input)=\"getValue($event)\" [multiple]=\"multipleFiles\">\r\n  </div>\r\n  </div>\r\n</div>"
-        },
-        {
-            "name": "AppComponent",
-            "id": "component-AppComponent-bf8af0954cd3c0b9af16810ba3c95f18af32ebbaa55d17119d5ec12e1e3e026e7f9c7791058ea0f571b4d9afd89cdae83f9b818cd4a29b9eec5ebbfc3d6c80df-4",
-            "file": "rds-projects/rds-floating-labels/src/app/app.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-root",
-            "styleUrls": [
-                "./app.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./app.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "disabled",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 15,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "id",
-                    "defaultValue": "'floatingInput'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 11,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Floating Label'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "listItems",
-                    "defaultValue": "['one', 'two', 'three']",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 19,
-                    "type": "{}",
-                    "decorators": []
-                },
-                {
-                    "name": "multiple",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 16,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "name",
-                    "defaultValue": "'floatingInputName'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 12,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "placeholder",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 17,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "required",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 14,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "type",
-                    "defaultValue": "'text'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 18,
-                    "type": "\"email\" | \"text\" | \"number\" | \"password\" | \"textarea\" | \"selection\"",
-                    "decorators": []
-                },
-                {
-                    "name": "value",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "title",
-                    "defaultValue": "'rds-floating-labels'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "onSelect",
-                    "args": [
-                        {
-                            "name": "event",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 20,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "event",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'rds-floating-labels';\r\n  @Input() label: string = 'Floating Label';\r\n  @Input() id: string = 'floatingInput';\r\n  @Input() name: string = 'floatingInputName';\r\n  @Input() value: string;\r\n  @Input() required: boolean = false;\r\n  @Input() disabled: boolean = false;\r\n  @Input() multiple: boolean = false;\r\n  @Input() placeholder: string = '';\r\n  @Input() type: 'email' | 'text' | 'number' | 'password' | 'textarea' | 'selection' = 'text';\r\n  @Input() listItems = ['one', 'two', 'three'];\r\n  onSelect(event:any){\r\n  \r\n  }\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./app.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "isDuplicate": true,
-            "duplicateId": 4,
-            "duplicateName": "AppComponent-4",
-            "templateData": "<div class=\"form-floating\">\r\n  <ng-container *ngIf=\"type==='textarea'; else selection_template\">\r\n    <textarea class=\"form-control\" [value]=\"value\" [id]=\"id\" [name]=\"name\"></textarea>\r\n  </ng-container>\r\n  <ng-template #selection_template>\r\n    <ng-container *ngIf=\"type==='selection';else other_template\">\r\n      <select class=\"form-select\" [id]=\"id\" [name]=\"name\" (change)=\"onSelect($event)\"  [disabled]=\"disabled\" [multiple]=\"multiple\"  aria-label=\"Floating label select example\"\r\n        [required]=\"required\">\r\n        <ng-container *ngFor=\"let item of listItems\"  [ngTemplateOutlet]=\"DropdownItems\" [ngTemplateOutletContext]=\"{ $implicit: item}\"></ng-container>\r\n        <ng-template #DropdownItems  let-val>\r\n          <option >{{val}}</option>\r\n          </ng-template>\r\n      </select>\r\n    </ng-container>\r\n    <ng-template #other_template>\r\n      <input [type]=\"type\" class=\"form-control\" [id]=\"id\" [name]=\"name\" [value]=\"value\" [required]=\"required\">\r\n    </ng-template>\r\n  </ng-template>\r\n\r\n  <label [for]=\"id\">{{label}}</label>\r\n</div>"
-        },
-        {
-            "name": "AppComponent",
-            "id": "component-AppComponent-6ee554ed5e31930f484cf7c1720f1f595bd72dee2939fae3a2855ab46b52d17f95fdd4a578198986dd416abb0d743fc4e7e0c7429a5705028c80f70cd3131499-5",
-            "file": "rds-projects/rds-list-group/src/app/app.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-root",
-            "styleUrls": [
-                "./app.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./app.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "backgroundType",
-                    "defaultValue": "'primary'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "\"primary\" | \"secondary\" | \"success\" | \"danger\" | \"warning\" | \"info\" | \"light\" | \"dark\"",
-                    "decorators": []
-                },
-                {
-                    "name": "flush",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "list",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 19,
-                    "type": "TemplateRef<any>",
-                    "decorators": []
-                },
-                {
-                    "name": "listItem",
-                    "defaultValue": "[\r\n        {\r\n          label:' label 1',\r\n          disabled:true,\r\n          badgeLabel: '10',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        },\r\n        {\r\n          label:' label 2',\r\n          disabled:false,\r\n          badgeLabel: '2',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        },\r\n        {\r\n          label:' label 3',\r\n          disabled:false,\r\n          badgeLabel: '5',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        }\r\n  ]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 20,
-                    "type": "{}",
-                    "decorators": []
-                },
-                {
-                    "name": "listType",
-                    "defaultValue": "'list'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 11,
-                    "type": "\"list\" | \"button\"",
-                    "decorators": []
-                },
-                {
-                    "name": "orderList",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 12,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "type",
-                    "defaultValue": "'xxl'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 14,
-                    "type": "\"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\"",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 16,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [
-                {
-                    "name": "selectedItem",
-                    "defaultValue": "1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 47
-                },
-                {
-                    "name": "title",
-                    "defaultValue": "'rds-list-group'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "listClick",
-                    "args": [
-                        {
-                            "name": "event",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 67,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "event",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output, TemplateRef } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'rds-list-group';\r\n   @Input() flush = false;\r\n  @Input() listType: 'list' | 'button' = 'list';\r\n  @Input() orderList = false;\r\n  @Input() backgroundType: 'primary'| 'secondary'| 'success' | 'danger'| 'warning' | 'info'| 'light' | 'dark' = 'primary';\r\n  @Input() type: 'sm' | 'md' | 'lg' | 'xl' | 'xxl' = 'xxl';\r\n\r\n  @Output() onClick = new EventEmitter<Event>();\r\n\r\n  @Input()\r\n  list!: TemplateRef<any>;\r\n  @Input() listItem =[\r\n        {\r\n          label:' label 1',\r\n          disabled:true,\r\n          badgeLabel: '10',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        },\r\n        {\r\n          label:' label 2',\r\n          disabled:false,\r\n          badgeLabel: '2',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        },\r\n        {\r\n          label:' label 3',\r\n          disabled:false,\r\n          badgeLabel: '5',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        }\r\n  ];\r\n\r\n  selectedItem=1;\r\n\r\n\r\n\r\n  public get classes(): string[] {\r\n\r\n    var listClasses= ['list-group']\r\n    if(this.flush === true){\r\n      listClasses.push('list-group-flush')\r\n    }\r\n    if(this.orderList === true){\r\n      listClasses.push('list-group-numbered')\r\n    }\r\n\r\n\r\n    return listClasses\r\n \r\n  }\r\n\r\n\r\n  listClick(event:any) {\r\n    \r\n    console.log(event)\r\n    this.selectedItem = event\r\n   \r\n}\r\npublic get listItemClass(): string[] {\r\n\r\n  var list= ['list-group-item']\r\n\r\n\r\n  return list\r\n}\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".list-group-item{\r\n    cursor:pointer;\r\n}",
-                    "styleUrl": "./app.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "accessors": {
-                "classes": {
-                    "name": "classes",
-                    "getSignature": {
-                        "name": "classes",
-                        "type": "[]",
-                        "returnType": "string[]",
-                        "line": 51
-                    }
-                },
-                "listItemClass": {
-                    "name": "listItemClass",
-                    "getSignature": {
-                        "name": "listItemClass",
-                        "type": "[]",
-                        "returnType": "string[]",
-                        "line": 73
-                    }
-                }
-            },
-            "isDuplicate": true,
             "duplicateId": 5,
             "duplicateName": "AppComponent-5",
-            "templateData": "<ul  [ngClass]=\"classes\">\r\n  <ng-container  *ngFor=\"let item of listItem\">\r\n    <ng-container  [ngTemplateOutlet]=\"list\"  [ngTemplateOutletContext]=\"{ $implicit: item}\"></ng-container>\r\n  </ng-container>\r\n</ul>\r\n<ng-template #list  let-item>  \r\n  <li class=\"list-group-item\" >\r\n  {{item.label}}</li>\r\n  </ng-template>"
+            "templateData": "<div class=\"row pb\">\r\n  <div class=\"col-md-6\">\r\n    <div class=\"mb-3\">\r\n      <label for=\"formFile\" class=\"form-label\">{{label}} </label>\r\n      <input [ngClass]=\"classes\" type=\"file\" id=\"formFile\" (input)=\"getValue($event)\" [multiple]=\"multipleFiles\">\r\n  </div>\r\n  </div>\r\n</div>"
         },
         {
             "name": "AppComponent",
@@ -1466,7 +1424,192 @@
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-407f3629a8f41850f6ac5535095dd8eabd940361e41e079708c42c03fd4ad591e2ad1f5f13453461c4efa3b805e66eb70e99cc19aa122032444f0a1840d93aa1-7",
+            "id": "component-AppComponent-6ee554ed5e31930f484cf7c1720f1f595bd72dee2939fae3a2855ab46b52d17f95fdd4a578198986dd416abb0d743fc4e7e0c7429a5705028c80f70cd3131499-7",
+            "file": "rds-projects/rds-list-group/src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundType",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "\"primary\" | \"secondary\" | \"success\" | \"danger\" | \"warning\" | \"info\" | \"light\" | \"dark\"",
+                    "decorators": []
+                },
+                {
+                    "name": "flush",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "list",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "TemplateRef<any>",
+                    "decorators": []
+                },
+                {
+                    "name": "listItem",
+                    "defaultValue": "[\r\n        {\r\n          label:' label 1',\r\n          disabled:true,\r\n          badgeLabel: '10',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        },\r\n        {\r\n          label:' label 2',\r\n          disabled:false,\r\n          badgeLabel: '2',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        },\r\n        {\r\n          label:' label 3',\r\n          disabled:false,\r\n          badgeLabel: '5',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        }\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "{}",
+                    "decorators": []
+                },
+                {
+                    "name": "listType",
+                    "defaultValue": "'list'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "\"list\" | \"button\"",
+                    "decorators": []
+                },
+                {
+                    "name": "orderList",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'xxl'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "\"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "selectedItem",
+                    "defaultValue": "1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 47
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "'rds-list-group'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "listClick",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 67,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output, TemplateRef } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'rds-list-group';\r\n   @Input() flush = false;\r\n  @Input() listType: 'list' | 'button' = 'list';\r\n  @Input() orderList = false;\r\n  @Input() backgroundType: 'primary'| 'secondary'| 'success' | 'danger'| 'warning' | 'info'| 'light' | 'dark' = 'primary';\r\n  @Input() type: 'sm' | 'md' | 'lg' | 'xl' | 'xxl' = 'xxl';\r\n\r\n  @Output() onClick = new EventEmitter<Event>();\r\n\r\n  @Input()\r\n  list!: TemplateRef<any>;\r\n  @Input() listItem =[\r\n        {\r\n          label:' label 1',\r\n          disabled:true,\r\n          badgeLabel: '10',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        },\r\n        {\r\n          label:' label 2',\r\n          disabled:false,\r\n          badgeLabel: '2',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        },\r\n        {\r\n          label:' label 3',\r\n          disabled:false,\r\n          badgeLabel: '5',\r\n          listHeading:'',\r\n          listContent:'',\r\n          listTime:'',\r\n        }\r\n  ];\r\n\r\n  selectedItem=1;\r\n\r\n\r\n\r\n  public get classes(): string[] {\r\n\r\n    var listClasses= ['list-group']\r\n    if(this.flush === true){\r\n      listClasses.push('list-group-flush')\r\n    }\r\n    if(this.orderList === true){\r\n      listClasses.push('list-group-numbered')\r\n    }\r\n\r\n\r\n    return listClasses\r\n \r\n  }\r\n\r\n\r\n  listClick(event:any) {\r\n    \r\n    console.log(event)\r\n    this.selectedItem = event\r\n   \r\n}\r\npublic get listItemClass(): string[] {\r\n\r\n  var list= ['list-group-item']\r\n\r\n\r\n  return list\r\n}\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".list-group-item{\r\n    cursor:pointer;\r\n}",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 51
+                    }
+                },
+                "listItemClass": {
+                    "name": "listItemClass",
+                    "getSignature": {
+                        "name": "listItemClass",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 73
+                    }
+                }
+            },
+            "isDuplicate": true,
+            "duplicateId": 7,
+            "duplicateName": "AppComponent-7",
+            "templateData": "<ul  [ngClass]=\"classes\">\r\n  <ng-container  *ngFor=\"let item of listItem\">\r\n    <ng-container  [ngTemplateOutlet]=\"list\"  [ngTemplateOutletContext]=\"{ $implicit: item}\"></ng-container>\r\n  </ng-container>\r\n</ul>\r\n<ng-template #list  let-item>  \r\n  <li class=\"list-group-item\" >\r\n  {{item.label}}</li>\r\n  </ng-template>"
+        },
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-407f3629a8f41850f6ac5535095dd8eabd940361e41e079708c42c03fd4ad591e2ad1f5f13453461c4efa3b805e66eb70e99cc19aa122032444f0a1840d93aa1-8",
             "file": "rds-projects/rds-search-input/src/app/app.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -1555,13 +1698,13 @@
                 "OnInit"
             ],
             "isDuplicate": true,
-            "duplicateId": 7,
-            "duplicateName": "AppComponent-7",
+            "duplicateId": 8,
+            "duplicateName": "AppComponent-8",
             "templateData": "<div class=\"container search\">\r\n  <input type=\"text\" class=\"searchTerm\"  placeholder=\"{{Placeholder}}\">\r\n  <button type=\"submit\" class=\"searchButton\">\r\n   <i [class]=\"icon\"></i>\r\n </button>\r\n</div>"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-09265b6dcbe0f1bd04c1a5cd736cf0117f9fd84a36293867a58c21a2319cfe4164d8b2747bf91095ce73bf45ffd0c9b413375f77cd3359889dd782c05e753889-8",
+            "id": "component-AppComponent-09265b6dcbe0f1bd04c1a5cd736cf0117f9fd84a36293867a58c21a2319cfe4164d8b2747bf91095ce73bf45ffd0c9b413375f77cd3359889dd782c05e753889-9",
             "file": "rds-projects/rds-select-list/src/app/app.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -1922,17 +2065,15 @@
                 }
             },
             "isDuplicate": true,
-            "duplicateId": 8,
-            "duplicateName": "AppComponent-8",
+            "duplicateId": 9,
+            "duplicateName": "AppComponent-9",
             "templateData": "<div [ngClass]=\"icon\">\r\n  <select\r\n    id=\"select\"\r\n    [ngClass]=\"classesForSelect\"\r\n    aria-label=\"Default select example\"\r\n    [disabled]=\"disabled\"\r\n    [multiple]=\"multiple\"\r\n    (change)=\"onSelect($event)\"\r\n  >\r\n    <ng-container\r\n      *ngFor=\"let item of listItems\"\r\n      [ngTemplateOutlet]=\"DropdownItems\"\r\n      [ngTemplateOutletContext]=\"{ $implicit: item }\"\r\n    ></ng-container>\r\n  </select>\r\n  <span [ngClass]=\"iconPosition\">\r\n    <i [ngClass]=\"bootstrapIcon\"></i>\r\n  </span>\r\n  <label *ngIf=\"floatingcontent\" for=\"floatingInput\">{{\r\n    floatinginputLabel\r\n  }}</label>\r\n</div>\r\n\r\n<ng-template #DropdownItems let-val>\r\n  <option>{{ val.value }}</option>\r\n</ng-template>\r\n"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-f071c5198db73aff3eed6bd1b3eb2d2907f764778263a504460c215e873f1c1f2ddf9fd2dfade50bab086cb3f14d199fb533ea629f46f847bb066fab8f2de1c1-9",
-            "file": "rds-projects/rds-table/src/app/app.component.ts",
-            "encapsulation": [
-                "ViewEncapsulation.None"
-            ],
+            "id": "component-AppComponent-3a56ecf76e539dc745f1a4c2e5646cca9f1cce401c7555eb4e5df13fc76c619dc1ce719394507e22bd035743425d9307779618339778c006af2a7ba2308c152a-10",
+            "file": "rds-projects/rds-spinners/src/app/app.component.ts",
+            "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
@@ -1948,75 +2089,36 @@
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "hover",
+                    "name": "colors",
+                    "defaultValue": "'text-primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "\"text-primary\" | \"text-secondary\" | \"text-success\" | \"text-danger\" | \"text-warning\" | \"text-info\" | \"text-light\" | \"text-dark\"",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'md'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "\"sm\" | \"md\"",
+                    "decorators": []
+                },
+                {
+                    "name": "spinnerType",
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 10,
                     "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "tableItems",
-                    "defaultValue": "[{ name: \"xyz\", age: 25, state: \"Maharashtra\" }, { name: \"yz\", age: 21, state: \"Hariyana\" }]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 16,
-                    "type": "any",
-                    "decorators": []
-                },
-                {
-                    "name": "tbody",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 22,
-                    "type": "TemplateRef<any>",
-                    "decorators": []
-                },
-                {
-                    "name": "thead",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 19,
-                    "type": "TemplateRef<any>",
                     "decorators": []
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "title",
-                    "defaultValue": "'rds-table'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 10
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "ngAfterViewInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 28,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 25,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
+            "propertiesClass": [],
+            "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -2024,45 +2126,34 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit, TemplateRef, ViewEncapsulation } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss'],\r\n    encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class AppComponent implements OnInit {\r\n  title = 'rds-table';\r\n\r\n  @Input()\r\n  hover = false\r\n\r\n  @Input()\r\n  tableItems: any = [{ name: \"xyz\", age: 25, state: \"Maharashtra\" }, { name: \"yz\", age: 21, state: \"Hariyana\" }]\r\n\r\n  @Input()\r\n  thead!: TemplateRef<any>;\r\n\r\n  @Input()\r\n  tbody!: TemplateRef<any>\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n\r\n  }\r\n  ngAfterViewInit() {\r\n\r\n  }\r\n\r\n  public get class(): string {\r\n    var hover = ''\r\n    if (this.hover === true) {\r\n\r\n      hover = 'table-hover'\r\n    }\r\n    return hover\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  //title = 'rds-spinners';\r\n@Input() spinnerType= false;\r\n\r\n// @Input()\r\n// Color?: string;\r\n\r\n@Input()  size: 'sm' | 'md'  = 'md';\r\n\r\n@Input()\r\n  colors: 'text-primary' | 'text-secondary' | 'text-success' | 'text-danger' | 'text-warning' | 'text-info' | 'text-light' | 'text-dark' = 'text-primary';\r\n\r\n  public get classes(): string {\r\n    const border =  `${this.spinnerType ? 'spinner-grow ' + this.colors : 'spinner-border ' + this.colors} `;\r\n    const size = `spinner-border-${this.size}`\r\n\r\n    return border+size;\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "#table {\r\n  thead {\r\n    background: var(--unnamed-color-5c82e3) 0% 0% no-repeat padding-box;\r\n    background: #5C82E3 0% 0% no-repeat padding-box;\r\n    opacity: 1;\r\n  }\r\n\r\n  thead th {\r\n    text-align: left;\r\n    font-size: 12px;\r\n    letter-spacing: 0px;\r\n    color: #EBF0FF;\r\n    text-transform: capitalize;\r\n    opacity: 1;\r\n    padding: 12px;\r\n  }\r\n\r\n  thead th:first-child {\r\n    border-right: 5px solid white;\r\n  }\r\n\r\n  .borders {\r\n    border-right: 1px solid #dee2e6;\r\n    padding: 20px;\r\n  }\r\n\r\n  svg {\r\n    float: right;\r\n  }\r\n\r\n  td {\r\n    padding: 14px;\r\n  }\r\n\r\n  tbody {\r\n    text-align: left;\r\n    font-size: 14px;\r\n    letter-spacing: 0px;\r\n    color: #424A50;\r\n    text-transform: capitalize;\r\n    opacity: 1;\r\n    font-weight: normal;\r\n  }\r\n\r\n  th.borders {\r\n    font-weight: normal;\r\n    font-size: 14px;\r\n  }\r\n\r\n  .table-hover > tbody > tr:hover {\r\n    --bs-table-accent-bg: #EBF0FF;\r\n    color: var(--bs-table-hover-color);\r\n  }\r\n\r\n  .sectble {\r\n    padding-top: 30px;\r\n  }\r\n\r\n  .tbl-dark {\r\n    background-color: #242F3D;\r\n    padding: 30px 30px;\r\n  }\r\n\r\n  .tbl-dark .borderh {\r\n    border-right: 5px solid #242F3D;\r\n  }\r\n\r\n  .tbl-dark tbody tr {\r\n    border-color: grey;\r\n    color: #EBF0FF;\r\n  }\r\n\r\n  .tbl-dark .borders {\r\n    border-right: 1px solid grey;\r\n    padding: 20px;\r\n  }\r\n\r\n  .table > :not(:last-child) > :last-child > * {\r\n    border-bottom-color: transparent;\r\n  }\r\n\r\n  .tbl-dark tbody {\r\n    color: #EBF0FF;\r\n  }\r\n}\r\n",
+                    "data": ".container{\r\n    padding-top: 50px;\r\n    padding-bottom: 50px;\r\n}\r\nh5{\r\n    padding-bottom: 30px;\r\n}\r\nh6{\r\n    padding-bottom: 10px;\r\n    padding-top: 30px;\r\n}\r\n.dark-mode {\r\n    padding-top: 40px;\r\n    background-color: #232933;\r\n    padding-bottom: 40px;\r\n}\r\n.light-mode{\r\n    padding:40px 60px 40px 0px;\r\n}\r\n.dark-mode h6, .dark-mode h5{\r\n    color: #fff;\r\n}\r\n.ml-2{\r\n    margin-left: 8px;\r\n}\r\n.dm{\r\n    border: 0.25em solid #343B46;\r\n    border-right-color: black;\r\n}\r\n.lt{\r\n    color: #343B46;\r\n}\r\n.sps{\r\n        border-right-color: black;\r\n        border-radius: 50%;\r\n}\r\n.spinner-grow.sps.spinner-grow-sm.ml-2, .spinner-grow.sps{\r\n    background-color: #343B46;\r\n}",
                     "styleUrl": "./app.component.scss"
                 }
             ],
             "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 22
-            },
-            "implements": [
-                "OnInit"
-            ],
             "accessors": {
-                "class": {
-                    "name": "class",
+                "classes": {
+                    "name": "classes",
                     "getSignature": {
-                        "name": "class",
+                        "name": "classes",
                         "type": "string",
                         "returnType": "string",
-                        "line": 32
+                        "line": 20
                     }
                 }
             },
             "isDuplicate": true,
-            "duplicateId": 9,
-            "duplicateName": "AppComponent-9",
-            "templateData": "<table class=\"table\" [ngClass]=\"class\" id=\"table\">\r\n  <thead>\r\n    <tr>\r\n      <ng-container [ngTemplateOutlet]=\"thead\"></ng-container>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <ng-container *ngFor=\"let items of tableItems\">\r\n      <ng-container [ngTemplateOutlet]=\"tbody\" [ngTemplateOutletContext]=\"{ $implicit: items}\"></ng-container>\r\n    </ng-container>\r\n  </tbody>\r\n</table>\r\n\r\n  <ng-template #thead>\r\n    <th>Name</th>\r\n    <th>Age</th>\r\n    <th>State</th>\r\n\r\n  </ng-template>\r\n  <ng-template #tbody let-val>\r\n    <tr>\r\n      <td>{{val.name}}</td>\r\n      <td>{{val.age}}</td>    \r\n      <td>{{val.state}}</td>        \r\n    </tr>\r\n  </ng-template>\r\n\r\n\r\n  `   \r\n"
+            "duplicateId": 10,
+            "duplicateName": "AppComponent-10",
+            "templateData": "<div [class]=\"classes\" role=\"status\">\r\n</div>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n  </div>\r\n</div>"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-0076d692cd61775cc43ba96bd6493a9d25a87381f07c45b3cfc73b06fe7985d6173e0c4386d45bd7050f3905efb5b2b68fc14f334d187842259966f1f6f9c314-10",
+            "id": "component-AppComponent-0076d692cd61775cc43ba96bd6493a9d25a87381f07c45b3cfc73b06fe7985d6173e0c4386d45bd7050f3905efb5b2b68fc14f334d187842259966f1f6f9c314-11",
             "file": "rds-projects/rds-tooltip/src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2180,9 +2271,143 @@
                 ]
             },
             "isDuplicate": true,
-            "duplicateId": 10,
-            "duplicateName": "AppComponent-10",
+            "duplicateId": 11,
+            "duplicateName": "AppComponent-11",
             "templateData": "<div data-bs-toggle=\"tooltip\" [attr.data-bs-placement]=\"tooltipPosition\" [title]=\"tooltipTitle\">\r\n  <ng-content></ng-content>  \r\n</div>"
+        },
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-ef9fc9ad8d4a0a2ecefcfa572b0fe8168850baffc62769bfc5d06e0db8efca8b051dfda3a5688fed2c8cb94479da243a028734dfc33eda416abbf43fb913dd98-12",
+            "file": "rds-projects/rds-table/src/app/app.component.ts",
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "rds-table",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "hover",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "tableItems",
+                    "defaultValue": "[{ name: \"xyz\", age: 25, state: \"Maharashtra\" }, { name: \"yz\", age: 21, state: \"Hariyana\" }]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "tbody",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "TemplateRef<any>",
+                    "decorators": []
+                },
+                {
+                    "name": "thead",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "TemplateRef<any>",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'rds-table'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit, TemplateRef, ViewEncapsulation } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'rds-table',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss'],\r\n    encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class AppComponent implements OnInit {\r\n  title = 'rds-table';\r\n\r\n  @Input()\r\n  hover = false\r\n\r\n  @Input()\r\n  tableItems: any = [{ name: \"xyz\", age: 25, state: \"Maharashtra\" }, { name: \"yz\", age: 21, state: \"Hariyana\" }]\r\n\r\n  @Input()\r\n  thead!: TemplateRef<any>;\r\n\r\n  @Input()\r\n  tbody!: TemplateRef<any>\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n\r\n  }\r\n  ngAfterViewInit() {\r\n\r\n  }\r\n\r\n  public get class(): string {\r\n    var hover = ''\r\n    if (this.hover === true) {\r\n\r\n      hover = 'table-hover'\r\n    }\r\n    return hover\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "#table {\r\n  thead {\r\n    background: var(--unnamed-color-5c82e3) 0% 0% no-repeat padding-box;\r\n    background: #5C82E3 0% 0% no-repeat padding-box;\r\n    opacity: 1;\r\n  }\r\n\r\n  thead th {\r\n    text-align: left;\r\n    font-size: 12px;\r\n    letter-spacing: 0px;\r\n    color: #EBF0FF;\r\n    text-transform: capitalize;\r\n    opacity: 1;\r\n    padding: 12px;\r\n  }\r\n\r\n  thead th:first-child {\r\n    border-right: 5px solid white;\r\n  }\r\n\r\n  .borders {\r\n    border-right: 1px solid #dee2e6;\r\n    padding: 20px;\r\n  }\r\n\r\n  svg {\r\n    float: right;\r\n  }\r\n\r\n  td {\r\n    padding: 14px;\r\n  }\r\n\r\n  tbody {\r\n    text-align: left;\r\n    font-size: 14px;\r\n    letter-spacing: 0px;\r\n    color: #424A50;\r\n    text-transform: capitalize;\r\n    opacity: 1;\r\n    font-weight: normal;\r\n  }\r\n\r\n  th.borders {\r\n    font-weight: normal;\r\n    font-size: 14px;\r\n  }\r\n\r\n  .table-hover > tbody > tr:hover {\r\n    --bs-table-accent-bg: #EBF0FF;\r\n    color: var(--bs-table-hover-color);\r\n  }\r\n\r\n  .sectble {\r\n    padding-top: 30px;\r\n  }\r\n\r\n  .tbl-dark {\r\n    background-color: #242F3D;\r\n    padding: 30px 30px;\r\n  }\r\n\r\n  .tbl-dark .borderh {\r\n    border-right: 5px solid #242F3D;\r\n  }\r\n\r\n  .tbl-dark tbody tr {\r\n    border-color: grey;\r\n    color: #EBF0FF;\r\n  }\r\n\r\n  .tbl-dark .borders {\r\n    border-right: 1px solid grey;\r\n    padding: 20px;\r\n  }\r\n\r\n  .table > :not(:last-child) > :last-child > * {\r\n    border-bottom-color: transparent;\r\n  }\r\n\r\n  .tbl-dark tbody {\r\n    color: #EBF0FF;\r\n  }\r\n}\r\n",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 22
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "class": {
+                    "name": "class",
+                    "getSignature": {
+                        "name": "class",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 32
+                    }
+                }
+            },
+            "isDuplicate": true,
+            "duplicateId": 12,
+            "duplicateName": "AppComponent-12",
+            "templateData": "<table class=\"table\" [ngClass]=\"class\" id=\"table\">\r\n  <thead>\r\n    <tr>\r\n      <ng-container [ngTemplateOutlet]=\"thead\"></ng-container>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <ng-container *ngFor=\"let items of tableItems\">\r\n      <ng-container [ngTemplateOutlet]=\"tbody\" [ngTemplateOutletContext]=\"{ $implicit: items}\"></ng-container>\r\n    </ng-container>\r\n  </tbody>\r\n</table>\r\n\r\n\r\n\r\n  `   \r\n"
         }
     ],
     "modules": [
@@ -2261,80 +2486,7 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-f261603305c5a60974b5023571f05a44efeeff13c73b3f4268619cf5d2958be7345a4671a3d2e7687e123364a9b1553a29963ee8502f31a6da2e360f04157307-1",
-            "description": "",
-            "deprecationMessage": "",
-            "deprecated": false,
-            "file": "rds-projects/rds-button/src/app/app.module.ts",
-            "methods": [
-                {
-                    "name": "ngDoBootstrap",
-                    "args": [
-                        {
-                            "name": "appRef",
-                            "type": "ApplicationRef",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 23,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "appRef",
-                            "type": "ApplicationRef",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-button', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "AppComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "imports",
-                    "elements": [
-                        {
-                            "name": "AppRoutingModule"
-                        }
-                    ]
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "AppModule",
-            "id": "module-AppModule-fb9e7ba265328363e69963220becbf5173091e2e4c9da5789859a8fde8cc9233030c0f5bb1d06a1a4f62f966551c62c19c0a7963e2a646fa18fa486df062133d-2",
+            "id": "module-AppModule-fb9e7ba265328363e69963220becbf5173091e2e4c9da5789859a8fde8cc9233030c0f5bb1d06a1a4f62f966551c62c19c0a7963e2a646fa18fa486df062133d-1",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -2407,11 +2559,11 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-636edb8b9471394ee8980ca557440856f9ca40fff26b2fc24f15eb5a1361a8904e720e62bc257d30abecd7be69ffc2cd4e3bf8d378917a435b20adffa60f6f29-3",
+            "id": "module-AppModule-f261603305c5a60974b5023571f05a44efeeff13c73b3f4268619cf5d2958be7345a4671a3d2e7687e123364a9b1553a29963ee8502f31a6da2e360f04157307-2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-file-uploader/src/app/app.module.ts",
+            "file": "rds-projects/rds-button/src/app/app.module.ts",
             "methods": [
                 {
                     "name": "ngDoBootstrap",
@@ -2442,7 +2594,80 @@
                     ]
                 }
             ],
-            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-file-uploader', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
+            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-button', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-7f76936d7ef7eb89f54d8d7d5e958a0edfdfb96eff47f3371dd825a6abbcaa7c8ec67e3eae6b15229e9b3349fe4abe67ddee6bd401888e1b572a877936dc354f-3",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "rds-projects/rds-dropdownlist/src/app/app.module.ts",
+            "methods": [
+                {
+                    "name": "ngDoBootstrap",
+                    "args": [
+                        {
+                            "name": "appRef",
+                            "type": "ApplicationRef",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "appRef",
+                            "type": "ApplicationRef",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-dropdownlist', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2553,11 +2778,11 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-f1fce6f77889ac1e130bb382a6309bb5a97cb386f3dca8c3ceadf1ba39afbbdfbea2f0ce887587f95e46eeba69971fa5adf2365eab59da049489737d7b2bac17-5",
+            "id": "module-AppModule-636edb8b9471394ee8980ca557440856f9ca40fff26b2fc24f15eb5a1361a8904e720e62bc257d30abecd7be69ffc2cd4e3bf8d378917a435b20adffa60f6f29-5",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-list-group/src/app/app.module.ts",
+            "file": "rds-projects/rds-file-uploader/src/app/app.module.ts",
             "methods": [
                 {
                     "name": "ngDoBootstrap",
@@ -2572,7 +2797,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 26,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -2588,7 +2813,7 @@
                     ]
                 }
             ],
-            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { createCustomElement } from '@angular/elements';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { environment } from '../environments/environment';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [environment.localDev ? AppComponent : []]\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-list-group', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}",
+            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-file-uploader', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2699,7 +2924,80 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-fa2e92cd6e32dfd67536a5d73266cb25803a0831603312ac0b2026d0c8175ad4a2e88c67629faa4ffe05ab26d0b6b67b53620c90850ce49ca06feb6cf33d9257-7",
+            "id": "module-AppModule-f1fce6f77889ac1e130bb382a6309bb5a97cb386f3dca8c3ceadf1ba39afbbdfbea2f0ce887587f95e46eeba69971fa5adf2365eab59da049489737d7b2bac17-7",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "rds-projects/rds-list-group/src/app/app.module.ts",
+            "methods": [
+                {
+                    "name": "ngDoBootstrap",
+                    "args": [
+                        {
+                            "name": "appRef",
+                            "type": "ApplicationRef",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "appRef",
+                            "type": "ApplicationRef",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { createCustomElement } from '@angular/elements';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { environment } from '../environments/environment';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [environment.localDev ? AppComponent : []]\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-list-group', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-fa2e92cd6e32dfd67536a5d73266cb25803a0831603312ac0b2026d0c8175ad4a2e88c67629faa4ffe05ab26d0b6b67b53620c90850ce49ca06feb6cf33d9257-8",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -2772,7 +3070,7 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-f0baaa7922d26a083e2be149731ba10f40d562da35413e031d3ff67dc8e1da252066fa1aec462386d42643cb2a0a5c082e8227aa80e62ba79407500d38a36d11-8",
+            "id": "module-AppModule-f0baaa7922d26a083e2be149731ba10f40d562da35413e031d3ff67dc8e1da252066fa1aec462386d42643cb2a0a5c082e8227aa80e62ba79407500d38a36d11-9",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -2845,11 +3143,11 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-1c549353c6263a8792a6dcd767909e625df7c8f99be70b5c43042e0fc65a811070ca5c4f074f7c365851119ed47d3d745cd6b7ec30b6c6b719b68cac3a608b9a-9",
+            "id": "module-AppModule-810baa08704b7c47f151caeae07dd6148107ba56f50bc80cd6802ff5e1948c1459b419b8b5e2d0dca09e791e40679ac1af643bd5eff2e4a7e0776ed2ea8efe32-10",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-table/src/app/app.module.ts",
+            "file": "rds-projects/rds-spinners/src/app/app.module.ts",
             "methods": [
                 {
                     "name": "ngDoBootstrap",
@@ -2880,7 +3178,7 @@
                     ]
                 }
             ],
-            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-table', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
+            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-spinners', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2918,7 +3216,7 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-5bae2cf0da28b29bce535d091bb9266ef7ac9316ff13a3cfdcf7b62cded4c25bb21e98a9acd81c91e1931ab414f2f97230d0f7c1bd127bc68e9b08674c8284af-10",
+            "id": "module-AppModule-5bae2cf0da28b29bce535d091bb9266ef7ac9316ff13a3cfdcf7b62cded4c25bb21e98a9acd81c91e1931ab414f2f97230d0f7c1bd127bc68e9b08674c8284af-11",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -2954,6 +3252,79 @@
                 }
             ],
             "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from 'rds-projects/rds-button/src/environments/environment';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule\r\n  ],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []]\r\n})\r\n\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-tooltip', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-1c549353c6263a8792a6dcd767909e625df7c8f99be70b5c43042e0fc65a811070ca5c4f074f7c365851119ed47d3d745cd6b7ec30b6c6b719b68cac3a608b9a-12",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "rds-projects/rds-table/src/app/app.module.ts",
+            "methods": [
+                {
+                    "name": "ngDoBootstrap",
+                    "args": [
+                        {
+                            "name": "appRef",
+                            "type": "ApplicationRef",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "appRef",
+                            "type": "ApplicationRef",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-table', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -3031,7 +3402,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-button/src/app/app-routing.module.ts",
+            "file": "rds-projects/rds-color-picker/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3067,7 +3438,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-color-picker/src/app/app-routing.module.ts",
+            "file": "rds-projects/rds-button/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3103,7 +3474,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-file-uploader/src/app/app-routing.module.ts",
+            "file": "rds-projects/rds-dropdownlist/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3175,7 +3546,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-list-group/src/app/app-routing.module.ts",
+            "file": "rds-projects/rds-file-uploader/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3247,7 +3618,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-search-input/src/app/app-routing.module.ts",
+            "file": "rds-projects/rds-list-group/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3283,7 +3654,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-select-list/src/app/app-routing.module.ts",
+            "file": "rds-projects/rds-search-input/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3319,7 +3690,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-table/src/app/app-routing.module.ts",
+            "file": "rds-projects/rds-select-list/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3355,7 +3726,79 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
+            "file": "rds-projects/rds-spinners/src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b-11",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
             "file": "rds-projects/rds-tooltip/src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b-12",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "rds-projects/rds-table/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3389,20 +3832,20 @@
     "miscellaneous": {
         "variables": [
             {
-                "name": "context",
+                "name": "BasicTable",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-carousel/src/test.ts",
+                "file": "rds-projects/rds-table/src/app/rds.table.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-button/src/test.ts",
+                "file": "rds-projects/rds-carousel/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3422,7 +3865,17 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-file-uploader/src/test.ts",
+                "file": "rds-projects/rds-button/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-dropdownlist/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3442,7 +3895,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-list-group/src/test.ts",
+                "file": "rds-projects/rds-file-uploader/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3453,6 +3906,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "rds-projects/rds-radio-buttons/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-list-group/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3482,7 +3945,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-table/src/test.ts",
+                "file": "rds-projects/rds-spinners/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3493,6 +3956,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "rds-projects/rds-tooltip/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-table/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3522,26 +3995,6 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-button/src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "rds-projects/rds-button/src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  production: false,\r\n  localDev: false\r\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "rds-projects/rds-color-picker/src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3562,7 +4015,27 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-file-uploader/src/environments/environment.ts",
+                "file": "rds-projects/rds-button/src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-button/src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false,\r\n  localDev: false\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-dropdownlist/src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
@@ -3572,11 +4045,11 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-file-uploader/src/environments/environment.prod.ts",
+                "file": "rds-projects/rds-dropdownlist/src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
+                "defaultValue": "{\r\n  production: true,\r\n  localDev:false\r\n}"
             },
             {
                 "name": "environment",
@@ -3602,21 +4075,31 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-list-group/src/environments/environment.prod.ts",
+                "file": "rds-projects/rds-file-uploader/src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  production: true,\r\n  localDev:true\r\n}"
+                "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
             },
             {
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-list-group/src/environments/environment.ts",
+                "file": "rds-projects/rds-file-uploader/src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
+                "defaultValue": "{\r\n  production: false\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
             },
             {
                 "name": "environment",
@@ -3632,11 +4115,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts",
+                "file": "rds-projects/rds-list-group/src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
+                "defaultValue": "{\r\n  production: true,\r\n  localDev:true\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-list-group/src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
             },
             {
                 "name": "environment",
@@ -3682,21 +4175,31 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-table/src/environments/environment.prod.ts",
+                "file": "rds-projects/rds-spinners/src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  production: true,\r\n  localDev:true\r\n}"
+                "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
             },
             {
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-table/src/environments/environment.ts",
+                "file": "rds-projects/rds-spinners/src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  production: false\r\n}"
+                "defaultValue": "{\r\n  production: false,\r\n  localDev: false\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-tooltip/src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
             },
             {
                 "name": "environment",
@@ -3712,11 +4215,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-tooltip/src/environments/environment.ts",
+                "file": "rds-projects/rds-table/src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
+                "defaultValue": "{\r\n  production: true,\r\n  localDev:true\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-table/src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false\r\n}"
             },
             {
                 "name": "Primary",
@@ -3741,15 +4254,6 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-button/src/test.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "literal type"
-            },
-            {
-                "name": "require",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "rds-projects/rds-color-picker/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3759,7 +4263,16 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-file-uploader/src/test.ts",
+                "file": "rds-projects/rds-button/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-dropdownlist/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -3777,7 +4290,7 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-list-group/src/test.ts",
+                "file": "rds-projects/rds-file-uploader/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -3787,6 +4300,15 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "rds-projects/rds-radio-buttons/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-list-group/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -3813,7 +4335,7 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-table/src/test.ts",
+                "file": "rds-projects/rds-spinners/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -3823,6 +4345,15 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "rds-projects/rds-tooltip/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-table/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -3846,12 +4377,44 @@
                 "deprecationMessage": "",
                 "type": "Story<AppComponent>",
                 "defaultValue": "(args: AppComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-table/src/app/rds.table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<AppComponent>",
+                "defaultValue": "(args: AppComponent) => ({\r\n  props: args,\r\n  template: `<rds-table  [thead]=\"thead\" [tbody]=\"tbody\" >\r\n    <ng-template #thead>\r\n      <th>Name</th>\r\n      <th>Age</th>\r\n      <th>State</th>\r\n      \r\n    </ng-template>\r\n    <ng-template #tbody let-val>\r\n       <tr>\r\n        <td>{{val.name}}</td>\r\n        <td>{{val.age}}</td>\r\n        <td>{{val.state}}</td>\r\n       </tr>\r\n    </ng-template>\r\n  \r\n  </rds-table>\r\n  `\r\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "rds-projects/rds-table/src/app/rds.table.stories.ts": [
+                {
+                    "name": "BasicTable",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-table/src/app/rds.table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-table/src/app/rds.table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<AppComponent>",
+                    "defaultValue": "(args: AppComponent) => ({\r\n  props: args,\r\n  template: `<rds-table  [thead]=\"thead\" [tbody]=\"tbody\" >\r\n    <ng-template #thead>\r\n      <th>Name</th>\r\n      <th>Age</th>\r\n      <th>State</th>\r\n      \r\n    </ng-template>\r\n    <ng-template #tbody let-val>\r\n       <tr>\r\n        <td>{{val.name}}</td>\r\n        <td>{{val.age}}</td>\r\n        <td>{{val.state}}</td>\r\n       </tr>\r\n    </ng-template>\r\n  \r\n  </rds-table>\r\n  `\r\n})"
+                }
+            ],
             "rds-projects/rds-carousel/src/test.ts": [
                 {
                     "name": "context",
@@ -3868,27 +4431,6 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "rds-projects/rds-carousel/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "literal type"
-                }
-            ],
-            "rds-projects/rds-button/src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-button/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-button/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
@@ -3915,12 +4457,12 @@
                     "type": "literal type"
                 }
             ],
-            "rds-projects/rds-file-uploader/src/test.ts": [
+            "rds-projects/rds-button/src/test.ts": [
                 {
                     "name": "context",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-file-uploader/src/test.ts",
+                    "file": "rds-projects/rds-button/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -3930,7 +4472,28 @@
                     "name": "require",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-file-uploader/src/test.ts",
+                    "file": "rds-projects/rds-button/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "rds-projects/rds-dropdownlist/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-dropdownlist/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-dropdownlist/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
@@ -3957,12 +4520,12 @@
                     "type": "literal type"
                 }
             ],
-            "rds-projects/rds-list-group/src/test.ts": [
+            "rds-projects/rds-file-uploader/src/test.ts": [
                 {
                     "name": "context",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-list-group/src/test.ts",
+                    "file": "rds-projects/rds-file-uploader/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -3972,7 +4535,7 @@
                     "name": "require",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-list-group/src/test.ts",
+                    "file": "rds-projects/rds-file-uploader/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
@@ -3994,6 +4557,27 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "rds-projects/rds-radio-buttons/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "rds-projects/rds-list-group/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-list-group/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-list-group/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
@@ -4041,12 +4625,12 @@
                     "type": "literal type"
                 }
             ],
-            "rds-projects/rds-table/src/test.ts": [
+            "rds-projects/rds-spinners/src/test.ts": [
                 {
                     "name": "context",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-table/src/test.ts",
+                    "file": "rds-projects/rds-spinners/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -4056,7 +4640,7 @@
                     "name": "require",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-table/src/test.ts",
+                    "file": "rds-projects/rds-spinners/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
@@ -4083,6 +4667,27 @@
                     "type": "literal type"
                 }
             ],
+            "rds-projects/rds-table/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-table/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-table/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
             "rds-projects/rds-carousel/src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -4101,30 +4706,6 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "rds-projects/rds-carousel/src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: false,\r\n  localDev: false\r\n}"
-                }
-            ],
-            "rds-projects/rds-button/src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-button/src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
-                }
-            ],
-            "rds-projects/rds-button/src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-button/src/environments/environment.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
@@ -4155,28 +4736,52 @@
                     "defaultValue": "{\r\n  production: false,\r\n  localDev: false\r\n}"
                 }
             ],
-            "rds-projects/rds-file-uploader/src/environments/environment.ts": [
+            "rds-projects/rds-button/src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-file-uploader/src/environments/environment.ts",
+                    "file": "rds-projects/rds-button/src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
+                }
+            ],
+            "rds-projects/rds-button/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-button/src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false,\r\n  localDev: false\r\n}"
+                }
+            ],
+            "rds-projects/rds-dropdownlist/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-dropdownlist/src/environments/environment.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false\r\n}"
                 }
             ],
-            "rds-projects/rds-file-uploader/src/environments/environment.prod.ts": [
+            "rds-projects/rds-dropdownlist/src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-file-uploader/src/environments/environment.prod.ts",
+                    "file": "rds-projects/rds-dropdownlist/src/environments/environment.prod.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
+                    "defaultValue": "{\r\n  production: true,\r\n  localDev:false\r\n}"
                 }
             ],
             "rds-projects/rds-floating-labels/src/environments/environment.prod.ts": [
@@ -4203,6 +4808,54 @@
                     "defaultValue": "{\r\n  production: false,\r\n  localDev: false\r\n}"
                 }
             ],
+            "rds-projects/rds-file-uploader/src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-file-uploader/src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
+                }
+            ],
+            "rds-projects/rds-file-uploader/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-file-uploader/src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
+            "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
+                }
+            ],
+            "rds-projects/rds-radio-buttons/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-radio-buttons/src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
             "rds-projects/rds-list-group/src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -4225,30 +4878,6 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
-                }
-            ],
-            "rds-projects/rds-radio-buttons/src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-radio-buttons/src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: false\r\n}"
-                }
-            ],
-            "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
                 }
             ],
             "rds-projects/rds-search-input/src/environments/environment.prod.ts": [
@@ -4299,6 +4928,54 @@
                     "defaultValue": "{\r\n  production: false\r\n}"
                 }
             ],
+            "rds-projects/rds-spinners/src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-spinners/src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
+                }
+            ],
+            "rds-projects/rds-spinners/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-spinners/src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false,\r\n  localDev: false\r\n}"
+                }
+            ],
+            "rds-projects/rds-tooltip/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-tooltip/src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
+                }
+            ],
+            "rds-projects/rds-tooltip/src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-tooltip/src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true,\r\n  localDev:false\r\n}"
+                }
+            ],
             "rds-projects/rds-table/src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -4321,30 +4998,6 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false\r\n}"
-                }
-            ],
-            "rds-projects/rds-tooltip/src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-tooltip/src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true,\r\n  localDev:false\r\n}"
-                }
-            ],
-            "rds-projects/rds-tooltip/src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-tooltip/src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
                 }
             ],
             "rds-projects/rds-button/src/app/rds-button.stories.ts": [
@@ -4571,6 +5224,55 @@
             },
             {
                 "filePath": "rds-projects/rds-color-picker/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "rds-projects/rds-dropdownlist/src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "rds-projects/rds-dropdownlist/src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "rds-projects/rds-dropdownlist/src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "rds-projects/rds-dropdownlist/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "rds-projects/rds-dropdownlist/src/test.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -4874,12 +5576,81 @@
                 "status": "low"
             },
             {
+                "filePath": "rds-projects/rds-spinners/src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "rds-projects/rds-spinners/src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "rds-projects/rds-spinners/src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "rds-projects/rds-spinners/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "rds-projects/rds-spinners/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "rds-projects/rds-table/src/app/app.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "rds-projects/rds-table/src/app/rds.table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BasicTable",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "rds-projects/rds-table/src/app/rds.table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, TemplateRef, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'rds-table',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
     encapsulation: ViewEncapsulation.None,
