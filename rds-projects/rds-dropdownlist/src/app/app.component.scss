@@ -1,0 +1,262 @@
+/* css after binding */
+
+ul.dd-menu.bind-dropdown img {
+  border-radius: 50px;
+}
+
+ul.dd-menu.bind-dropdown {
+  width: 100%;
+  /* padding: 10px 15px; */
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+ul.dd-menu.bind-dropdown img {
+  width: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #222222
+}
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid #23293352;
+  border-radius: 4px 4px 0px 0px;
+  padding: 7px 10px 7px 15px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 40vh;
+  color: #9FA4AB;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 26px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* .dd-button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+  }
+   */
+.dd-button:hover {
+  background-color: #fff;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0px 0px 4px 4px;
+  padding: 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+li.active {
+  background-color: #EBF0FF;
+  border-left: 4px solid #4EA1FF;
+  padding-left: 11px !important;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+}
+
+.dd-input:checked + .dd-menu {
+  display: block;
+}
+
+.dd-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #EBF0FF;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider {
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+/* new variation custom css */
+.drop-round-img {
+  width: 20%;
+  border-radius: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+span.mr-auto {
+  font-size: 16px;
+  color: #424A50;
+  line-height: 26px;
+  font-weight: normal;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #3D4D60;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #3D4D60;
+}
+
+.container {
+  padding-top: 50px;
+}
+
+h5 {
+  padding-bottom: 30px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.dark-mode {
+  padding-top: 40px;
+  background-color: #232933;
+  padding-bottom: 450px;
+}
+
+.dark-mode h6, .dark-mode h5 {
+  color: #fff;
+}
+
+.light-mode {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+/* variation two with billable nonbillable bar */
+.bill-nonbillbar {
+  width: 100%;
+}
+
+.bill-nonbillbar li {
+  padding: 8px 15px;
+}
+
+.bill-nonbillbar li.active {
+  border-left: 7px solid #EA2745;
+}
+
+.bill-nonbillbar li {
+  border-left: 7px solid #01AE9D;
+}
+
+.vari-two .dark-mode {
+  padding-bottom: 120px;
+}
+
+/* variation three with bullet point */
+.dot-red {
+  height: 16px;
+  width: 16px;
+  background-color: #EA2745;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.dot-green {
+  height: 16px;
+  width: 16px;
+  background-color: #01AE9D !important;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.vari-three li.active {
+  border-left: 0px solid;
+}
+
+.vari-three li {
+  border-left: 0px solid;
+}
+
+/* flags variation dropdown list */
+.flag-variation {
+  width: 100%;
+}
+
+.flag-img {
+  margin-right: 10px;
+}
+
+.flag-variation li {
+  padding: 6px 15px !important;
+}
+
+.flag-variation li.active {
+  border-left: 4px solid #4EA1FF;
+}
+
+.vari-three .dark-mode {
+  padding-bottom: 250px;
+}
+
+/* split button variation */
+/* .split-button{
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+} */
+/* split button variation */
+.split-variation {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0px 0px 4px 4px;
+  padding: 0;
+  box-shadow: 0 0 6px 0 rgb(0 0 0 / 10%);
+  background-color: #ffffff;
+  list-style-type: none;
+  right: -139px !important;
+  width: 65% !important;
+}
