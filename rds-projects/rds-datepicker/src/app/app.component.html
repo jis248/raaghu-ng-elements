@@ -1,0 +1,49 @@
+<div class="container-fluid light-mode">
+  <div class="dd">
+    <div class="dd-a vertical">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-calendar-date"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z" />
+          <path
+            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+        </svg>
+        <span class="date-range"> {{Label }}</span>
+      </button>
+    </div>
+    <input type="checkbox">
+    <div class="dd-c">
+      <ul class="dropdown-menu1">
+        <li class="display-last-date cus-date"><a class="dropdown-item" href="#"><strong>{{title}}</strong></a></li>
+        <div [ngSwitch]="newDate">
+          <li class="display-date" *ngSwitchCase="'currentDate'"><a><small>{{currentDate | date:'MMM d, y'}}</small></a>
+          </li>
+          <li class="display-date" *ngSwitchCase="'yesterdayDate'"><a><small>{{yesterdayDate | date:'MMM d,
+                y'}}</small></a></li>
+          <li class="display-date" *ngSwitchCase="'lastSevendate'"><a><small>{{dates | date:'MMM d, y'}} -
+                {{lastSevendate | date:'MMM d, y'}}</small></a></li>
+          <li class="display-date" *ngSwitchCase="'lastFourteendate'"><a><small>{{dates | date:'MMM d, y'}} -
+                {{lastFourteendate | date: 'MMM d, y'}}</small></a></li>
+          <li class="display-date" *ngSwitchCase="'custom'"><a><small>{{firstRange | date:'MMM d, y'}} - {{lastRange |
+                date: 'MMM d, y'}}</small></a></li>
+
+        </div>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" (click)="todayDate($event)">Today</a></li>
+        <li><a class="dropdown-item" (click)="yesDate($event)">Yesterday</a></li>
+        <li><a class="dropdown-item" (click)="lastSevenDate($event)">Last 7 days</a></li>
+        <li><a class="dropdown-item" (click)="lastFourteenDate($event)">Last 14 days</a></li>
+        <li class="menu-item-has-children">
+          <div class="dropdown-item active input-group date datepicker" [bsValue]="bsInlineRangeValue"
+            [bsConfig]="{ containerClass: 'theme-dark-blue light-mode', customTodayClass: 'custom-today-class'}"
+            bsDaterangepicker placement="right" (bsValueChange)="changeDate($event)" bsrangeValue>Custom <span
+              class="hr-line">|</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
