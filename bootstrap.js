@@ -7,25 +7,17 @@ const exec = util.promisify(require('child_process').exec);
 const projectRootFolder = 'rds-projects';
 const distPath = path.join(__dirname, 'dist');
 
-const buildAllProjects = async (directories) => {
-    for (const dir of directories) {
-        console.log('building ' + dir + '...')
-        await exec(`npm run build --project="${dir}" --href=/${dir}/`, { cwd: path.join(__dirname) });
+const buildAllProjects = async (directories, projectToBuild) => {
+    if (projectToBuild) {
+        console.log('building ' + projectToBuild + '...')
+        await exec(`npm run build --project="${projectToBuild}" --href=/${projectToBuild}/`, { cwd: path.join(__dirname) });
+    } else {
+        for (const dir of directories) {
+            console.log('building ' + dir + '...')
+            await exec(`npm run build --project="${dir}" --href=/${dir}/`, { cwd: path.join(__dirname) });
+        }
     }
 }
-
-// const setLocalDevValue = async (directories, localDev) => {
-//     for (const dir of directories) {
-//         const envFilePath = path.join(__dirname, projectRootFolder, dir, 'src', 'environments', 'environment.prod.ts');
-//         if (existsSync(envFilePath)) {
-//             const config = (await fs.readFile(envFilePath)).toString();
-//             console.log(config.split("=")[1].trim())
-//             const modifiedConfig = JSON.parse(config.split("=")[1].trim());
-//             modifiedConfig.localDev = localDev;
-//             await fs.writeFile(envFilePath, config.split("=")[0] + JSON.stringify(modifiedConfig));
-//         }
-//     }
-// }
 
 const getDirectories = source => {
     return fs.readdir(source, { withFileTypes: true })
@@ -58,17 +50,18 @@ const startServer = () => {
 
 async function start() {
     const args = getArgs();
-    // if (args?.localDev === 'true' || args?.localDev === 'false') {
-    //     const directories = await getDirectories(path.join(__dirname, projectRootFolder));
-    //     await setLocalDevValue(directories, args.localDev);
-    // }
     console.log(args)
     if (args?.build !== "false") {
+        const directories = await getDirectories(path.join(__dirname, projectRootFolder));
+        const projectToBuild = args?.project;
+        if (projectToBuild && !directories.includes(projectToBuild)) {
+            console.log("invalid project name");
+            return;
+        }
         await fs.rm(path.join(__dirname, 'dist'), { recursive: true, force: true });
         await fs.mkdir(path.join(__dirname, 'dist'));
         console.log('Building projects from ' + projectRootFolder);
-        const directories = await getDirectories(path.join(__dirname, projectRootFolder));
-        await buildAllProjects(directories);
+        await buildAllProjects(directories, projectToBuild);
     }
     startServer();
 }

@@ -1,0 +1,47 @@
+.cmninput{
+    border: 1px solid #EAEFF5;
+    background: #EAEFF5 0% 0% no-repeat padding-box;
+    border-radius: 4px !important;
+    font: 14px;
+    letter-spacing: 0px;
+    color: #9BACBC;
+    opacity: 1;
+}
+.readicon {
+    background-color: #eaeff5;
+    border: 1px solid #eaeff5;
+    border-radius: 0px 4px 4px 0px;
+}
+.icon-position{
+    position: absolute;
+    right:0;
+    top:0;
+    margin-right: 28px;
+    margin-top: 22px;
+}
+.cmninput:focus{
+    background: #EAEFF5 0% 0% no-repeat padding-box;
+    border: 1px solid #15BDFD;
+    border-radius: 4px !important;
+    opacity: 1;
+    box-shadow: 0 0 0 0rem rgb(13 110 253 / 25%);
+}  
+input:focus{
+    background: #EAEFF5 0% 0% no-repeat padding-box;
+    border: 1px solid #15BDFD;
+    border-radius: 4px !important;
+    opacity: 1;
+    box-shadow: 0 0 0 0rem rgb(13 110 253 / 25%);
+}
+.form-control.is-invalid{
+    background: #EAEFF5 0% 0% no-repeat padding-box;
+    border: 1px solid #FF6060;
+    border-radius: 4px;
+    opacity: 1;
+}
+.invalid-feedback{
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #FF6060;
+    opacity: 1;
+}              
