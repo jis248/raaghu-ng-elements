@@ -21,7 +21,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "ngx-build-build",
+          "builder": "ngx-build-plus:build",
           "options": {
             "outputPath": "dist/rds-button",
             "index": "rds-projects/rds-button/src/index.html",
