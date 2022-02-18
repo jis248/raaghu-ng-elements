@@ -30,8 +30,16 @@
             "tsConfig": "rds-projects/rds-button/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "rds-projects/rds-button/src/favicon.ico",
-              "rds-projects/rds-button/src/assets"
+              {
+                "glob": "**/favicon.ico",
+                "input": "rds-projects/rds-button/src",
+                "output": ""
+              },
+              {
+                "glob": "**/*",
+                "input": "rds-projects/rds-button/src/assets",
+                "output": "assets"
+              }
             ],
             "styles": [
               "rds-projects/rds-button/src/styles.scss"
