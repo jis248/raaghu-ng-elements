@@ -1,0 +1,6 @@
+<div [ngClass]="divclasses">
+  <!-- <label for="exampleFormControlTextarea1" class="form-label">{{label}}</label> -->
+  <textarea class="form-control" id="exampleFormControlTextarea1"  [rows]="rows" [disabled]="disabled" [placeholder]="placeholderText" [readonly]="readonly" ></textarea>
+  <label *ngIf ="floatingcontent" for="floatingInput">{{floatinginputLabel}}</label>
+</div>
+

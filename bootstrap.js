@@ -19,19 +19,6 @@ const buildAllProjects = async (directories, projectToBuild) => {
     }
 }
 
-// const setLocalDevValue = async (directories, localDev) => {
-//     for (const dir of directories) {
-//         const envFilePath = path.join(__dirname, projectRootFolder, dir, 'src', 'environments', 'environment.prod.ts');
-//         if (existsSync(envFilePath)) {
-//             const config = (await fs.readFile(envFilePath)).toString();
-//             console.log(config.split("=")[1].trim())
-//             const modifiedConfig = JSON.parse(config.split("=")[1].trim());
-//             modifiedConfig.localDev = localDev;
-//             await fs.writeFile(envFilePath, config.split("=")[0] + JSON.stringify(modifiedConfig));
-//         }
-//     }
-// }
-
 const getDirectories = source => {
     return fs.readdir(source, { withFileTypes: true })
         .then(directories => directories.filter(d => d.isDirectory()).map(d => d.name))
