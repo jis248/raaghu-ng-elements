@@ -40,6 +40,8 @@
     <a href="https://github.com/Wai-Technologies/raaghu-ng-elements/issues/new">Request Feature</a>
 </p>
 
+
+
 # 👋 Introducing `raaghu-ng-elements`
 <!-- <p align="center">
     <a href="https://tryshape.vercel.app" target="blank"/>
@@ -52,7 +54,7 @@
 Raaghu elements can be used as a base to build complex components and UI layouts whilst maintaining a high level of reusability.
 
 
-<br/>
+
 
 # 🚀 Demo
 Here is a quick [demo](https://www.raaghu.io) of the elements. We hope you enjoy it.
@@ -61,7 +63,7 @@ Liked it? Please give us a ⭐️ to show your appreciation
 
 Many Thanks to all the `supporters` who have helped this project with stars(⭐)
 
-<br/>
+
 
 # 🔥 Features
 
@@ -82,7 +84,7 @@ Many Thanks to all the `supporters` who have helped this project with stars(⭐)
 - All of the elements are built for a wide variety of screen sizes
 
 
-<br/>
+
 
 # 🏗️ How to Set up `raaghu-ng-elements` for Development?
 You can run `raaghu-ng-elements` locally with a few easy steps.
@@ -139,19 +141,19 @@ npm run storybook
 
 All set !! Now open `localhost:3000/rds-<element name>` to see the element locally or `localhost:3000/rds-<element name>/main.js` to serve it as a micro front end.
 
-<br/>
+
 
 # 🍔 Built With
 - [Bootstrap 5](https://bootstrap.com/): Sleek, intuitive, and powerful framework for faster and easier web development.
 - [Storybook](https://storybook.js.org/): Build bulletproof UI components faster
 - [Angular Elements](https://angular.io/guide/elements): Build bulletproof UI components faster
 
-<br/>
+
 
 # 🛡️ License
 This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for details.
 
-<br/>
+
 
 
 # 🦄 Upcoming Features
@@ -165,7 +167,7 @@ This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) fi
 
 If you find something is missing, we are listening. Please create a feature request [from here](https://github.com/Wai-Technologies/raaghu-ng-elements/issues/new).
 
-<br/>
+
 
 # 🤝 Contributing to `Raaghu`
 Any kind of positive contribution is welcome! Please help us to grow by contributing to the project.
@@ -173,7 +175,7 @@ Any kind of positive contribution is welcome! Please help us to grow by contribu
 If you wish to contribute, you can work on any features [listed here](https://github.com/Wai-Technologies/raaghu-ng-elements#-upcoming-features) or create one on your own. After adding your code, please send us a Pull Request.  
 
 
-<br/>
+
 
 # 🙏 Support
 
@@ -191,7 +193,7 @@ If you found the app helpful, consider supporting us with a coffee.
 A ⭐️ to <b>Raaghu</b> is to build its triceps 💪 stronger.
 </h3>
 
-<br/>
+
 
 ## Contributors ✨
 
