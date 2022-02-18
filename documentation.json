@@ -9,208 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-f8fe408b5cd56d7e0c55b452f1331bd911b8afd6dd2ba60d56ecf38415a5f43c1e3d06a8ce64d05f7b91ffdab877f87235a774b51821363b2f565ad64e74ae4a",
-            "file": "rds-projects/rds-alert/src/app/app.component.ts",
-            "encapsulation": [
-                "ViewEncapsulation.None"
-            ],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-root",
-            "styleUrls": [
-                "./app.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./app.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "alertOpen",
-                    "defaultValue": "true",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 17,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "backgroundColor",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 26,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "color",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 28,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "dismisable",
-                    "defaultValue": "true",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 24,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "heading",
-                    "defaultValue": "'Heading'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 35,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "icon",
-                    "defaultValue": "'bi bi-info-circle'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 32,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'A simple primary alert—check it out!'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 34,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "type",
-                    "defaultValue": "'primary'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 36,
-                    "type": "\"primary\" | \"secondary\" | \"success\" | \"danger\" | \"warning\" | \"info\" | \"light\" | \"dark\"",
-                    "decorators": []
-                },
-                {
-                    "name": "visibility",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 14,
-                    "type": "boolean",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onDismiss",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 39,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onShow",
-                    "defaultValue": "new EventEmitter<Event>(this.visibility = true)",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 41,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [
-                {
-                    "name": "title",
-                    "defaultValue": "'rds-alert'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 11
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "close",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 77,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "closeAlert",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 70,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "showAlert",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 66,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss'],\n  encapsulation: ViewEncapsulation.None\n\n})\nexport class AppComponent {\n  title = 'rds-alert';\n\n  // visibility true or false\n  @Input() visibility = false;\n\n  @Input()\n  alertOpen = true\n\n  // @Input()\n  // showicon =false\n  // @Input()\n  // showheading =true\n  @Input()\n  dismisable = true\n  // background-color property\n  @Input() backgroundColor?: string;\n\n  @Input() color?: string;\n\n  // added icon in Alert Box\n\n  @Input() icon = 'bi bi-info-circle';\n\n  @Input() label = 'A simple primary alert—check it out!';\n  @Input() heading = 'Heading';\n  @Input() type: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark' = 'primary';\n\n  // tslint:disable-next-line:no-output-on-prefix\n  @Output() onDismiss = new EventEmitter<Event>();\n  // tslint:disable-next-line:no-output-on-prefix\n  @Output() onShow = new EventEmitter<Event>(this.visibility = true);\n\n  public get classes(): string {\n    const mode = `alert alert-${this.type} alert-dismissible fade show`;\n\n    return mode;\n  }\n  // public get showIcon():string{\n  //   let icon = ''\n  //   if(this.showicon=== true){\n  //     icon = 'd-none'\n  //   }\n  //   return icon\n\n  // }\n\n  public get withDismiss(): string {\n    let dismiss = 'd-none'\n    if (this.dismisable === true) {\n      dismiss = ''\n    }\n    return dismiss\n\n  }\n\n  showAlert() {\n    this.alertOpen = true\n  }\n\n  closeAlert() {\n    this.alertOpen = false;\n    this.onDismiss.emit();\n    console.log(this.alertOpen)\n  }\n\n  // tslint:disable-next-line:typedef\n  close() {\n    this.visibility = true;\n  }\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".alert-primary {\r\n  color: #0b54c0;\r\n}\r\n\r\n.alert-success {\r\n  color: #128951;\r\n}\r\n\r\n.alert-warning {\r\n  color: #b68c10;\r\n}\r\n\r\n.alert-danger {\r\n  color: #c61a28;\r\n}\r\n",
-                    "styleUrl": "./app.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "accessors": {
-                "classes": {
-                    "name": "classes",
-                    "getSignature": {
-                        "name": "classes",
-                        "type": "string",
-                        "returnType": "string",
-                        "line": 43
-                    }
-                },
-                "withDismiss": {
-                    "name": "withDismiss",
-                    "getSignature": {
-                        "name": "withDismiss",
-                        "type": "string",
-                        "returnType": "string",
-                        "line": 57
-                    }
-                }
-            },
-            "templateData": "<div id=\"alert\" *ngIf=\"alertOpen\" [class]=\"classes\" [ngStyle]=\"{'background-color':backgroundColor , 'color': color }\" role=\"alert\">\r\n  <h2 *ngIf=\" heading !== '' \"> {{ heading }}</h2>\r\n  <span><i [class]=\"icon\" class=\"fs-6\"></i> {{ label }}</span>\r\n  <ng-content></ng-content>\r\n  <button (click)=\"closeAlert()\" type=\"button\" class=\"btn-close\" [ngClass]=\"withDismiss\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>\r\n</div>\r\n\r\n"
-        },
-        {
-            "name": "AppComponent",
-            "id": "component-AppComponent-5057135ebec549c1e3c2ed4df614b511abb79f8b003566b5ad1d009179fdd0fc44502e28a8c829441ea36d8b922c5d5b18ceaa8abd95521ec901333bdddc0778-1",
+            "id": "component-AppComponent-5057135ebec549c1e3c2ed4df614b511abb79f8b003566b5ad1d009179fdd0fc44502e28a8c829441ea36d8b922c5d5b18ceaa8abd95521ec901333bdddc0778",
             "file": "rds-projects/rds-carousel/src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -349,14 +148,11 @@
                     }
                 }
             },
-            "isDuplicate": true,
-            "duplicateId": 1,
-            "duplicateName": "AppComponent-1",
             "templateData": "<div [id]=\"id\" [class]=\"classes\" data-bs-ride=\"carousel\" >\r\n  <div *ngIf=\"indicators\" class=\"carousel-indicators\">\r\n      <button type=\"button\" *ngFor=\"let item of imageItem; index as i\" [attr.data-bs-target]=\"'#'+id\" [attr.data-bs-slide-to]=\"i\" [class.active]=\"i===0\"  [attr.aria-label]=\"'Slide '+i\"></button>\r\n\r\n    </div>\r\n  <div class=\"carousel-inner\" >\r\n    <div class=\"carousel-item\" [class.active]=\"i===0\" *ngFor=\"let item of imageItem; index as i\">\r\n      <img src={{item.img}} class=\"d-block w-100\" alt=\"...\">\r\n      <div class=\"carousel-caption d-none d-md-block\">\r\n<!-- <h5>First slide label</h5> -->\r\n<p>{{item.caption}}</p>\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n<button *ngIf=\"controls\" class=\"carousel-control-prev\" type=\"button\" [attr.data-bs-target]=\"'#'+id\" data-bs-slide=\"prev\">\r\n    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n    <span class=\"visually-hidden\">Previous</span>\r\n  </button>\r\n  <button *ngIf=\"controls\" class=\"carousel-control-next\" type=\"button\" [attr.data-bs-target]=\"'#'+id\" data-bs-slide=\"next\">\r\n    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n    <span class=\"visually-hidden\">Next</span>\r\n  </button>\r\n</div>"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-909ccb96241f7ee5f9e4204f93443cf1a451db9a2d5c4fb9a91e9d44fa58706dd3ca39a7b6c723b3141bdf973a9e1707aeecaafaa72f7e70b6d8144d494c7c24-2",
+            "id": "component-AppComponent-909ccb96241f7ee5f9e4204f93443cf1a451db9a2d5c4fb9a91e9d44fa58706dd3ca39a7b6c723b3141bdf973a9e1707aeecaafaa72f7e70b6d8144d494c7c24-1",
             "file": "rds-projects/rds-button/src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -440,13 +236,13 @@
                 }
             },
             "isDuplicate": true,
-            "duplicateId": 2,
-            "duplicateName": "AppComponent-2",
+            "duplicateId": 1,
+            "duplicateName": "AppComponent-1",
             "templateData": "<!-- Template for the micro front end component -->\r\n<button class=\"btn\" [ngClass]=\"classes\" (click)=\"click.emit()\">{{ label || 'Button' }}</button>"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-256823312c7a80b99adc377cfe8db5fcb423052058319d7921f8c0412bceaae947a1b5ad56c90dd32b1462fa408449d45d7fcf3f4618cb14ed4eda1cd1ad1c86-3",
+            "id": "component-AppComponent-256823312c7a80b99adc377cfe8db5fcb423052058319d7921f8c0412bceaae947a1b5ad56c90dd32b1462fa408449d45d7fcf3f4618cb14ed4eda1cd1ad1c86-2",
             "file": "rds-projects/rds-color-picker/src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -666,13 +462,13 @@
                 "ControlValueAccessor"
             ],
             "isDuplicate": true,
-            "duplicateId": 3,
-            "duplicateName": "AppComponent-3",
+            "duplicateId": 2,
+            "duplicateName": "AppComponent-2",
             "templateData": "<label for=\"exampleColorInput\" class=\"form-label\">Color picker</label>\r\n<input type=\"color\" class=\"form-control form-control-color\" id=\"exampleColorInput\" [value]=\"value\" title=\"Choose your color\" (input)=\"changedValue($event)\">\r\n    \r\n"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-cebc2665b99d1e5303b32ec9419db647c775ef4fa89fba510ba347a492b988e01777cbae6b4d97bbae156af2f6a388a4b0d2a9f20c0269a9b18c5bddff93ca7f-4",
+            "id": "component-AppComponent-cebc2665b99d1e5303b32ec9419db647c775ef4fa89fba510ba347a492b988e01777cbae6b4d97bbae156af2f6a388a4b0d2a9f20c0269a9b18c5bddff93ca7f-3",
             "file": "rds-projects/rds-file-uploader/src/app/app.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -1011,9 +807,182 @@
                 }
             },
             "isDuplicate": true,
+            "duplicateId": 3,
+            "duplicateName": "AppComponent-3",
+            "templateData": "<div class=\"row pb\">\r\n  <div class=\"col-md-6\">\r\n    <div class=\"mb-3\">\r\n      <label for=\"formFile\" class=\"form-label\">{{label}} </label>\r\n      <input [ngClass]=\"classes\" type=\"file\" id=\"formFile\" (input)=\"getValue($event)\" [multiple]=\"multipleFiles\">\r\n  </div>\r\n  </div>\r\n</div>"
+        },
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-bf8af0954cd3c0b9af16810ba3c95f18af32ebbaa55d17119d5ec12e1e3e026e7f9c7791058ea0f571b4d9afd89cdae83f9b818cd4a29b9eec5ebbfc3d6c80df-4",
+            "file": "rds-projects/rds-floating-labels/src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "'floatingInput'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Floating Label'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "listItems",
+                    "defaultValue": "['one', 'two', 'three']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "{}",
+                    "decorators": []
+                },
+                {
+                    "name": "multiple",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "'floatingInputName'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "required",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "\"email\" | \"text\" | \"number\" | \"password\" | \"textarea\" | \"selection\"",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'rds-floating-labels'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onSelect",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'rds-floating-labels';\r\n  @Input() label: string = 'Floating Label';\r\n  @Input() id: string = 'floatingInput';\r\n  @Input() name: string = 'floatingInputName';\r\n  @Input() value: string;\r\n  @Input() required: boolean = false;\r\n  @Input() disabled: boolean = false;\r\n  @Input() multiple: boolean = false;\r\n  @Input() placeholder: string = '';\r\n  @Input() type: 'email' | 'text' | 'number' | 'password' | 'textarea' | 'selection' = 'text';\r\n  @Input() listItems = ['one', 'two', 'three'];\r\n  onSelect(event:any){\r\n  \r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "isDuplicate": true,
             "duplicateId": 4,
             "duplicateName": "AppComponent-4",
-            "templateData": "<div class=\"row pb\">\r\n  <div class=\"col-md-6\">\r\n    <div class=\"mb-3\">\r\n      <label for=\"formFile\" class=\"form-label\">{{label}} </label>\r\n      <input [ngClass]=\"classes\" type=\"file\" id=\"formFile\" (input)=\"getValue($event)\" [multiple]=\"multipleFiles\">\r\n  </div>\r\n  </div>\r\n</div>"
+            "templateData": "<div class=\"form-floating\">\r\n  <ng-container *ngIf=\"type==='textarea'; else selection_template\">\r\n    <textarea class=\"form-control\" [value]=\"value\" [id]=\"id\" [name]=\"name\"></textarea>\r\n  </ng-container>\r\n  <ng-template #selection_template>\r\n    <ng-container *ngIf=\"type==='selection';else other_template\">\r\n      <select class=\"form-select\" [id]=\"id\" [name]=\"name\" (change)=\"onSelect($event)\"  [disabled]=\"disabled\" [multiple]=\"multiple\"  aria-label=\"Floating label select example\"\r\n        [required]=\"required\">\r\n        <ng-container *ngFor=\"let item of listItems\"  [ngTemplateOutlet]=\"DropdownItems\" [ngTemplateOutletContext]=\"{ $implicit: item}\"></ng-container>\r\n        <ng-template #DropdownItems  let-val>\r\n          <option >{{val}}</option>\r\n          </ng-template>\r\n      </select>\r\n    </ng-container>\r\n    <ng-template #other_template>\r\n      <input [type]=\"type\" class=\"form-control\" [id]=\"id\" [name]=\"name\" [value]=\"value\" [required]=\"required\">\r\n    </ng-template>\r\n  </ng-template>\r\n\r\n  <label [for]=\"id\">{{label}}</label>\r\n</div>"
         },
         {
             "name": "AppComponent",
@@ -1202,180 +1171,7 @@
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-bf8af0954cd3c0b9af16810ba3c95f18af32ebbaa55d17119d5ec12e1e3e026e7f9c7791058ea0f571b4d9afd89cdae83f9b818cd4a29b9eec5ebbfc3d6c80df-6",
-            "file": "rds-projects/rds-floating-labels/src/app/app.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-root",
-            "styleUrls": [
-                "./app.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./app.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "disabled",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 15,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "id",
-                    "defaultValue": "'floatingInput'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 11,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Floating Label'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "listItems",
-                    "defaultValue": "['one', 'two', 'three']",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 19,
-                    "type": "{}",
-                    "decorators": []
-                },
-                {
-                    "name": "multiple",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 16,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "name",
-                    "defaultValue": "'floatingInputName'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 12,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "placeholder",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 17,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "required",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 14,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "type",
-                    "defaultValue": "'text'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 18,
-                    "type": "\"email\" | \"text\" | \"number\" | \"password\" | \"textarea\" | \"selection\"",
-                    "decorators": []
-                },
-                {
-                    "name": "value",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "title",
-                    "defaultValue": "'rds-floating-labels'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "onSelect",
-                    "args": [
-                        {
-                            "name": "event",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 20,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "event",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'rds-floating-labels';\r\n  @Input() label: string = 'Floating Label';\r\n  @Input() id: string = 'floatingInput';\r\n  @Input() name: string = 'floatingInputName';\r\n  @Input() value: string;\r\n  @Input() required: boolean = false;\r\n  @Input() disabled: boolean = false;\r\n  @Input() multiple: boolean = false;\r\n  @Input() placeholder: string = '';\r\n  @Input() type: 'email' | 'text' | 'number' | 'password' | 'textarea' | 'selection' = 'text';\r\n  @Input() listItems = ['one', 'two', 'three'];\r\n  onSelect(event:any){\r\n  \r\n  }\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./app.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "isDuplicate": true,
-            "duplicateId": 6,
-            "duplicateName": "AppComponent-6",
-            "templateData": "<div class=\"form-floating\">\r\n  <ng-container *ngIf=\"type==='textarea'; else selection_template\">\r\n    <textarea class=\"form-control\" [value]=\"value\" [id]=\"id\" [name]=\"name\"></textarea>\r\n  </ng-container>\r\n  <ng-template #selection_template>\r\n    <ng-container *ngIf=\"type==='selection';else other_template\">\r\n      <select class=\"form-select\" [id]=\"id\" [name]=\"name\" (change)=\"onSelect($event)\"  [disabled]=\"disabled\" [multiple]=\"multiple\"  aria-label=\"Floating label select example\"\r\n        [required]=\"required\">\r\n        <ng-container *ngFor=\"let item of listItems\"  [ngTemplateOutlet]=\"DropdownItems\" [ngTemplateOutletContext]=\"{ $implicit: item}\"></ng-container>\r\n        <ng-template #DropdownItems  let-val>\r\n          <option >{{val}}</option>\r\n          </ng-template>\r\n      </select>\r\n    </ng-container>\r\n    <ng-template #other_template>\r\n      <input [type]=\"type\" class=\"form-control\" [id]=\"id\" [name]=\"name\" [value]=\"value\" [required]=\"required\">\r\n    </ng-template>\r\n  </ng-template>\r\n\r\n  <label [for]=\"id\">{{label}}</label>\r\n</div>"
-        },
-        {
-            "name": "AppComponent",
-            "id": "component-AppComponent-15c2131c0930018b3263d8597fae5f984e95ab849edf5f00276f5b935c2c71568c0bbf4f10e796093a57ed3e0443655cbcc6beadba8d8a0b4fb094d1d48c9ec1-7",
+            "id": "component-AppComponent-15c2131c0930018b3263d8597fae5f984e95ab849edf5f00276f5b935c2c71568c0bbf4f10e796093a57ed3e0443655cbcc6beadba8d8a0b4fb094d1d48c9ec1-6",
             "file": "rds-projects/rds-radio-buttons/src/app/app.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -1664,13 +1460,13 @@
                 }
             },
             "isDuplicate": true,
-            "duplicateId": 7,
-            "duplicateName": "AppComponent-7",
+            "duplicateId": 6,
+            "duplicateName": "AppComponent-6",
             "templateData": "<div [ngClass]=\"classes\">\r\n  <input type=\"radio\"  class=\"form-check-input\"  [name]=\"name\" [value]=\"label\"  [checked]=\"checked\" [id]=\"id\"\r\n  [disabled]=\"disabled\" (input)=\"getValue($event)\">\r\n  <label class=\"form-check-label\" [for]=\"id\">\r\n      {{label}}\r\n  </label> \r\n</div>\r\n\r\n"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-407f3629a8f41850f6ac5535095dd8eabd940361e41e079708c42c03fd4ad591e2ad1f5f13453461c4efa3b805e66eb70e99cc19aa122032444f0a1840d93aa1-8",
+            "id": "component-AppComponent-407f3629a8f41850f6ac5535095dd8eabd940361e41e079708c42c03fd4ad591e2ad1f5f13453461c4efa3b805e66eb70e99cc19aa122032444f0a1840d93aa1-7",
             "file": "rds-projects/rds-search-input/src/app/app.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -1759,13 +1555,13 @@
                 "OnInit"
             ],
             "isDuplicate": true,
-            "duplicateId": 8,
-            "duplicateName": "AppComponent-8",
+            "duplicateId": 7,
+            "duplicateName": "AppComponent-7",
             "templateData": "<div class=\"container search\">\r\n  <input type=\"text\" class=\"searchTerm\"  placeholder=\"{{Placeholder}}\">\r\n  <button type=\"submit\" class=\"searchButton\">\r\n   <i [class]=\"icon\"></i>\r\n </button>\r\n</div>"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-09265b6dcbe0f1bd04c1a5cd736cf0117f9fd84a36293867a58c21a2319cfe4164d8b2747bf91095ce73bf45ffd0c9b413375f77cd3359889dd782c05e753889-9",
+            "id": "component-AppComponent-09265b6dcbe0f1bd04c1a5cd736cf0117f9fd84a36293867a58c21a2319cfe4164d8b2747bf91095ce73bf45ffd0c9b413375f77cd3359889dd782c05e753889-8",
             "file": "rds-projects/rds-select-list/src/app/app.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -2126,137 +1922,13 @@
                 }
             },
             "isDuplicate": true,
-            "duplicateId": 9,
-            "duplicateName": "AppComponent-9",
+            "duplicateId": 8,
+            "duplicateName": "AppComponent-8",
             "templateData": "<div [ngClass]=\"icon\">\r\n  <select\r\n    id=\"select\"\r\n    [ngClass]=\"classesForSelect\"\r\n    aria-label=\"Default select example\"\r\n    [disabled]=\"disabled\"\r\n    [multiple]=\"multiple\"\r\n    (change)=\"onSelect($event)\"\r\n  >\r\n    <ng-container\r\n      *ngFor=\"let item of listItems\"\r\n      [ngTemplateOutlet]=\"DropdownItems\"\r\n      [ngTemplateOutletContext]=\"{ $implicit: item }\"\r\n    ></ng-container>\r\n  </select>\r\n  <span [ngClass]=\"iconPosition\">\r\n    <i [ngClass]=\"bootstrapIcon\"></i>\r\n  </span>\r\n  <label *ngIf=\"floatingcontent\" for=\"floatingInput\">{{\r\n    floatinginputLabel\r\n  }}</label>\r\n</div>\r\n\r\n<ng-template #DropdownItems let-val>\r\n  <option>{{ val.value }}</option>\r\n</ng-template>\r\n"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-0076d692cd61775cc43ba96bd6493a9d25a87381f07c45b3cfc73b06fe7985d6173e0c4386d45bd7050f3905efb5b2b68fc14f334d187842259966f1f6f9c314-10",
-            "file": "rds-projects/rds-tooltip/src/app/app.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-root",
-            "styleUrls": [
-                "./app.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./app.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "tooltipPosition",
-                    "defaultValue": "'bottom'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 22,
-                    "type": "\"top\" | \"bottom\" | \"right\" | \"left\"",
-                    "decorators": []
-                },
-                {
-                    "name": "tooltipTitle",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 20,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngAfterViewInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 26,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 23,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { DOCUMENT } from '@angular/common';\r\nimport { Component, Inject, Input, Renderer2 } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n // title = 'rds-tooltip';\r\n constructor(\r\n  // tslint:disable-next-line:variable-name\r\n  private _renderer2: Renderer2,\r\n  // tslint:disable-next-line:variable-name\r\n  @Inject(DOCUMENT) private _document: Document\r\n\r\n) { }\r\n\r\n@Input()\r\ntooltipTitle =  '';\r\n@Input()\r\ntooltipPosition: 'top' | 'bottom' | 'right' | 'left' = 'bottom';\r\nngOnInit(): void {\r\n}\r\n\r\nngAfterViewInit(): void {\r\n  // tslint:disable-next-line:prefer-const\r\n  let script = this._renderer2.createElement('script');\r\n  script.text = `\r\n              var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"tooltip\"]'))\r\n              var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {\r\n                return new bootstrap.Tooltip(tooltipTriggerEl)\r\n              })\r\n              `;\r\n  this._renderer2.appendChild(this._document.body, script);\r\n}\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./app.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [
-                    {
-                        "name": "_renderer2",
-                        "type": "Renderer2",
-                        "deprecated": false,
-                        "deprecationMessage": ""
-                    },
-                    {
-                        "name": "_document",
-                        "type": "Document",
-                        "deprecated": false,
-                        "deprecationMessage": ""
-                    }
-                ],
-                "line": 9,
-                "jsdoctags": [
-                    {
-                        "name": "_renderer2",
-                        "type": "Renderer2",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    },
-                    {
-                        "name": "_document",
-                        "type": "Document",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    }
-                ]
-            },
-            "isDuplicate": true,
-            "duplicateId": 10,
-            "duplicateName": "AppComponent-10",
-            "templateData": "<div data-bs-toggle=\"tooltip\" [attr.data-bs-placement]=\"tooltipPosition\" [title]=\"tooltipTitle\">\r\n  <ng-content></ng-content>  \r\n</div>"
-        },
-        {
-            "name": "AppComponent",
-            "id": "component-AppComponent-f071c5198db73aff3eed6bd1b3eb2d2907f764778263a504460c215e873f1c1f2ddf9fd2dfade50bab086cb3f14d199fb533ea629f46f847bb066fab8f2de1c1-11",
+            "id": "component-AppComponent-f071c5198db73aff3eed6bd1b3eb2d2907f764778263a504460c215e873f1c1f2ddf9fd2dfade50bab086cb3f14d199fb533ea629f46f847bb066fab8f2de1c1-9",
             "file": "rds-projects/rds-table/src/app/app.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -2384,63 +2056,139 @@
                 }
             },
             "isDuplicate": true,
-            "duplicateId": 11,
-            "duplicateName": "AppComponent-11",
+            "duplicateId": 9,
+            "duplicateName": "AppComponent-9",
             "templateData": "<table class=\"table\" [ngClass]=\"class\" id=\"table\">\r\n  <thead>\r\n    <tr>\r\n      <ng-container [ngTemplateOutlet]=\"thead\"></ng-container>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <ng-container *ngFor=\"let items of tableItems\">\r\n      <ng-container [ngTemplateOutlet]=\"tbody\" [ngTemplateOutletContext]=\"{ $implicit: items}\"></ng-container>\r\n    </ng-container>\r\n  </tbody>\r\n</table>\r\n\r\n  <ng-template #thead>\r\n    <th>Name</th>\r\n    <th>Age</th>\r\n    <th>State</th>\r\n\r\n  </ng-template>\r\n  <ng-template #tbody let-val>\r\n    <tr>\r\n      <td>{{val.name}}</td>\r\n      <td>{{val.age}}</td>    \r\n      <td>{{val.state}}</td>        \r\n    </tr>\r\n  </ng-template>\r\n\r\n\r\n  `   \r\n"
+        },
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-0076d692cd61775cc43ba96bd6493a9d25a87381f07c45b3cfc73b06fe7985d6173e0c4386d45bd7050f3905efb5b2b68fc14f334d187842259966f1f6f9c314-10",
+            "file": "rds-projects/rds-tooltip/src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "tooltipPosition",
+                    "defaultValue": "'bottom'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "\"top\" | \"bottom\" | \"right\" | \"left\"",
+                    "decorators": []
+                },
+                {
+                    "name": "tooltipTitle",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { DOCUMENT } from '@angular/common';\r\nimport { Component, Inject, Input, Renderer2 } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n // title = 'rds-tooltip';\r\n constructor(\r\n  // tslint:disable-next-line:variable-name\r\n  private _renderer2: Renderer2,\r\n  // tslint:disable-next-line:variable-name\r\n  @Inject(DOCUMENT) private _document: Document\r\n\r\n) { }\r\n\r\n@Input()\r\ntooltipTitle =  '';\r\n@Input()\r\ntooltipPosition: 'top' | 'bottom' | 'right' | 'left' = 'bottom';\r\nngOnInit(): void {\r\n}\r\n\r\nngAfterViewInit(): void {\r\n  // tslint:disable-next-line:prefer-const\r\n  let script = this._renderer2.createElement('script');\r\n  script.text = `\r\n              var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"tooltip\"]'))\r\n              var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {\r\n                return new bootstrap.Tooltip(tooltipTriggerEl)\r\n              })\r\n              `;\r\n  this._renderer2.appendChild(this._document.body, script);\r\n}\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "_renderer2",
+                        "type": "Renderer2",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "_document",
+                        "type": "Document",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 9,
+                "jsdoctags": [
+                    {
+                        "name": "_renderer2",
+                        "type": "Renderer2",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "_document",
+                        "type": "Document",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "isDuplicate": true,
+            "duplicateId": 10,
+            "duplicateName": "AppComponent-10",
+            "templateData": "<div data-bs-toggle=\"tooltip\" [attr.data-bs-placement]=\"tooltipPosition\" [title]=\"tooltipTitle\">\r\n  <ng-content></ng-content>  \r\n</div>"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-b0bb343999c0401a2e3ecbec65490c5a76866396b25cae82ed79702c1d4e115033ea8c8ade9395518e8eba42217f2ec5d6c7a62f3d969b3ab2838fe206d56a66",
-            "description": "",
-            "deprecationMessage": "",
-            "deprecated": false,
-            "file": "rds-projects/rds-alert/src/app/app.module.ts",
-            "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "AppComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "imports",
-                    "elements": [
-                        {
-                            "name": "AppRoutingModule"
-                        }
-                    ]
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": [
-                        {
-                            "name": "AppComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "AppModule",
-            "id": "module-AppModule-f59ee6df3fcedcdbc1de37b6bcd6e43d4cf485abab5ca5f879164beeb6350f110b37eda6f5c5943e0f598fbecfb4b2341ed6488341374294f2fa0d1bac588046-1",
+            "id": "module-AppModule-f59ee6df3fcedcdbc1de37b6bcd6e43d4cf485abab5ca5f879164beeb6350f110b37eda6f5c5943e0f598fbecfb4b2341ed6488341374294f2fa0d1bac588046",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -2513,7 +2261,7 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-f261603305c5a60974b5023571f05a44efeeff13c73b3f4268619cf5d2958be7345a4671a3d2e7687e123364a9b1553a29963ee8502f31a6da2e360f04157307-2",
+            "id": "module-AppModule-f261603305c5a60974b5023571f05a44efeeff13c73b3f4268619cf5d2958be7345a4671a3d2e7687e123364a9b1553a29963ee8502f31a6da2e360f04157307-1",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -2586,7 +2334,7 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-fb9e7ba265328363e69963220becbf5173091e2e4c9da5789859a8fde8cc9233030c0f5bb1d06a1a4f62f966551c62c19c0a7963e2a646fa18fa486df062133d-3",
+            "id": "module-AppModule-fb9e7ba265328363e69963220becbf5173091e2e4c9da5789859a8fde8cc9233030c0f5bb1d06a1a4f62f966551c62c19c0a7963e2a646fa18fa486df062133d-2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -2659,7 +2407,7 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-636edb8b9471394ee8980ca557440856f9ca40fff26b2fc24f15eb5a1361a8904e720e62bc257d30abecd7be69ffc2cd4e3bf8d378917a435b20adffa60f6f29-4",
+            "id": "module-AppModule-636edb8b9471394ee8980ca557440856f9ca40fff26b2fc24f15eb5a1361a8904e720e62bc257d30abecd7be69ffc2cd4e3bf8d378917a435b20adffa60f6f29-3",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -2695,6 +2443,79 @@
                 }
             ],
             "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-file-uploader', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-f25ac2a56db3ff00dfae5cfce155559d4d775f6aa455ba141a4d198474531744af4104994884a3adeefb6b1146e73c506a6ca78792adce5981b87c56fb8975d9-4",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "rds-projects/rds-floating-labels/src/app/app.module.ts",
+            "methods": [
+                {
+                    "name": "ngDoBootstrap",
+                    "args": [
+                        {
+                            "name": "appRef",
+                            "type": "ApplicationRef",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "appRef",
+                            "type": "ApplicationRef",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { createCustomElement } from '@angular/elements';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { environment } from '../environments/environment.prod';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [environment.localDev ? AppComponent : []]\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-floating-labels', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}",
             "children": [
                 {
                     "type": "providers",
@@ -2805,80 +2626,7 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-f25ac2a56db3ff00dfae5cfce155559d4d775f6aa455ba141a4d198474531744af4104994884a3adeefb6b1146e73c506a6ca78792adce5981b87c56fb8975d9-6",
-            "description": "",
-            "deprecationMessage": "",
-            "deprecated": false,
-            "file": "rds-projects/rds-floating-labels/src/app/app.module.ts",
-            "methods": [
-                {
-                    "name": "ngDoBootstrap",
-                    "args": [
-                        {
-                            "name": "appRef",
-                            "type": "ApplicationRef",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 28,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "appRef",
-                            "type": "ApplicationRef",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { createCustomElement } from '@angular/elements';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { environment } from '../environments/environment.prod';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [environment.localDev ? AppComponent : []]\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-floating-labels', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "AppComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "imports",
-                    "elements": [
-                        {
-                            "name": "AppRoutingModule"
-                        }
-                    ]
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "AppModule",
-            "id": "module-AppModule-322004cfa82057c9f83ef44c197eec2f5181ed41921723dc7967ba7fd3b8b50e223937ae8da4056f5e3dcffbc3c3509f92fc8262a3d283a1e1b7f73d5611eddd-7",
+            "id": "module-AppModule-322004cfa82057c9f83ef44c197eec2f5181ed41921723dc7967ba7fd3b8b50e223937ae8da4056f5e3dcffbc3c3509f92fc8262a3d283a1e1b7f73d5611eddd-6",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -2951,7 +2699,7 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-fa2e92cd6e32dfd67536a5d73266cb25803a0831603312ac0b2026d0c8175ad4a2e88c67629faa4ffe05ab26d0b6b67b53620c90850ce49ca06feb6cf33d9257-8",
+            "id": "module-AppModule-fa2e92cd6e32dfd67536a5d73266cb25803a0831603312ac0b2026d0c8175ad4a2e88c67629faa4ffe05ab26d0b6b67b53620c90850ce49ca06feb6cf33d9257-7",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -3024,7 +2772,7 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-f0baaa7922d26a083e2be149731ba10f40d562da35413e031d3ff67dc8e1da252066fa1aec462386d42643cb2a0a5c082e8227aa80e62ba79407500d38a36d11-9",
+            "id": "module-AppModule-f0baaa7922d26a083e2be149731ba10f40d562da35413e031d3ff67dc8e1da252066fa1aec462386d42643cb2a0a5c082e8227aa80e62ba79407500d38a36d11-8",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -3060,6 +2808,79 @@
                 }
             ],
             "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-select-list', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-1c549353c6263a8792a6dcd767909e625df7c8f99be70b5c43042e0fc65a811070ca5c4f074f7c365851119ed47d3d745cd6b7ec30b6c6b719b68cac3a608b9a-9",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "rds-projects/rds-table/src/app/app.module.ts",
+            "methods": [
+                {
+                    "name": "ngDoBootstrap",
+                    "args": [
+                        {
+                            "name": "appRef",
+                            "type": "ApplicationRef",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "appRef",
+                            "type": "ApplicationRef",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-table', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -3169,117 +2990,8 @@
             ]
         },
         {
-            "name": "AppModule",
-            "id": "module-AppModule-1c549353c6263a8792a6dcd767909e625df7c8f99be70b5c43042e0fc65a811070ca5c4f074f7c365851119ed47d3d745cd6b7ec30b6c6b719b68cac3a608b9a-11",
-            "description": "",
-            "deprecationMessage": "",
-            "deprecated": false,
-            "file": "rds-projects/rds-table/src/app/app.module.ts",
-            "methods": [
-                {
-                    "name": "ngDoBootstrap",
-                    "args": [
-                        {
-                            "name": "appRef",
-                            "type": "ApplicationRef",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 23,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "appRef",
-                            "type": "ApplicationRef",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "sourceCode": "import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { environment } from '../environments/environment.prod';\r\nimport { createCustomElement } from '@angular/elements';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, AppRoutingModule],\r\n  providers: [],\r\n  entryComponents: [AppComponent],\r\n  bootstrap: [environment.localDev ? AppComponent : []],\r\n})\r\nexport class AppModule implements DoBootstrap {\r\n  constructor(private injector: Injector) {\r\n    const micro = createCustomElement(AppComponent, {\r\n      injector: this.injector,\r\n    });\r\n    customElements.define('rds-table', micro);\r\n  }\r\n\r\n  ngDoBootstrap(appRef: ApplicationRef): void {\r\n  }\r\n}\r\n\r\n",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "AppComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "imports",
-                    "elements": [
-                        {
-                            "name": "AppRoutingModule"
-                        }
-                    ]
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-78922b3ae99d2c5249b333980bd5afde1b120b2cc6fedfd41b8b2cc90f279797cb4b22e183bf7e1d1dfab8c6100e77e7812c110234d81f866f544f28a3e18b15",
-            "description": "",
-            "deprecationMessage": "",
-            "deprecated": false,
-            "file": "rds-projects/rds-alert/src/app/app-routing.module.ts",
-            "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": []
-                },
-                {
-                    "type": "imports",
-                    "elements": []
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b-1",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -3315,7 +3027,7 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b-2",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b-1",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -3351,7 +3063,7 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b-3",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b-2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -3387,11 +3099,47 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b-4",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b-3",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "rds-projects/rds-file-uploader/src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b-4",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "rds-projects/rds-floating-labels/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3463,7 +3211,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-floating-labels/src/app/app-routing.module.ts",
+            "file": "rds-projects/rds-radio-buttons/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3499,7 +3247,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-radio-buttons/src/app/app-routing.module.ts",
+            "file": "rds-projects/rds-search-input/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3535,7 +3283,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-search-input/src/app/app-routing.module.ts",
+            "file": "rds-projects/rds-select-list/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3571,7 +3319,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "rds-projects/rds-select-list/src/app/app-routing.module.ts",
+            "file": "rds-projects/rds-table/src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
@@ -3636,66 +3384,10 @@
                     "elements": []
                 }
             ]
-        },
-        {
-            "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b-11",
-            "description": "",
-            "deprecationMessage": "",
-            "deprecated": false,
-            "file": "rds-projects/rds-table/src/app/app-routing.module.ts",
-            "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": []
-                },
-                {
-                    "type": "imports",
-                    "elements": []
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
         }
     ],
     "miscellaneous": {
         "variables": [
-            {
-                "name": "Basic",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "rds-projects/rds-alert/src/app/rds-alert.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "context",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "rds-projects/rds-alert/src/test.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-            },
             {
                 "name": "context",
                 "ctype": "miscellaneous",
@@ -3740,7 +3432,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-list-group/src/test.ts",
+                "file": "rds-projects/rds-floating-labels/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3750,7 +3442,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-floating-labels/src/test.ts",
+                "file": "rds-projects/rds-list-group/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3790,7 +3482,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-tooltip/src/test.ts",
+                "file": "rds-projects/rds-table/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3800,31 +3492,11 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-table/src/test.ts",
+                "file": "rds-projects/rds-tooltip/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "rds-projects/rds-alert/src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "rds-projects/rds-alert/src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: false\n}"
             },
             {
                 "name": "environment",
@@ -3890,16 +3562,6 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-file-uploader/src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "rds-projects/rds-file-uploader/src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3910,21 +3572,11 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-list-group/src/environments/environment.prod.ts",
+                "file": "rds-projects/rds-file-uploader/src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  production: true,\r\n  localDev:true\r\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "rds-projects/rds-list-group/src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
+                "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
             },
             {
                 "name": "environment",
@@ -3950,11 +3602,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts",
+                "file": "rds-projects/rds-list-group/src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
+                "defaultValue": "{\r\n  production: true,\r\n  localDev:true\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-list-group/src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
             },
             {
                 "name": "environment",
@@ -3965,6 +3627,16 @@
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\r\n  production: false\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
             },
             {
                 "name": "environment",
@@ -4010,26 +3682,6 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-tooltip/src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  production: true,\r\n  localDev:false\r\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "rds-projects/rds-tooltip/src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "rds-projects/rds-table/src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -4047,6 +3699,26 @@
                 "defaultValue": "{\r\n  production: false\r\n}"
             },
             {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-tooltip/src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true,\r\n  localDev:false\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "rds-projects/rds-tooltip/src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
+            },
+            {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -4055,15 +3727,6 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "require",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "rds-projects/rds-alert/src/test.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "literal type"
             },
             {
                 "name": "require",
@@ -4105,7 +3768,7 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-list-group/src/test.ts",
+                "file": "rds-projects/rds-floating-labels/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -4114,7 +3777,7 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-floating-labels/src/test.ts",
+                "file": "rds-projects/rds-list-group/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -4150,7 +3813,7 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-tooltip/src/test.ts",
+                "file": "rds-projects/rds-table/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -4159,7 +3822,7 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-table/src/test.ts",
+                "file": "rds-projects/rds-tooltip/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -4178,16 +3841,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "rds-projects/rds-alert/src/app/rds-alert.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<AppComponent>",
-                "defaultValue": "(args: AppComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "rds-projects/rds-button/src/app/rds-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -4199,49 +3852,6 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "rds-projects/rds-alert/src/app/rds-alert.stories.ts": [
-                {
-                    "name": "Basic",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-alert/src/app/rds-alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-alert/src/app/rds-alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<AppComponent>",
-                    "defaultValue": "(args: AppComponent) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "rds-projects/rds-alert/src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-alert/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-alert/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "literal type"
-                }
-            ],
             "rds-projects/rds-carousel/src/test.ts": [
                 {
                     "name": "context",
@@ -4326,27 +3936,6 @@
                     "type": "literal type"
                 }
             ],
-            "rds-projects/rds-list-group/src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-list-group/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-list-group/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "literal type"
-                }
-            ],
             "rds-projects/rds-floating-labels/src/test.ts": [
                 {
                     "name": "context",
@@ -4363,6 +3952,27 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "rds-projects/rds-floating-labels/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "rds-projects/rds-list-group/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-list-group/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-list-group/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
@@ -4431,27 +4041,6 @@
                     "type": "literal type"
                 }
             ],
-            "rds-projects/rds-tooltip/src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-tooltip/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-tooltip/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "literal type"
-                }
-            ],
             "rds-projects/rds-table/src/test.ts": [
                 {
                     "name": "context",
@@ -4473,28 +4062,25 @@
                     "type": "literal type"
                 }
             ],
-            "rds-projects/rds-alert/src/environments/environment.prod.ts": [
+            "rds-projects/rds-tooltip/src/test.ts": [
                 {
-                    "name": "environment",
+                    "name": "context",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-alert/src/environments/environment.prod.ts",
+                    "file": "rds-projects/rds-tooltip/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
-                }
-            ],
-            "rds-projects/rds-alert/src/environments/environment.ts": [
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
                 {
-                    "name": "environment",
+                    "name": "require",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-alert/src/environments/environment.ts",
+                    "file": "rds-projects/rds-tooltip/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false\n}"
+                    "type": "literal type"
                 }
             ],
             "rds-projects/rds-carousel/src/environments/environment.prod.ts": [
@@ -4569,18 +4155,6 @@
                     "defaultValue": "{\r\n  production: false,\r\n  localDev: false\r\n}"
                 }
             ],
-            "rds-projects/rds-file-uploader/src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-file-uploader/src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
-                }
-            ],
             "rds-projects/rds-file-uploader/src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -4593,28 +4167,16 @@
                     "defaultValue": "{\r\n  production: false\r\n}"
                 }
             ],
-            "rds-projects/rds-list-group/src/environments/environment.prod.ts": [
+            "rds-projects/rds-file-uploader/src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-list-group/src/environments/environment.prod.ts",
+                    "file": "rds-projects/rds-file-uploader/src/environments/environment.prod.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\r\n  production: true,\r\n  localDev:true\r\n}"
-                }
-            ],
-            "rds-projects/rds-list-group/src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-list-group/src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
+                    "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
                 }
             ],
             "rds-projects/rds-floating-labels/src/environments/environment.prod.ts": [
@@ -4641,16 +4203,28 @@
                     "defaultValue": "{\r\n  production: false,\r\n  localDev: false\r\n}"
                 }
             ],
-            "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts": [
+            "rds-projects/rds-list-group/src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts",
+                    "file": "rds-projects/rds-list-group/src/environments/environment.prod.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
+                    "defaultValue": "{\r\n  production: true,\r\n  localDev:true\r\n}"
+                }
+            ],
+            "rds-projects/rds-list-group/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-list-group/src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
                 }
             ],
             "rds-projects/rds-radio-buttons/src/environments/environment.ts": [
@@ -4663,6 +4237,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
+            "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-radio-buttons/src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true,\r\n  localDev: false\r\n}"
                 }
             ],
             "rds-projects/rds-search-input/src/environments/environment.prod.ts": [
@@ -4713,30 +4299,6 @@
                     "defaultValue": "{\r\n  production: false\r\n}"
                 }
             ],
-            "rds-projects/rds-tooltip/src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-tooltip/src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true,\r\n  localDev:false\r\n}"
-                }
-            ],
-            "rds-projects/rds-tooltip/src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "rds-projects/rds-tooltip/src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
-                }
-            ],
             "rds-projects/rds-table/src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -4759,6 +4321,30 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
+            "rds-projects/rds-tooltip/src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-tooltip/src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true,\r\n  localDev:false\r\n}"
+                }
+            ],
+            "rds-projects/rds-tooltip/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "rds-projects/rds-tooltip/src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false,\r\n  localDev:true\r\n}"
                 }
             ],
             "rds-projects/rds-button/src/app/rds-button.stories.ts": [
@@ -4805,7 +4391,7 @@
         "children": [
             {
                 "name": "routes",
-                "filename": "rds-projects/rds-alert/src/app/app-routing.module.ts",
+                "filename": "rds-projects/rds-carousel/src/app/app-routing.module.ts",
                 "module": "AppRoutingModule",
                 "children": [],
                 "kind": "module"
@@ -4816,75 +4402,6 @@
         "count": 0,
         "status": "low",
         "files": [
-            {
-                "filePath": "rds-projects/rds-alert/src/app/app.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "AppComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/16",
-                "status": "low"
-            },
-            {
-                "filePath": "rds-projects/rds-alert/src/app/rds-alert.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Basic",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "rds-projects/rds-alert/src/app/rds-alert.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "rds-projects/rds-alert/src/environments/environment.prod.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "environment",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "rds-projects/rds-alert/src/environments/environment.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "environment",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "rds-projects/rds-alert/src/test.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "context",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "rds-projects/rds-alert/src/test.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "require",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
             {
                 "filePath": "rds-projects/rds-button/src/app/app.component.ts",
                 "type": "component",
