@@ -1,0 +1,29 @@
+<table class="table" [ngClass]="class" id="table">
+  <thead>
+    <tr>
+      <ng-container [ngTemplateOutlet]="thead"></ng-container>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let items of tableItems">
+      <ng-container [ngTemplateOutlet]="tbody" [ngTemplateOutletContext]="{ $implicit: items}"></ng-container>
+    </ng-container>
+  </tbody>
+</table>
+
+  <ng-template #thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>State</th>
+
+  </ng-template>
+  <ng-template #tbody let-val>
+    <tr>
+      <td>{{val.name}}</td>
+      <td>{{val.age}}</td>    
+      <td>{{val.state}}</td>        
+    </tr>
+  </ng-template>
+
+
+  `   
