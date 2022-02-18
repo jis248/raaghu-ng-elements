@@ -1,0 +1,21 @@
+<div class="form-floating">
+  <ng-container *ngIf="type==='textarea'; else selection_template">
+    <textarea class="form-control" [value]="value" [id]="id" [name]="name"></textarea>
+  </ng-container>
+  <ng-template #selection_template>
+    <ng-container *ngIf="type==='selection';else other_template">
+      <select class="form-select" [id]="id" [name]="name" (change)="onSelect($event)"  [disabled]="disabled" [multiple]="multiple"  aria-label="Floating label select example"
+        [required]="required">
+        <ng-container *ngFor="let item of listItems"  [ngTemplateOutlet]="DropdownItems" [ngTemplateOutletContext]="{ $implicit: item}"></ng-container>
+        <ng-template #DropdownItems  let-val>
+          <option >{{val}}</option>
+          </ng-template>
+      </select>
+    </ng-container>
+    <ng-template #other_template>
+      <input [type]="type" class="form-control" [id]="id" [name]="name" [value]="value" [required]="required">
+    </ng-template>
+  </ng-template>
+
+  <label [for]="id">{{label}}</label>
+</div>
