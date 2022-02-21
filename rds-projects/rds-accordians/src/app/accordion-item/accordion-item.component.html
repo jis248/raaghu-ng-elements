@@ -1,0 +1,22 @@
+
+<div class="accordion-item binding-accordian">
+    <h2 class="accordion-header" [id]="id">
+      <button class="accordion-button" type="button"
+      data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + count"
+      [attr.aria-expanded]="expanded" (click)="toggleExpanded()"
+            [attr.aria-controls]="id">
+        <p *ngIf="!isTemplate(title)"
+          class="accordion-title">
+          {{title}}
+          <ng-container [ngTemplateOutlet]="accordion"></ng-container>
+        </p>
+
+      </button>
+    </h2>
+
+    <div [id]="'collapse' + count" class=" collapse" [ngClass]="expand" [attr.aria-labelledby]="id" [attr.data-bs-parent]="id">
+      <div [id]="id" class="accordion-body content">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+      </div>
+    </div>
+  </div>

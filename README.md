@@ -195,7 +195,7 @@ A ⭐️ to <b>Raaghu</b> is to build its triceps 💪 stronger.
 
 
 
-## Contributors ✨
+## Contributor ✨
 
 Thanks goes to these wonderful people
 

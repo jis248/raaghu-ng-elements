@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'rds-carousel',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
