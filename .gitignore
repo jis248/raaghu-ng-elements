@@ -13,7 +13,7 @@ yarn-error.log
 
 # IDEs and editors
 .vc/*
-/.vc/*
+/.vc
 .idea/
 .project
 .classpath
@@ -24,7 +24,7 @@ yarn-error.log
 
 # Visual Studio Code
 .vscode/*
-/.vscode/*
+/.vscode
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -45,5 +45,5 @@ testem.log
 Thumbs.db
 
 # Storybook Document
-.storybook/*
-documentation.json
+/.storybook
+/documentation.json
