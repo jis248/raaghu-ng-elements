@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   Placeholder ='New'
 
   @Input()
-  icon ='bi bi-search'
+  icon =''
 
   @Input()
   size ='form-control-sm'

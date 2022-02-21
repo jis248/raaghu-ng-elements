@@ -4,11 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule,BsDatepickerModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   entryComponents: [AppComponent],
   bootstrap: [environment.localDev ? AppComponent : []],
