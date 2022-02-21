@@ -1,0 +1,85 @@
+#table {
+  thead {
+    background: var(--unnamed-color-5c82e3) 0% 0% no-repeat padding-box;
+    background: #5C82E3 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  thead th {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #EBF0FF;
+    text-transform: capitalize;
+    opacity: 1;
+    padding: 12px;
+  }
+
+  thead th:first-child {
+    border-right: 5px solid white;
+  }
+
+  .borders {
+    border-right: 1px solid #dee2e6;
+    padding: 20px;
+  }
+
+  svg {
+    float: right;
+  }
+
+  td {
+    padding: 14px;
+  }
+
+  tbody {
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #424A50;
+    text-transform: capitalize;
+    opacity: 1;
+    font-weight: normal;
+  }
+
+  th.borders {
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  .table-hover > tbody > tr:hover {
+    --bs-table-accent-bg: #EBF0FF;
+    color: var(--bs-table-hover-color);
+  }
+
+  .sectble {
+    padding-top: 30px;
+  }
+
+  .tbl-dark {
+    background-color: #242F3D;
+    padding: 30px 30px;
+  }
+
+  .tbl-dark .borderh {
+    border-right: 5px solid #242F3D;
+  }
+
+  .tbl-dark tbody tr {
+    border-color: grey;
+    color: #EBF0FF;
+  }
+
+  .tbl-dark .borders {
+    border-right: 1px solid grey;
+    padding: 20px;
+  }
+
+  .table > :not(:last-child) > :last-child > * {
+    border-bottom-color: transparent;
+  }
+
+  .tbl-dark tbody {
+    color: #EBF0FF;
+  }
+}
