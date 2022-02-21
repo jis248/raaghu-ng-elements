@@ -3,7 +3,7 @@ import { AppComponent } from './app.component';
 
 
 export default {
-    title: 'Component/Forms/Textarea',
+    title: 'rds-textarea',
     component:AppComponent ,
     argTypes: {
         disabled:{control:{ type:'boolean'}},
