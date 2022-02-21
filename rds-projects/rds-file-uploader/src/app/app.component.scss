@@ -1,0 +1,214 @@
+.files {
+  position: relative;
+  text-align: center;
+  margin: 0;
+  width: 100% !important;
+  height: 100px;
+  overflow: hidden;
+  background: #eaeff5 0% 0% no-repeat padding-box;
+  border: 1px dashed #9bacbc;
+  opacity: 1;
+  border-radius: 4px;
+}
+
+.files input {
+  width: 100% !important;
+  height: 200px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.files {
+  position: relative;
+}
+
+.files:after {
+  pointer-events: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 70px;
+  right: 0;
+  height: 70px;
+  content: "";
+  background-image: url(https://image.flaticon.com/icons/svg/130/130993.svg);
+  display: block;
+  margin: 0 auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.files:before {
+  content: "Drag and drop files";
+  position: absolute;
+  bottom: 50px;
+  left: 18px;
+  right: 0;
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #3d4d60;
+}
+
+input.form-control.file-input {
+  height: 90px !important;
+}
+span.file-type {
+  left: 19px;
+  bottom: 29px;
+  position: absolute;
+}
+span.file-type {
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #9bacbc;
+}
+span.spn-svg {
+  position: absolute;
+  right: 30px;
+  top: 29px;
+}
+.spn-svg svg {
+  color: #bbc7d3;
+}
+.text-right {
+  float: right;
+  text-align: right;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #9bacbc;
+  opacity: 1;
+  line-height: 24px;
+}
+label {
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  font-weight: bold;
+}
+input.form-control.file-input {
+  opacity: 0;
+}
+.pb {
+  padding-bottom: 50px;
+}
+.files:hover {
+  background: #dde2e8;
+}
+.files:focus {
+  border: 3px solid #67aeec;
+  /* opacity: 0.06; */
+  background-color: #dce1e7;
+}
+.top-div {
+  padding-top: 50px;
+}
+.press {
+  background: #cacfd3;
+}
+.press:hover {
+  background: #cacfd3;
+}
+.press svg {
+  color: #9b9b9b !important;
+}
+.drdp {
+  background-color: #1f8eee47;
+  border: 2px solid #1f8eee;
+}
+.drdp:hover {
+  background-color: #1f8eee47;
+  border: 2px solid #1f8eee;
+}
+.drdp svg {
+  color: #1f8eee !important;
+}
+.alert-col {
+  margin-top: 20px;
+  padding-right: 15px;
+  background: transparent linear-gradient(90deg, #dcdadf 0%, #ff606048 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #232e3c;
+  opacity: 1;
+  margin-bottom: 5px;
+}
+.btn-fclose {
+  float: right;
+}
+.file-close {
+  background-color: transparent;
+  border: 0px;
+}
+.file-close svg {
+  color: #9bacbc;
+}
+.file-size {
+  padding-right: 20px;
+}
+.error-msg {
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #ff6060;
+  position: absolute;
+  top: 4rem;
+}
+.alert-un {
+  background-color: #eaeff5 !important;
+  border: 1px solid #eaeff5;
+  padding-right: 15px;
+  margin-top: 20px;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #232e3c;
+}
+
+/* // media queries */
+
+/* //iphone 5 */
+@media (min-width: 320px) and (max-width: 570px) {
+  .alert-un {
+    padding-right: 0px;
+    font-size: 10px;
+  }
+  .file-size {
+    padding-right: 10px;
+  }
+}
+
+// ipad pro
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fil-div {
+    display: block;
+    max-width: 100vh;
+    width: 100vh;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1365px) {
+  .fil-div {
+    display: block;
+    max-width: 100vh;
+    width: 100vh;
+  }
+}
+
+// Removed Bullet on list element
+
+.list-style li {
+  list-style: none;
+}
+.list-style {
+  padding-left: 0rem;
+}
