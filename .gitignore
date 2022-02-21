@@ -45,5 +45,12 @@ testem.log
 Thumbs.db
 
 # Storybook Document
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 /storybook-static
+>>>>>>> main
+=======
+/storybook-static
+>>>>>>> 0c7c5ab51f375faf6bbef4b6a95d405ef782e0c6
 /documentation.json
