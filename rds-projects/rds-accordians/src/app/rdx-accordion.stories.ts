@@ -30,7 +30,7 @@ export const Basic: Story<AppComponent> = (args) => ({
   props: args,
   template: `
     <rdx-accordion>
-      <accordion-item title="Section 1 title" (onClose)="onClose($event)" (onShow)="onShow($event)" [expanded]="expandall" [accordion]="accordion" [content]="content">
+      <accordion-item title="Section 1 title" (onClose)="onClose($event)" (onShow)="onShow($event)" [expanded]="expandall"  [content]="content">
       <ng-template #content>
       <h3>Custom </h3>
       </ng-template>
