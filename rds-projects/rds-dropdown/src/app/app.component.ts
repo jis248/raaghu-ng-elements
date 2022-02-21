@@ -2,7 +2,7 @@ import { ViewEncapsulation } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'rds-dropdown',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   
@@ -20,7 +20,9 @@ export class AppComponent implements OnInit  {
   @Input()
   darkDropdown = false
   @Input()
-  listItems=[{value:'India',some:'value'},{value:'USA'},{value:'Canada'}];
+  listItems=[{value:'India',some:'value',id:1},{value:'USA',some:'value',id:2},{value:'Canada',some:'value',id:3}];
+  @Input()
+  dropdownAlignment:string[]=[''];
   constructor() { }
   @Input()
   label?:string;
@@ -91,11 +93,13 @@ return customClasses.join(' ')
 
    // Dropdown background theme
    public get menu():string[]{
-     var customMenu = ['dropdown-menu']
-    var color = this.darkDropdown? 'dropdown-menu-dark':''
-    customMenu.push(color)
-     return customMenu
-   }
+
+    var customMenu = ['dropdown-menu']
+   var color = this.darkDropdown? 'dropdown-menu-dark':''
+   customMenu.push(color)
+   customMenu = customMenu.concat(this.dropdownAlignment)
+    return customMenu
+  }
 
    //Drop down direction
    public get dropdownDirection():string[]{

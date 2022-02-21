@@ -1,4 +1,5 @@
-import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';
+import { ApplicationRef, CUSTOM_ELEMENTS_SCHEMA, DoBootstrap, Injector, NgModule } from '@angular/core';
+import { LazyElementsModule } from '@angular-extensions/elements';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
@@ -12,8 +13,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LazyElementsModule
   ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
+  entryComponents: [AppComponent],
   providers: [],
   bootstrap: [environment.localDev ? AppComponent : []],})
 export class AppModule implements DoBootstrap {
@@ -21,7 +25,7 @@ export class AppModule implements DoBootstrap {
     const micro = createCustomElement(AppComponent, {
       injector: this.injector,
     });
-    customElements.define('rds-input', micro);
+    customElements.define('rds-input-group', micro);
   }
 
   ngDoBootstrap(appRef: ApplicationRef): void {

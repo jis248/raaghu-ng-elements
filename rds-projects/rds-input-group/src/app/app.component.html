@@ -37,8 +37,7 @@
         <span class="input-group-text" id="basic-addon1">{{item.displayName}}</span>
       </ng-container>
       <ng-container *ngSwitchCase="'button'">
-        <button class="btn" [ngClass]="getbuttonClasses(item)" [disabled]="item.disabled" type="button"
-          id="button-addon1">{{item.displayName}}</button>
+        <rds-button [size]="item.size" *axLazyElement="link" [type]="item.buttonType" ></rds-button>
       </ng-container>
       <ng-container *ngSwitchCase="'radio'">
         <div class="input-group-text">

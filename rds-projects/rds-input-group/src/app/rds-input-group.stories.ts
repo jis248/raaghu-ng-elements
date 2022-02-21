@@ -38,10 +38,10 @@ InputGroup.args = {
         },
         {
             type: 'button',
-            disabled: false,
-            buttonType: 'secondary',
-            displayName:'Button',
-            size:'sm'
+            label: 'Label',
+            buttonType: 'primary',
+            size: 'sm',
+            link : 'http://localhost:3000/rds-button/main.js'
         },
         {
             type: 'select',
