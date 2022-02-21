@@ -3,11 +3,18 @@ import { AppComponent } from './app.component';
 
 
 export default {
-    title: 'rds-textarea',
+    title: 'rds-search',
     component:AppComponent ,
     argTypes: {
+        inputType: {
+            options: ['email','text','password'],
+            control: { type: 'select' }
+          },
+        size: {
+            options: ['default', 'small','large'],
+            control: { type: 'radio' }
+          },
         disabled:{control:{ type:'boolean'}},
-        rows:{control:{ type:'text'}},
         readonly:{control:{ type:'boolean'}},
         value:{control:{ type:'text'}},
     }
@@ -17,12 +24,10 @@ const Template: Story<AppComponent> = (args:AppComponent) => ({
     props: args,
   });
 
-  export const InputText = Template.bind({})
-  InputText.args = {
-    disabled:false,
-    rows: '3',
-    readonly:false,
-    label:'Text area',
-    placeholderText:"Add Placeholder",
-    floatinginputLabel:""
+  export const Search = Template.bind({})
+  Search.args = {
+
+    Placeholder:'New',
+    icon:'bi bi-search'
+
   }
