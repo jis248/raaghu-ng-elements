@@ -3,21 +3,21 @@ import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { RdsListGroupComponent } from './RdsListGroup.component';
 @NgModule({
   declarations: [
-    AppComponent
+    RdsListGroupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [environment.localDev ? AppComponent : []]
+  bootstrap: [environment.localDev ? RdsListGroupComponent : []]
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(AppComponent, {
+    const micro = createCustomElement(RdsListGroupComponent, {
       injector: this.injector,
     });
     customElements.define('rds-list-group', micro);
