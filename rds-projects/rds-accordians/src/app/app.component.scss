@@ -1,0 +1,17 @@
+.container-fluid{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.lm{
+  padding-right: 80px;
+}
+h5{
+  padding-bottom: 30px;
+}
+h6{
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+.accordion-button::after{
+  transition: none !important;
+}
