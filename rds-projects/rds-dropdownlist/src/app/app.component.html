@@ -1,0 +1,13 @@
+<label class="dropdown">
+
+  <div class="dd-button" [ngClass]="type">
+    {{placeholder}}
+  </div>
+
+  <input type="checkbox" class="dd-input" id="test">
+
+  <ul class="dd-menu bind-dropdown" [ngClass]="variation">
+    <ng-container *ngFor="let item of listItems; index as i;" [ngTemplateOutlet]="DropdownItems" [ngTemplateOutletContext]="{ $implicit: item ,index:i}"> </ng-container>
+  </ul>
+
+</label>
