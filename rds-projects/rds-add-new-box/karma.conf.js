@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, '../../coverage/rds-new-box'),
+      dir: require('path').join(__dirname, '../../coverage/rds-add-new-box'),
       subdir: '.',
       reporters: [
         { type: 'html' },

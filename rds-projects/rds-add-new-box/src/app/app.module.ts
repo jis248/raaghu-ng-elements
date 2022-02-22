@@ -4,26 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
-import { RdsNewBoxComponent } from './rds-new-box.component';
+import { RdsAddNewBoxComponent } from './rds-add-new-box.component';
 
 @NgModule({
   declarations: [
-    RdsNewBoxComponent
+    RdsAddNewBoxComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  entryComponents: [RdsNewBoxComponent],
-  bootstrap: [environment.localDev ? RdsNewBoxComponent : []],
+  bootstrap: [environment.localDev ? RdsAddNewBoxComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(RdsNewBoxComponent, {
+    const micro = createCustomElement(RdsAddNewBoxComponent, {
       injector: this.injector,
     });
-    customElements.define('rds-new-box', micro);
+    customElements.define('rds-add-new-box', micro);
   }
 
   ngDoBootstrap(appRef: ApplicationRef): void {

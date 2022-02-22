@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'rds-new-box'`, () => {
+  it(`should have as title 'rds-add-new-box'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('rds-new-box');
+    expect(app.title).toEqual('rds-add-new-box');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('rds-new-box app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('rds-add-new-box app is running!');
   });
 });

@@ -3,18 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment.prod';
 import { createCustomElement } from '@angular/elements';
-import { RdsTileComponent } from '../../../rds-tile/src/app/rds-tile.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [RdsTileComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  entryComponents: [RdsTileComponent],
-  bootstrap: [environment.localDev ? RdsTileComponent : []],
+  entryComponents: [AppComponent],
+  bootstrap: [environment.localDev ? AppComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(RdsTileComponent, {
+    const micro = createCustomElement(AppComponent, {
       injector: this.injector,
     });
     customElements.define('rds-button', micro);
