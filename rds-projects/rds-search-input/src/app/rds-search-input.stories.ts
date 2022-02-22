@@ -3,7 +3,7 @@ import { AppComponent } from './app.component';
 
 
 export default {
-    title: 'rds-search',
+    title: 'ELEMENTS/rds-search',
     component:AppComponent ,
     argTypes: {
         inputType: {
