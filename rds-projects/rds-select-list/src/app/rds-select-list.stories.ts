@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent } from './app.component';
 
 export default {
-    title: 'ELEMENTS/rds-select-list',
+    title: 'rds-select-list',
     component: AppComponent,
     argTypes: {
         size: {
