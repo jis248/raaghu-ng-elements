@@ -1,10 +1,12 @@
-<div class="toast-container position-absolute bottom-0 end-0 p-3">
+<button class="btn btn-primary" (click)="showToast()">Click Here</button>
+
+<div *ngIf="clicked" class="toast-container position-absolute p-3" [ngClass]="positionClass">
   <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header" [ngClass]="show">
-      <img src="../../assets/images/blue.jfif" class="rounded me-2" [ngClass]="img" alt="..." width="8%">
+      <!-- <img src="../../assets/images/blue.jfif" class="rounded me-2" [ngClass]="img" alt="..." width="20" height="20"> -->
       <strong class="me-auto">{{headerTitle}}</strong>
       <small>{{time}}</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" (click)="hideToast()"></button>
     </div>
     <div class="toast-body" [ngClass]="classes" [ngStyle]="{'background-color':custcolor, 'color':textColor}">
       {{message}}

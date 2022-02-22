@@ -45,4 +45,5 @@ testem.log
 Thumbs.db
 
 # Storybook Document
+/storybook-static
 /documentation.json
