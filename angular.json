@@ -3103,6 +3103,37 @@
           }
         }
       }
+    },
+    "app-config": {
+      "projectType": "library",
+      "root": "rds-projects/app-config",
+      "sourceRoot": "rds-projects/app-config/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "rds-projects/app-config/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "rds-projects/app-config/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "rds-projects/app-config/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "rds-projects/app-config/src/test.ts",
+            "tsConfig": "rds-projects/app-config/tsconfig.spec.json",
+            "karmaConfig": "rds-projects/app-config/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }

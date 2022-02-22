@@ -6,6 +6,7 @@ const http = require('http');
 const exec = util.promisify(require('child_process').exec);
 const projectRootFolder = 'rds-projects';
 const distPath = path.join(__dirname, 'dist');
+const elementsFilePath = path.join(__dirname, 'rds-projects', 'app-config', 'src', 'lib', 'elements.ts')
 
 const buildAllProjects = async (directories, projectToBuild) => {
     if (projectToBuild) {
@@ -16,6 +17,23 @@ const buildAllProjects = async (directories, projectToBuild) => {
             console.log('building ' + dir + '...')
             await exec(`npm run build --project="${dir}" --href=/${dir}/`, { cwd: path.join(__dirname) });
         }
+    }
+}
+
+const updateElementsTsFile = async () => {
+    if (existsSync(distPath)) {
+        const dirs = await getDirectories(distPath);
+        const elementsTsFile = (await fs.readFile(elementsFilePath)).toString().split('=')[1].trim().split('').filter(r => r !== ` ` && r !== `\r` && r !== `\n` && r !== `'`).join('');
+        const openingBracketIndex = elementsTsFile.indexOf('[');
+        const closingBracketIndex = elementsTsFile.indexOf(']');
+        let arr = elementsTsFile.substring(openingBracketIndex + 1, closingBracketIndex).split(',');
+
+        for (const dir of dirs) {
+            if (arr.includes(dir)) continue;
+            arr.push(dir);
+        }
+        arr.shift()
+        await fs.writeFile(elementsFilePath, `export const elements: string[] = [${arr.map(r => `'${r}'`).join(',')}]`)
     }
 }
 
@@ -54,15 +72,21 @@ async function start() {
     if (args?.build !== "false") {
         const directories = await getDirectories(path.join(__dirname, projectRootFolder));
         const projectToBuild = args?.project;
-        if (projectToBuild && !directories.includes(projectToBuild)) {
-            console.log("invalid project name");
-            return;
+        if (projectToBuild) {
+            if (!directories.includes(projectToBuild)) {
+                console.log("invalid project name");
+                return;
+            } else {
+                await buildAllProjects(directories, projectToBuild);
+            }
+        } else {
+            await fs.rm(path.join(__dirname, 'dist'), { recursive: true, force: true });
+            await fs.mkdir(path.join(__dirname, 'dist'));
+            console.log('Building projects from ' + projectRootFolder);
+            await buildAllProjects(directories, projectToBuild);
         }
-        await fs.rm(path.join(__dirname, 'dist'), { recursive: true, force: true });
-        await fs.mkdir(path.join(__dirname, 'dist'));
-        console.log('Building projects from ' + projectRootFolder);
-        await buildAllProjects(directories, projectToBuild);
     }
+    await updateElementsTsFile();
     startServer();
 }
 
