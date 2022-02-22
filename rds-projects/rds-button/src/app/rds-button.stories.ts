@@ -1,4 +1,6 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
+import { APP_BASE_HREF } from '@angular/common';
+import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent } from './app.component';
 
@@ -6,6 +8,7 @@ import { AppComponent } from './app.component';
 export default {
   title: 'rds-button',
   component: AppComponent,
+
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
