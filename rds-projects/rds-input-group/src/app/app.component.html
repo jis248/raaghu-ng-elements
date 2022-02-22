@@ -1,84 +1,19 @@
-<!-- <div class="input-group input-group-lg">
-  <span class="input-group-text">$</span>
-  <span class="input-group-text">0.00</span>
-  <ng-container *ngFor="let item of inputGroupItem">
-    <ng-container [ngSwitch]="item.type">
-      <ng-container *ngSwitchCase="'label'">
-        <label for="inputGroupSelect01" class="input-group-text">{{item.displayName}}</label>
-      </ng-container>
-      <div *ngSwitchCase="'button'">
-        <button class="btn" [ngClass]="getbuttonClasses(item)" [disabled]="item.disabled" (click)="click.emit()">{{
-          item.displayName || 'Button' }}</button>
-      </div>
-      <div *ngSwitchCase="'select'">
-        <select id="select" class="form-select" aria-label="Default select example" [disabled]="item.disabled"
-          [multiple]="item.multiple" (change)="onSelect($event)">
-          <ng-container *ngFor="let listItem of item.listItems" [ngTemplateOutlet]="DropdownItems"
-            [ngTemplateOutletContext]="{ $implicit: listItem }"></ng-container>
-          <ng-template #DropdownItems let-val>
-            <option>{{val.value}}</option>
-          </ng-template>
-        </select>
-      </div>
-      <div *ngSwitchDefault [ngClass]="getDefaultClass(item.type)">
-        <input (keyup)="onKeyup($event)" [ngClass]="getClassElemet(item.type)" (focus)="focus()" [attr.type]="item.type"
-          [attr.placeholder]="item.placeholder" [value]="item.value" [disabled]="item.disabled"
-          [readonly]="item.readonly">
-
-      </div>
-    </ng-container>
-  </ng-container>
-
-</div> -->
 <div class="input-group" [ngClass]="classes">
-  <ng-container *ngFor="let item of inputGroupItem">
+  <!-- <ng-container *ngFor="let item of inputGroupItem">
     <ng-container [ngSwitch]="item.type">
-      <ng-container *ngSwitchCase="'label'">
-        <span class="input-group-text" id="basic-addon1">{{item.displayName}}</span>
-      </ng-container>
-      <ng-container *ngSwitchCase="'button'">
-        <rds-button [size]="item.size" *axLazyElement="link" [type]="item.buttonType" ></rds-button>
-      </ng-container>
-      <ng-container *ngSwitchCase="'radio'">
-        <div class="input-group-text">
-          <input class="form-check-input" [attr.type]="item.type" [disabled]="item.disabled"
-            (change)="onRadioChange($event)" [value]="item.value" aria-label="Checkbox for following text input">
-        </div>
-      </ng-container>
-      <ng-container *ngSwitchCase="'checkbox'">
-        <div class="input-group-text">
-          <input class="form-check-input" [attr.type]="item.type" [disabled]="item.disabled"
-            (change)="onCheckboxChange($event)" [value]="item.value" aria-label="Checkbox for following text input">
-        </div>
+      <ng-container *ngSwitchCase="'button'" >
+        <rds-button>
+        </rds-button>
       </ng-container>
       <ng-container *ngSwitchCase="'select'">
-        <select class="form-select" [ngClass]="getSelectClass(item)" id="inputGroupSelect03" [disabled]="item.disabled"
-          aria-label="Example select with button addon" [disabled]="item.disabled" [multiple]="item.multiple"
-          (change)="onSelect($event)">
-          <ng-container *ngFor="let listItem of item.listItems" [ngTemplateOutlet]="selectionItems"
-            [ngTemplateOutletContext]="{ $implicit: listItem }"></ng-container>
-          <ng-template #selectionItems let-val>
-            <option>{{val.value}}</option>
-          </ng-template>
-        </select>
-      </ng-container>
-      <ng-container *ngSwitchCase="'dropdown'">
-        <button class="btn  dropdown-toggle" [ngClass]="getbuttonClasses(item)" type="button" data-bs-toggle="dropdown"
-          aria-expanded="false">{{item.displayName}}</button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <ng-container class="" *ngFor="let listItem of item.listItems" [ngTemplateOutlet]="DropdownItems"
-            [ngTemplateOutletContext]="{ $implicit: listItem}"></ng-container>
-          <ng-template #DropdownItems let-val>
-            <li><a class="dropdown-item">{{val.value}}</a></li>
-          </ng-template>
-        </ul>
+        <rds-select-list></rds-select-list>
       </ng-container>
       <ng-container *ngSwitchDefault>
-        <input [attr.type]="item.type" [attr.placeholder]="item.placeholder" (keyup)="onKeyup($event)"
-          [disabled]="item.disabled" class="form-control" [value]="item.value"
-          aria-label="Dollar amount (with dot and two decimal places)">
+        <rds-input  [inputType]="item.type"></rds-input>
       </ng-container>
     </ng-container>
-  </ng-container>
+  </ng-container> -->
+  <ng-content>
 
+  </ng-content>
 </div>

@@ -14,12 +14,12 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LazyElementsModule
+    LazyElementsModule,
   ],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   entryComponents: [AppComponent],
-  providers: [],
-  bootstrap: [environment.localDev ? AppComponent : []],})
+  bootstrap: [environment.localDev ? AppComponent : []],
+})
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
     const micro = createCustomElement(AppComponent, {

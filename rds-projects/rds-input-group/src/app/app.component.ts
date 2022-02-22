@@ -13,42 +13,14 @@ export class AppComponent {
   @Input() DropdownItems!: TemplateRef<any>
   @Input() inputGroupItem = [
     {
-      displayName: '$',
-      type: 'label'
-    },
-    {
-      type: 'radio',
-      disabled: false,
-      value: true
-
-    },
-    {
       type: 'text',
-      disabled: false,
-      placeholder: 'sample',
-      value: ''
     },
     {
       type: 'button',
-      label: 'Label',
-      buttonType: 'primary',
-      size: 'sm',
-      link : 'http://localhost:3000/rds-button/main.js'
     },
     {
       type: 'select',
-      disabled: false,
-      multiple: false,
       listItems: [{ value: 'India', some: 'value' }, { value: 'USA' }, { value: 'Canada' }],
-      size: 'sm'
-    },
-    {
-      displayName: 'Dropdown',
-      buttonType: 'secondary',
-      type: 'dropdown',
-      disabled: false,
-      listItems: [{ value: 'India', some: 'value' }, { value: 'USA' }, { value: 'Canada' }],
-      size: 'sm'
     }
   ];
 
