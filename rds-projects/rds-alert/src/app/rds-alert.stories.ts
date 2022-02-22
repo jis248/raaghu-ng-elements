@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent } from './app.component';
 
 export default {
-  title: 'Component/Alert',
+  title: 'Elements/Alert',
   component: AppComponent,
   argTypes: {
     backgroundColor: { control: 'color' },

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
-  title: 'rds-button',
+  title: 'Elements/Button',
   component: AppComponent,
 
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes

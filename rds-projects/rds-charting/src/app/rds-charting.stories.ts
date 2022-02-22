@@ -3,7 +3,7 @@ import { RdsChartingComponent } from './rdsCharting.component';
 
 
 export default {
-    title: 'ELEMENTS/rds-charting',
+    title: 'Elements/Charting',
     component:RdsChartingComponent ,
 } as Meta
 

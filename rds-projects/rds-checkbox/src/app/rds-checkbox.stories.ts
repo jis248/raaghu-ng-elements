@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent } from './app.component';
 
 export default {
-    title: 'Component/Forms/rds-checkbox',
+    title: 'Elements/Checkbox',
     component:AppComponent ,
     argTypes: {
          

@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent } from './app.component';
 
 export default {
-    title: 'ELEMENTS/rds-radio-buttons',
+    title: 'Elements/Radio Button',
     component:AppComponent ,
     argTypes: {
         

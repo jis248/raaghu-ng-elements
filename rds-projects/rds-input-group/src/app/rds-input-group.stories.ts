@@ -1,4 +1,3 @@
-import { LazyElementsModule } from '@angular-extensions/elements';
 import { APP_BASE_HREF } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { moduleMetadata } from '@storybook/angular';
@@ -6,10 +5,10 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent } from './app.component';
 
 export default {
-    title: 'Component/Forms/rds-input-group',
+    title: 'Elements/Input Group',
     decorators: [
         moduleMetadata({
-            imports: [LazyElementsModule],
+            imports: [],
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
             providers: [
                 { provide: APP_BASE_HREF, useValue: "/" }

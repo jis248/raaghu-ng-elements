@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { RdsOffcanvasComponent } from './rdsOffcanvascomponent'
 
 export default {
-  title: 'Elements/rds-offcanvas',
+  title: 'Elements/Offcanvas',
   component: RdsOffcanvasComponent,
   argTypes: {
     onShow:{ click: "clicked"},
