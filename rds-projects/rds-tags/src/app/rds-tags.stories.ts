@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 export default {
-    title: 'Component/Tags',
+    title: 'rds-tags',
     component:AppComponent ,
     decorators: [
       moduleMetadata({
