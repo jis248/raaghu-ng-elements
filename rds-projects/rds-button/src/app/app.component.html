@@ -3,9 +3,6 @@
 <button [type]="buttonType" [class]="classes" (click)="onClick.emit($event)"
 [ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor , 'color':color}"
 [disabled]="disabled"
-[attr.data-bs-toggle]="active"
-[attr.data-bs-placement]="tooltipPosition"
-[title]="tooltipTitle"
 [ngClass]= "width"
 >
 

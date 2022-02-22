@@ -1,26 +1,26 @@
 import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 import { AppRoutingModule } from './app-routing.module';
-import { RdsListGroupComponent } from './RdsListGroup.component';
+import { RdsPopoverComponent } from './rdsPopover.component';
 @NgModule({
   declarations: [
-    RdsListGroupComponent
+    RdsPopoverComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [environment.localDev ? RdsListGroupComponent : []]
+  bootstrap: [environment.localDev ? RdsPopoverComponent : []]
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(RdsListGroupComponent, {
+    const micro = createCustomElement(RdsPopoverComponent, {
       injector: this.injector,
     });
-    customElements.define('rds-list-group', micro);
+    customElements.define('rds-popover', micro);
   }
 
   ngDoBootstrap(appRef: ApplicationRef): void {

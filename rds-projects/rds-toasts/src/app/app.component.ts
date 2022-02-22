@@ -2,7 +2,7 @@ import { AfterViewInit, Component, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
+  selector: 'rds-toast',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -39,6 +39,10 @@ export class AppComponent implements AfterViewInit {
    @Input()
    textColor = ''
   
+    @Input()
+  position: 'Top-Left' | 'Top-Center' | 'Top-Right' | 'Middle-Left' | 'Middle-Center' | 'Middle-Right' | 'Bottom-Left' | 'Bottom-Center' | 'Bottom-Right' = 'Bottom-Right';
+
+  clicked=false;
   
    //messages: ToastItems[] = [];
     constructor(
@@ -73,5 +77,14 @@ export class AppComponent implements AfterViewInit {
         customClasses.push('d-none')
       }  
       return customClasses
+    }
+
+    showToast(){
+      debugger;
+      this.clicked=!this.clicked;
+    }
+    hideToast(){
+      debugger;
+      this.clicked=false;
     }
 }

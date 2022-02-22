@@ -56,14 +56,6 @@ CloseButton.args = {
     iconClass: 'bi bi-x-lg',
 };
 
-export const Tooltip = Template.bind({});
-Tooltip.args = {
-  // role: 'tooltip',
-  label: 'tooltip button',
-  tooltipTitle: 'hello this is tooltip',
-  tooltipPosition: 'bottom',
-};
-
 export const IconButton = Template.bind({});
 IconButton.args = {
    roundedButton: true,
