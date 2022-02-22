@@ -8,7 +8,6 @@ export default {
 } as Meta
 
 const Template: Story<RdsLoadingAnimationComponent> = (args:RdsLoadingAnimationComponent) => ({
-    props: args,
   });
 
   export const LoadingAnimation = Template.bind({})
