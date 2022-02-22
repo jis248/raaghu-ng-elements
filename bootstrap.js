@@ -76,9 +76,8 @@ async function start() {
             if (!directories.includes(projectToBuild)) {
                 console.log("invalid project name");
                 return;
-            } else {
-                await buildAllProjects(directories, projectToBuild);
             }
+            await buildAllProjects(directories, projectToBuild);
         } else {
             await fs.rm(path.join(__dirname, 'dist'), { recursive: true, force: true });
             await fs.mkdir(path.join(__dirname, 'dist'));
