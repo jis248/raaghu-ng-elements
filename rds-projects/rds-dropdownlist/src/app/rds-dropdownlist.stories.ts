@@ -1,13 +1,9 @@
 ﻿import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent } from './app.component';
 
-
-
-
-
 export default {
 
-  title: 'rds-dropdownlist',
+  title: 'Elements/Dropdown List',
   component: AppComponent,
   argTypes: {
 

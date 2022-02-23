@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { RdsListGroupComponent } from './RdsListGroup.component';
 export default {
 
-  title: 'rds-list-group',
+  title: 'Elements/List Group',
   component: RdsListGroupComponent,
   argTypes: {
    

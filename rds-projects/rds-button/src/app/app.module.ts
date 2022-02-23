@@ -1,15 +1,15 @@
-import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';
+import { ApplicationRef, CUSTOM_ELEMENTS_SCHEMA, DoBootstrap, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { environment } from '../environments/environment.prod';
 import { createCustomElement } from '@angular/elements';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
   entryComponents: [AppComponent],
+  providers: [],
   bootstrap: [environment.localDev ? AppComponent : []],
 })
 export class AppModule implements DoBootstrap {

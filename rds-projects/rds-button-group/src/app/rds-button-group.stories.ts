@@ -4,7 +4,7 @@ import { RdsButtonGroupComponent } from './rdsButtonGroup.component';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
-  title: 'Elements/rds-button-group',
+  title: 'Elements/Button Group',
   component: RdsButtonGroupComponent,
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
 } as Meta;
