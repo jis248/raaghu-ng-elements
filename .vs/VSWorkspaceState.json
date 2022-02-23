@@ -2,17 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\rds-projects",
-    "\\rds-projects\\rds-accordians\\src",
-    "\\rds-projects\\rds-accordians\\src\\app",
-    "\\rds-projects\\rds-button",
-    "\\rds-projects\\rds-popover",
-    "\\rds-projects\\rds-popover\\src",
-    "\\rds-projects\\rds-popover\\src\\app",
-    "\\rds-projects\\rds-popover\\src\\environments",
-    "\\rds-projects\\rds-tile",
-    "\\rds-projects\\rds-tile\\src",
-    "\\rds-projects\\rds-tile\\src\\environments"
+    "\\rds-projects\\rds-loading-animation",
+    "\\rds-projects\\rds-loading-animation\\src",
+    "\\rds-projects\\rds-loading-animation\\src\\app"
   ],
-  "SelectedNode": "\\rds-projects\\rds-button\\src\\app\\app.component.ts",
+  "SelectedNode": "\\raaghu_icon.png",
   "PreviewInSolutionExplorer": false
 }
