@@ -1,0 +1,10 @@
+<div [ngClass]="cardClasses" [ngStyle]="{'background-color':backgroundColor , 'color': color ,'width':width}">
+  <ng-container [ngTemplateOutlet]="header"></ng-container>
+   <div [ngClass]="cardBody">
+     <h5 class="custom-title">{{headerTitle}}</h5>
+     <p class="custom-desc">{{cardDescription}}</p>
+      <ng-content></ng-content>
+      <ng-container [ngTemplateOutlet]="footer"></ng-container>
+   </div>
+ </div>
+ 
