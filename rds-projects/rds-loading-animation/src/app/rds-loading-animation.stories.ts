@@ -3,7 +3,7 @@ import { RdsLoadingAnimationComponent } from './rdsLoadingAnimation.component';
 
 
 export default {
-    title: 'ELEMENTS/rds-loading-animation',
+    title: 'Elements/Loading Animation',
     component:RdsLoadingAnimationComponent ,
 } as Meta
 

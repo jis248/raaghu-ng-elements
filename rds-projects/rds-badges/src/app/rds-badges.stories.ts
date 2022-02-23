@@ -8,7 +8,7 @@ import { RdsBadgesComponent } from './Rdsbadges.component';
 
 export default {
 
-  title: 'rds-badges',
+  title: 'Elements/Badge',
 
   component: RdsBadgesComponent,
   decorators: [

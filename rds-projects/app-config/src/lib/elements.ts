@@ -1,0 +1,1 @@
+export const elements: string[] = ['rds-alert','rds-button','rds-carousel','rds-color-picker']

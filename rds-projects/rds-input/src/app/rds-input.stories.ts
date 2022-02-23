@@ -3,7 +3,7 @@ import { AppComponent } from './app.component';
 
 
 export default {
-    title: 'rds-input',
+    title: 'Elements/Input',
     component:AppComponent ,
     argTypes: {
         inputType: {
