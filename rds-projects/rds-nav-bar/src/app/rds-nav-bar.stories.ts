@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { RdsNavbarComponent } from './RdsNavbar.component';
 export default {
 
-  title: 'rds-nav-bar',
+  title: 'Elements/Navbar',
   component: RdsNavbarComponent,
   argTypes: {
     backgroundColor: { control: 'color' },

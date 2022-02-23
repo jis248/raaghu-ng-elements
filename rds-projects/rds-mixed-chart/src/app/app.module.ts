@@ -21,7 +21,7 @@ export class AppModule implements DoBootstrap {
     const micro = createCustomElement(AppComponent, {
       injector: this.injector,
     });
-    customElements.define('rds-modal', micro);
+    customElements.define('rds-mixed-chart', micro);
   }
 
   ngDoBootstrap(appRef: ApplicationRef): void {
