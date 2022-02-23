@@ -20,7 +20,7 @@ export class AppModule implements DoBootstrap {
     const micro = createCustomElement(AppComponent, {
       injector: this.injector,
     });
-    customElements.define('rds-offcanvas', micro);
+    customElements.define('rds-pagination', micro);
   }
 
   ngDoBootstrap(appRef: ApplicationRef): void {

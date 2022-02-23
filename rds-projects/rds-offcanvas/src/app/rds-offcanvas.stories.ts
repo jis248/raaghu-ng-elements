@@ -1,16 +1,16 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsOffcanvasComponent } from './rdsOffcanvascomponent'
+import { AppComponent } from './app.component'
 
 export default {
   title: 'Elements/Offcanvas',
-  component: RdsOffcanvasComponent,
+  component: AppComponent,
   argTypes: {
     onShow:{ click: "clicked"},
     onClose:{ click: "clicked"},
 
   },
   } as Meta;
-  const Template: Story<RdsOffcanvasComponent> = (args: RdsOffcanvasComponent) => ({
+  const Template: Story<AppComponent> = (args: AppComponent) => ({
   props: args,
   template: `
   <button
@@ -32,5 +32,7 @@ export default {
 
   export const offcanvas = Template.bind({});
   offcanvas.args ={
-    offId:'canvas1'
+    offId:'canvas1',
+    placement: 'bottom ',
+    backDrop: 'Scrolling',
   }

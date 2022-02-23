@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsPopoverComponent } from './rdsPopover.component';
+import { AppComponent } from './app.component';
 
 export default {
     title: 'Elements/Popover',
-    component: RdsPopoverComponent,
+    component: AppComponent,
     decorators: [
       moduleMetadata({
         imports: [CommonModule],
@@ -13,11 +13,11 @@ export default {
     ],
 } as Meta;
 
-const Template: Story<RdsPopoverComponent> = (args: RdsPopoverComponent) => ({
+const Template: Story<AppComponent> = (args: AppComponent) => ({
     props: args,
 });
 
-export const PopoverWithButton: Story<RdsPopoverComponent> = (args) => ({
+export const PopoverWithButton: Story<AppComponent> = (args) => ({
   props: args,
   template:
       `<rds-popover [popoverPosition]= "popoverPosition" 
@@ -33,7 +33,7 @@ PopoverWithButton.args = {
   popoverContent: 'popover body'
 };
 
-export const PopoverWithLink: Story<RdsPopoverComponent> = (args) => ({
+export const PopoverWithLink: Story<AppComponent> = (args) => ({
   props: args,
   template:
       `<rds-popover [popoverPosition]= "popoverPosition"
