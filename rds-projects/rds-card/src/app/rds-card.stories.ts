@@ -1,9 +1,9 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AppComponent } from './app.component';
+import { AppComponent as RdsCard  } from './app.component';
 
 export default {
   title: 'Elements/rds-card/Basic',
-  component: AppComponent,
+  component: RdsCard,
   argTypes: {
   backgroundColor: { control: 'color' },
   color: { control: 'color' },
@@ -12,7 +12,7 @@ export default {
   },
   } as Meta;
 
-const Template: Story<AppComponent> = (args: AppComponent) => ({
+const Template: Story<RdsCard> = (args: RdsCard) => ({
   props: args,
   template: `<rds-card  [header]="header"
    [footer]="footer"
@@ -33,7 +33,7 @@ Card.args = {
   width : '20%',
 };
 
-const Avatar: Story<AppComponent> = (args: AppComponent) => ({
+const Avatar: Story<RdsCard> = (args: RdsCard) => ({
   props: args,
   template: `<rds-card  [header]="header"
    [footer]="footer"
@@ -52,7 +52,7 @@ const Avatar: Story<AppComponent> = (args: AppComponent) => ({
   // const teletext = "some text"
   export const withAvatar = Avatar.bind({});
 
-  const Avatarpos: Story<AppComponent> = (args: AppComponent) => ({
+  const Avatarpos: Story<RdsCard> = (args: RdsCard) => ({
     props: args,
     template: `<rds-card  [header]="header"
      [footer]="footer"

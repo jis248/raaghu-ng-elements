@@ -1,6 +1,6 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsButtonGroupComponent } from './rdsButtonGroup.component';
+import { AppComponent as RdsButtonGroupComponent } from './app.component';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {

@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsBigNumberWidgetComponent } from './rds-big-number-widget.component';
+import {AppComponent as RdsBigNumberWidgetComponent } from './app.component';
 
 export default {
 

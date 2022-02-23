@@ -3,10 +3,10 @@ import { AfterViewInit, Component, EventEmitter, Inject, Input, OnInit, Output, 
 
 @Component({
   selector: 'rds-popover',
-  templateUrl: './rdsPopover.component.html',
-  styleUrls: ['./rdsPopover.component.scss']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class RdsPopoverComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
 
   constructor(
 

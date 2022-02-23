@@ -2,8 +2,8 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
 
 @Component({
   selector: 'rds-button',
-  templateUrl: './rds-button.component.html',
-  styleUrls: ['./rds-button.component.scss'],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {

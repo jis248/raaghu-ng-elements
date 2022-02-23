@@ -2,10 +2,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'rds-badges',
-  templateUrl: './Rdsbadges.component.html',
-  styleUrls: ['./Rdsbadges.component.scss']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class RdsBadgesComponent {
+export class AppComponent {
   title = 'rds-badges';
 
   public get classes(): string {

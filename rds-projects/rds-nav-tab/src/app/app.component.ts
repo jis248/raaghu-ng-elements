@@ -2,10 +2,10 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'rds-nav-tab',
-  templateUrl: './RdsNavTab.component.html',
-  styleUrls: ['./RdsNavTab.component.scss']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class RdsNavTabComponent {
+export class AppComponent {
   title = 'rds-nav-tab';
   constructor() { }
 

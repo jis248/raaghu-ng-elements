@@ -1,19 +1,19 @@
 import { Story, Meta } from '@storybook/angular/types-6-0'
-import { AppComponent } from './app.component';
+import {AppComponent as RdsModal } from './app.component';
 export default {
 
     title: 'Elements/Modal',
-    component: AppComponent,
+    component: RdsModal,
     argTypes: {
         backgroundColor: { control: 'color' },
         onShow: { click: "clicked" },
     },
 } as Meta;
 
-const Template: Story<AppComponent> = (args: AppComponent) => ({
+const Template: Story<RdsModal> = (args: RdsModal) => ({
     props: args,
 });
-export const FormModal: Story<AppComponent> = (args) => ({
+export const FormModal: Story<RdsModal> = (args) => ({
     props: args,
     template:
         `
@@ -44,7 +44,7 @@ FormModal.args = {
     ModalClasses: "modal-dialog",
     backdropstatic: true
 };
-// export const StaicBackdropModal: Story<AppComponent> = (args) => ({
+// export const StaicBackdropModal: Story<RdsModal> = (args) => ({
 //     props: args,
 //     template:
 //         `
@@ -79,7 +79,7 @@ FormModal.args = {
 //     ModalClasses: 'modal-dialog'
 
 // };
-// export const LongContentModal: Story<AppComponent> = (args) => ({
+// export const LongContentModal: Story<RdsModal> = (args) => ({
 //     props: args,
 //     template:
 //         ` 
