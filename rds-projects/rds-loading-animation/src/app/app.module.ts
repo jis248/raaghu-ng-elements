@@ -3,7 +3,7 @@ import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 import { AppRoutingModule } from './app-routing.module';
-import { RdsLoadingAnimationComponent } from './rdsLoadingAnimation.component';
+import {AppComponent as RdsLoadingAnimationComponent } from './app.component';
 
 @NgModule({
   declarations: [

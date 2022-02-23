@@ -1,10 +1,10 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AppComponent } from './app.component';
+import { AppComponent as RdsCarousel } from './app.component';
 
 export default {
   title: 'Elements/Carousel',
-    component: AppComponent,
+    component: RdsCarousel,
 //   argTypes: {
 //       backgroundColor: { control: 'color' },
 //       borderColor: { control: 'color' },
@@ -12,7 +12,7 @@ export default {
 //   },
 } as Meta;
 
-const Template: Story<AppComponent> = (args: AppComponent) => ({
+const Template: Story<RdsCarousel> = (args: RdsCarousel) => ({
   props: args,
 });
 

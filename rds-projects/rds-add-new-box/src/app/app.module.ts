@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
-import { RdsAddNewBoxComponent } from './rds-add-new-box.component';
+import { AppComponent as RdsAddNewBoxComponent } from './app.component';
 
 @NgModule({
   declarations: [
