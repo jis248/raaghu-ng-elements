@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 
 
 export default {
-  title: 'rdx-accordion',
+  title: 'Elements/rds-accordion',
   component: AppComponent,
   decorators: [
     moduleMetadata({
@@ -24,12 +24,12 @@ export default {
 
 const Template: Story<AppComponent> = (args: AppComponent) => ({
   props: {...args},
-  template: `<rdx-accordion></rdx-accordion>`,
+  template: `<rds-accordion></rds-accordion>`,
 });
 export const Basic: Story<AppComponent> = (args) => ({
   props: args,
   template: `
-    <rdx-accordion>
+    <rds-accordion>
       <accordion-item title="Section 1 title" (onClose)="onClose($event)" (onShow)="onShow($event)" [expanded]="expandall"  [content]="content">
       <ng-template #content>
       <h3>Custom </h3>
@@ -37,7 +37,7 @@ export const Basic: Story<AppComponent> = (args) => ({
       </accordion-item>
       <accordion-item title="Section 2 title" (onClose)="onClose($event)" (onShow)="onShow($event)" [expanded]="expandall"  [content]="content">
     </accordion-item>
-    </rdx-accordion>
+    </rds-accordion>
       <ng-template #accordion>
         <span>Custom content</span>
       </ng-template>`,
@@ -45,7 +45,7 @@ export const Basic: Story<AppComponent> = (args) => ({
 export const withFlush: Story<AppComponent> = (args) => ({
   props: args,
   template: `
-    <rdx-accordion [flush] = "true">
+    <rds-accordion [flush] = "true">
       <accordion-item title="Section 1 title" (onClose)="onClose($event)" (onShow)="onShow($event)" [content]="content">
       <ng-template #content>
       this is content updated
@@ -57,5 +57,5 @@ export const withFlush: Story<AppComponent> = (args) => ({
      <p> hello i am in paragarph tag</p>
      </ng-template>
     </accordion-item>
-    </rdx-accordion>`,
+    </rds-accordion>`,
 });

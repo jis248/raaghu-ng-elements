@@ -2,8 +2,8 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  templateUrl: './rds-button.component.html',
+  styleUrls: ['./rds-button.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
@@ -20,11 +20,9 @@ export class AppComponent {
   //   return [`btn-${this.type}`, `btn-${this.size}`].join(' ');
   // }
 
-  constructor(){
 
-  }
   @Input()
-  type: 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark' = 'primary';
+  colorType?: string;
 
   @Input()
   submit = false;
@@ -42,7 +40,7 @@ export class AppComponent {
   block = false;
 
   @Input()
-  size: 'small' | 'large' | 'medium' = 'medium';
+  size?: string;
 
   @Input()
   disabled = false;
@@ -55,8 +53,10 @@ export class AppComponent {
 
   @Input()
   toggleButton = false;
+
   @Input()
   iconClass?: string;
+
   @Input()
   label?: string;
 
@@ -66,7 +66,7 @@ export class AppComponent {
 
 
   public get classes(): string {
-    const outline = `${this.outlineButton ? 'btn btn-outline-' + this.type : 'btn btn-' + this.type}`;
+    const outline = `${this.outlineButton ? 'btn btn-outline-' + this.colorType : 'btn btn-' + this.colorType}`;
     const mode = ` btn-${this.size === 'small' ? 'sm' : this.size === 'large' ? 'lg' : 'md'}`;
     const icon = `${this.roundedButton ? ' btn-icon' : ''}`;
     return outline + mode + icon;
