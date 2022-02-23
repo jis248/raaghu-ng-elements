@@ -4885,6 +4885,109 @@
           }
         }
       }
+    },
+    "rds-chart-bar-horizontal": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "rds-projects/rds-chart-bar-horizontal",
+      "sourceRoot": "rds-projects/rds-chart-bar-horizontal/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:build",
+          "options": {
+            "outputPath": "dist/rds-chart-bar-horizontal",
+            "index": "rds-projects/rds-chart-bar-horizontal/src/index.html",
+            "main": "rds-projects/rds-chart-bar-horizontal/src/main.ts",
+            "polyfills": "rds-projects/rds-chart-bar-horizontal/src/polyfills.ts",
+            "tsConfig": "rds-projects/rds-chart-bar-horizontal/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "rds-projects/rds-chart-bar-horizontal/src/favicon.ico",
+              "rds-projects/rds-chart-bar-horizontal/src/assets"
+            ],
+            "styles": [
+              "rds-projects/rds-chart-bar-horizontal/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "rds-projects/rds-chart-bar-horizontal/src/environments/environment.ts",
+                  "with": "rds-projects/rds-chart-bar-horizontal/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "rds-chart-bar-horizontal:build:production"
+            },
+            "development": {
+              "browserTarget": "rds-chart-bar-horizontal:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "ngx-build-plus:extract-i18n",
+          "options": {
+            "browserTarget": "rds-chart-bar-horizontal:build"
+          }
+        },
+        "test": {
+          "builder": "ngx-build-plus:karma",
+          "options": {
+            "main": "rds-projects/rds-chart-bar-horizontal/src/test.ts",
+            "polyfills": "rds-projects/rds-chart-bar-horizontal/src/polyfills.ts",
+            "tsConfig": "rds-projects/rds-chart-bar-horizontal/tsconfig.spec.json",
+            "karmaConfig": "rds-projects/rds-chart-bar-horizontal/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "rds-projects/rds-chart-bar-horizontal/src/favicon.ico",
+              "rds-projects/rds-chart-bar-horizontal/src/assets"
+            ],
+            "styles": [
+              "rds-projects/rds-chart-bar-horizontal/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }
