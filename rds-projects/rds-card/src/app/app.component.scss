@@ -1,0 +1,212 @@
+
+.himc{
+    border-bottom: 0px solid black;
+    padding-bottom: 0px;
+  }
+  .io svg.bd-placeholder-img.bd-placeholder-img-lg.card-img{
+    font-size: 3.1rem;
+  }
+  
+  /* dark mode css */
+  
+  .dark-mode{
+    margin-top: 50px;
+  }
+  .dark-mode .card-body {
+    // color: #fff !important;
+    background-color: #343B46;
+    border: 1px solid #6c757d4d;
+  }
+  .dark-mode h6 {
+    color: #fff;
+  }
+  .dark-mode .card {
+    background-color: transparent;
+    /* border: 1px solid #6c757d4d; */
+  }
+  .dark-mode .card-header {
+    color: #fff;
+    background-color: #343B46;
+    border: 1px solid #6c757d4d;
+  }
+  .dark-mode .card-footer {
+    padding: 0.5rem 1rem;
+    background-color: #343B46;
+    border: 1px solid #6c757d4d;
+    color: #fff;
+  }
+  .dark-mode .border-success .card-footer{
+    border-color: #198754!important;
+    background-color: transparent !important;
+    color: #fff;
+  }
+  .dark-mode .list-group-item {
+    background-color: #343B46;
+    color: #fff;
+    border: 1px solid #6c757d4d;
+  }    
+  
+  // new css default component variation
+  
+  
+  .default-card {
+    border: 0px;
+    box-shadow: 0px 4px 40px #0000000a;
+    height: auto;
+  }
+  .card-body.body-border {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 40px #0000000a;
+    border: 1px solid #70707059;
+    border-radius: 0px 0px 4px 4px;
+    padding-left: 35px;
+      padding-right: 35px;
+  }
+  .custom-title {
+    color: #323b47;
+    text-align: left;
+    font-size: 22px;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+    font-weight: normal;
+    line-height: 21px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .custom-desc {
+    color: #212529;
+      font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    padding-bottom: 15px;
+  }
+  .btn.btn-primary {
+    margin-bottom: 15px;
+    background-color: #4EA1FF;
+    border-color: #4EA1FF;
+    padding: 10px 14px;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 12px;
+  }
+  
+  
+  // avatar badge card variation left css
+  
+  
+  .banner-image {
+    position: absolute;
+   background-image: url(https://picsum.photos/seed/picsum/1200/600);
+    height: 8rem;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px 4px 0px 0px;
+  }
+  
+  .profile-image {
+    width: 7rem;
+    margin-top: 3.5rem;
+    z-index: 9;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-left: 25px;
+  }
+  .rounded-avatar-left .body-border {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 40px #0000000a;
+    border-radius: 0px 0px 4px 4px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-bottom: 0px solid #70707059;
+    border-left: 0px solid #70707059;
+    border-right: 0px solid #70707059;
+    border-top: 0px;
+    margin-top: -45px;
+    padding-top: 60px;
+  }
+  .rounded-avatar-left .card-title {
+    padding-bottom: 10px !important;
+  }
+  
+  
+  // avatar badge card variation center css
+  .rounded-avatar-center .body-border {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 40px #0000000a;
+    border-radius: 0px 0px 4px 4px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-bottom: 0px solid #70707059;
+    border-left: 0px solid #70707059;
+    border-right: 0px solid #70707059;
+    border-top: 0px;
+    margin-top: -45px;
+    padding-top: 60px;
+    text-align: center;
+  }
+  .rounded-avatar-center .custom-title {
+    padding-bottom: 10px !important;
+    text-align: center !important;
+  }
+  .rounded-avatar-center .profile-image {
+    margin-left: 85px;
+  }
+  
+  // after binding css
+  .img-avatar {
+    border-radius: 50vh;
+    width: 180px;
+    z-index: 9;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 37%;
+    margin-top: -130px;
+    border: 3px solid #fff; 
+  }
+  .img-responsive{
+    width: -webkit-fill-available;
+  }
+  .img-avatar-left {
+    border-radius: 50vh;
+    width: 180px;
+    z-index: 9;
+    display: block;
+    margin-left: 20px;
+    margin-right: auto;
+    width: 37%;
+    margin-top: -130px;
+    border: 3px solid #fff;
+  }
+  
+  // media queries
+  
+  // ipad pro view
+  @media (min-width: 768px) and (max-width: 1024px){
+    .rounded-avatar-left .card{
+      width: 100% !important;
+    }
+    .rounded-avatar-center .card{
+      width: 100% !important;
+    }
+    .rounded-avatar-basic .card{
+      width: 100% !important;
+    }
+  }
+  // ipad and mobile
+  @media (max-width: 768px) {
+    .rounded-avatar-left .card{
+      width: 100% !important;
+    }
+    .rounded-avatar-center .card{
+      width: 100% !important;
+    }
+    .rounded-avatar-basic .card{
+      width: 100% !important;
+    }
+  }
+  
