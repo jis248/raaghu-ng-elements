@@ -1,0 +1,41 @@
+.accordion-title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.16px;
+  z-index: 1;
+  width: 100%;
+  margin: 0 0 0 1rem;
+  text-align: left;
+}
+.content {
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+// new variation styling start
+.binding-accordian.accordion-button{
+  color: #323B47 !important;
+  background-color: transparent !important;
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+.binding-accordian h2 button::after{
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  background-size: 22px;
+ // transition: transform 0.2s ease-in-out;
+  background-color: #5C82E3;
+  padding: 20px;
+  background-position: center;
+}
+.binding-accordian .accordion-button {
+  background-color: transparent;
+  padding: 0px;
+}
+.binding-accordian .accordion-title {
+  font-size: 16px;
+  color: #323B47;
+}
+.accordion-button::after{
+  transition: none !important;
+}
