@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 
 
 export default {
-    title: 'rds-dropdown',
+    title: 'Elements/Dropdown',
     component:AppComponent ,
     argTypes: {
         dropdownStyle: {

@@ -1,379 +1,396 @@
 <div [ngSwitch]="roles">
 
-  <div *ngSwitchCase="'Basic'">
-  <div  class="container binding-tags">
-      <div class="row">
-          <div class="res-class" style="float:left; border: 1px solid  #ced4da;;border-radius: 5px;padding: 5px; width: 60%">
-              <div style="float:left">
-                  <ng-template  [ngIf]="showtag">
-                      <ul style="margin-bottom: 0;padding-left: 0;">
-                          <li *ngFor=" let item of Tagarray">
-                  <div [class]="classes">
-                      <div [ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor}" class="toast align-items-center fade show" role="alert" aria-live="assertive" aria-atomic="true">
-                          <div class="d-flex"  >
-                              <div [ngStyle]="{'color':color}" class="toast-body" >
-                              {{item}}
-                              </div>
-                              <button  class="btn-close"
-                              data-bs-dismiss="toast" aria-label="Close">
-                              <ng-template [ngIf]="!Clossbtnclass"> <span aria-hidden="true" [ngStyle]="{'color':color}" class="close-btn1" >&times;</span></ng-template>
-                              <ng-template [ngIf]="Clossbtnclass"> <span aria-hidden="true" [ngStyle]="{'color':color}" class="close-btn1" ><i class="bi bi-x-circle-fill fill-btn"></i></span></ng-template>
-                              </button>
-                          </div>
-                        </div>
-                  </div>
-                  </li>
-                  </ul>
-                  </ng-template>
-              </div>
-              <div class="formshadow" style="float: left"><input type="text" class="form-control" name="inputText"  [(ngModel)]="inputText" (keydown.enter)="onKeyDownEvent($event)" placeholder="+Tag" aria-label="+Tag" aria-describedby="basic-addon1"/></div>
-  
-          </div>
-       </div>
-  </div>
-  </div>
-  <div *ngSwitchCase="'TagWithScroll'">
-  <div  class="container binding-tags2" >
-      <div class="row">
-          <div  class="scroll-type res-class" style="float:left; border: 1px solid  #ced4da;;border-radius: 5px;padding: 5px; width: 60%">
-              <div style="float:left">
-                  <ng-template  [ngIf]="showtag">
-                      <ul style="margin-bottom: 0;padding-left: 0;">
-                          <li *ngFor=" let item of Tagarray">
-                  <div [class]="classes">
-                      <div [ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor}" class="toast align-items-center fade show" role="alert" aria-live="assertive" aria-atomic="true">
-                          <div class="d-flex"  >
-                              <div [ngStyle]="{'color':color}" class="toast-body" >
-                              {{item}}
-                              </div>
-                              <button  class="btn-close"
-                              data-bs-dismiss="toast" aria-label="Close">
-                              <ng-template [ngIf]="!Clossbtnclass"> <span aria-hidden="true" [ngStyle]="{'color':color}" class="close-btn1" >&times;</span></ng-template>
-                              <ng-template [ngIf]="Clossbtnclass"> <span aria-hidden="true" [ngStyle]="{'color':color}" class="close-btn1" ><i class="bi bi-x-circle-fill fill-btn"></i></span></ng-template>
-                              </button>
-                          </div>
-                        </div>
-                  </div>
-                  </li>
-                  </ul>
-                  </ng-template>
-              </div>
-              <div class="formshadow" style="float: left"><input type="text" class="form-control" name="inputText"  [(ngModel)]="inputText" (keydown.enter)="onKeyDownEvent($event)" placeholder="+Tag" aria-label="+Tag" aria-describedby="basic-addon1"/></div>
-          </div>
-       </div>
-  </div>
-  </div>
-  </div>
-  
-      <div class="row custom-tags">
-        <!-- light mode -->
-        <div class="col-md-6 light-mode">
-          <!-- <h5>light mode</h5>
-          <h6>Variation one</h6> -->
-  
-          <!-- red tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- green tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- orange tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- <h6 class="sec-title">Variation two</h6> -->
-  
-          <!-- red tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- green tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- orange tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- <h6 class="sec-title">Variation three bordered</h6> -->
-  
-          <!-- red tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- green tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- orange tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
+    <div *ngSwitchCase="'Basic'">
+        <div class="container binding-tags">
+            <div class="row">
+                <div class="res-class"
+                    style="float:left; border: 1px solid  #ced4da;;border-radius: 5px;padding: 5px; width: 60%">
+                    <div style="float:left">
+                        <ng-template [ngIf]="showtag">
+                            <ul style="margin-bottom: 0;padding-left: 0;">
+                                <li *ngFor=" let item of Tagarray">
+                                    <div [class]="classes">
+                                        <div [ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor}"
+                                            class="toast align-items-center fade show" role="alert"
+                                            aria-live="assertive" aria-atomic="true">
+                                            <div class="d-flex">
+                                                <div [ngStyle]="{'color':color}" class="toast-body">
+                                                    {{item}}
+                                                </div>
+                                                <button class="btn-close" data-bs-dismiss="toast" aria-label="Close">
+                                                    <ng-template [ngIf]="!Clossbtnclass"> <span aria-hidden="true"
+                                                            [ngStyle]="{'color':color}"
+                                                            class="close-btn1">&times;</span></ng-template>
+                                                    <ng-template [ngIf]="Clossbtnclass"> <span aria-hidden="true"
+                                                            [ngStyle]="{'color':color}" class="close-btn1"><i
+                                                                class="bi bi-x-circle-fill fill-btn"></i></span>
+                                                    </ng-template>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </ng-template>
+                    </div>
+                    <div class="formshadow" style="float: left"><input type="text" class="form-control" name="inputText"
+                            [(ngModel)]="inputText" (keydown.enter)="onKeyDownEvent($event)" placeholder="+Tag"
+                            aria-label="+Tag" aria-describedby="basic-addon1" /></div>
+
+                </div>
+            </div>
         </div>
-  
-  
-        <!-- dark mode -->
-        <!-- <div class="col-md-6 dark-mode"> -->
-          <!-- <h5>Dark mode</h5> -->
-  
-          <!-- <h6>Variation one</h6> -->
-  
-          <!-- red tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- green tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- orange tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- <h6 class="sec-title">Variation two</h6> -->
-  
-          <!-- red tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- green tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- orange tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- <h6 class="sec-title">Variation three bordered</h6> -->
-  
-          <!-- red tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- green tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
-  
-          <!-- orange tags -->
-          <div class="row">
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <!-- Variation one -->
-                  <div class="placement">
-                    
-                  </div>
-              </div>
-          </div>
     </div>
-  
+    <div *ngSwitchCase="'TagWithScroll'">
+        <div class="container binding-tags2">
+            <div class="row">
+                <div class="scroll-type res-class"
+                    style="float:left; border: 1px solid  #ced4da;;border-radius: 5px;padding: 5px; width: 60%">
+                    <div style="float:left">
+                        <ng-template [ngIf]="showtag">
+                            <ul style="margin-bottom: 0;padding-left: 0;">
+                                <li *ngFor=" let item of Tagarray">
+                                    <div [class]="classes">
+                                        <div [ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor}"
+                                            class="toast align-items-center fade show" role="alert"
+                                            aria-live="assertive" aria-atomic="true">
+                                            <div class="d-flex">
+                                                <div [ngStyle]="{'color':color}" class="toast-body">
+                                                    {{item}}
+                                                </div>
+                                                <button class="btn-close" data-bs-dismiss="toast" aria-label="Close">
+                                                    <ng-template [ngIf]="!Clossbtnclass"> <span aria-hidden="true"
+                                                            [ngStyle]="{'color':color}"
+                                                            class="close-btn1">&times;</span></ng-template>
+                                                    <ng-template [ngIf]="Clossbtnclass"> <span aria-hidden="true"
+                                                            [ngStyle]="{'color':color}" class="close-btn1"><i
+                                                                class="bi bi-x-circle-fill fill-btn"></i></span>
+                                                    </ng-template>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </ng-template>
+                    </div>
+                    <div class="formshadow" style="float: left"><input type="text" class="form-control" name="inputText"
+                            [(ngModel)]="inputText" (keydown.enter)="onKeyDownEvent($event)" placeholder="+Tag"
+                            aria-label="+Tag" aria-describedby="basic-addon1" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row custom-tags">
+    <!-- light mode -->
+    <div class="col-md-6 light-mode">
+        <!-- <h5>light mode</h5>
+            <h6>Variation one</h6> -->
+
+        <!-- red tags -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- green tags -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- orange tags -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <h6 class="sec-title">Variation two</h6> -->
+
+        <!-- red tags -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- green tags -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- orange tags -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <h6 class="sec-title">Variation three bordered</h6> -->
+
+        <!-- red tags -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- green tags -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- orange tags -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Variation one -->
+                <div class="placement">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- dark mode -->
+    <!-- <div class="col-md-6 dark-mode"> -->
+    <!-- <h5>Dark mode</h5> -->
+
+    <!-- <h6>Variation one</h6> -->
+
+    <!-- red tags -->
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- green tags -->
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- orange tags -->
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <h6 class="sec-title">Variation two</h6> -->
+
+    <!-- red tags -->
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- green tags -->
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- orange tags -->
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <h6 class="sec-title">Variation three bordered</h6> -->
+
+    <!-- red tags -->
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- green tags -->
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- orange tags -->
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Variation one -->
+            <div class="placement">
+
+            </div>
+        </div>
+    </div>
+</div>

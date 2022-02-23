@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 
 export default {
-    title: 'rds-datepicker',
+    title: 'Elements/Datepicker',
     component: AppComponent,
     decorators: [
       moduleMetadata({

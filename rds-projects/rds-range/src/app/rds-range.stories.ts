@@ -4,7 +4,7 @@ import { componentWrapperDecorator } from '@storybook/angular';
 
 
 export default {
-    title: 'Component/Forms/Range',
+    title: 'Elements/Range',
     component: AppComponent,
     argTypes: {
 

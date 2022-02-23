@@ -3,7 +3,7 @@ import { AppComponent } from './app.component';
 
 
 export default {
-    title: 'rds-file-uploader',
+    title: 'Elements/File Uploader',
     component:AppComponent ,
     argTypes: {
       maxfilesize: { control: {type: 'number'} },

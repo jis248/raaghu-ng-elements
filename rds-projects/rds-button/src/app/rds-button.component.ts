@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'rds-button',
   templateUrl: './rds-button.component.html',
   styleUrls: ['./rds-button.component.scss'],
   encapsulation: ViewEncapsulation.None,

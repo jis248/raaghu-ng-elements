@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent } from './app.component';
 
 export default {
-    title: 'rds-tooltip',
+    title: 'Elements/Tooltip',
     component: AppComponent,
     decorators: [
       moduleMetadata({

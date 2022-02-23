@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent } from './app.component';
 
 export default {
-  title: 'rds-spinner',
+  title: 'Elements/Spinner',
   component: AppComponent,
   argTypes: {
     // Color: {control: 'color'},

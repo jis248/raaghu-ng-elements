@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 
 
 export default {
-  title: 'Elements/rds-accordion',
+  title: 'Elements/Accordion',
   component: AppComponent,
   decorators: [
     moduleMetadata({

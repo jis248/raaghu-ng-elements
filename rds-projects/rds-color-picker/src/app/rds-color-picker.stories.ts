@@ -3,7 +3,7 @@ import { AppComponent } from './app.component';
 
 
 export default {
-    title: 'Component/Forms/Color-Picker-Input',
+    title: 'Elements/Color Picker',
     component:AppComponent ,
     argTypes: {
 
