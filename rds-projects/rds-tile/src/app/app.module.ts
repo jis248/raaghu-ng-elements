@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
-import { RdsTileComponent } from './rds-tile.component';
+import {AppComponent as RdsTileComponent } from './app.component';
 
 @NgModule({
   declarations: [

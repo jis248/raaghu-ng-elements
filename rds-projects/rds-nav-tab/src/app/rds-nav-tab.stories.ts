@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsNavTabComponent } from './RdsNavTab.component';
+import {AppComponent as RdsNavTabComponent } from './app.component';
 export default {
 
     title: 'Elements/Navtabs',

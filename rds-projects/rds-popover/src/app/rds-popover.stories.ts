@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsPopoverComponent } from './rdsPopover.component';
+import {AppComponent as  RdsPopoverComponent } from './app.component';
 
 export default {
     title: 'Elements/Popover',
