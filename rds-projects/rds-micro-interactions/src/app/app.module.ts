@@ -15,4 +15,4 @@ import { MicroInteractionsComponent } from './microInteractions.component';
   providers: [],
   bootstrap: [MicroInteractionsComponent]
 })
-export class AppModule { }
+export class AppModule {}
