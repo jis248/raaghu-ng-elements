@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { RdsPopoverComponent } from './rdsPopover.component';
 
 export default {
-    title: 'Elements/rds-popover',
+    title: 'Elements/Popover',
     component: RdsPopoverComponent,
     decorators: [
       moduleMetadata({
