@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsTileComponent } from './rds-tile.component';
+import {AppComponent as RdsTileComponent } from './app.component';
 
 
 

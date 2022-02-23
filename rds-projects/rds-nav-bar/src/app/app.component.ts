@@ -2,10 +2,10 @@ import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'rds-nav-bar',
-  templateUrl: './RdsNavbar.component.html',
-  styleUrls: ['./RdsNavbar.component.scss']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class RdsNavbarComponent implements OnInit {
+export class AppComponent implements OnInit {
  
   constructor() { }
 

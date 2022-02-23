@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { RdsListGroupComponent } from './RdsListGroup.component';
+import { AppComponent as RdsListGroupComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

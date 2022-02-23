@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewEncaps
 
 @Component({
   selector: 'rds-list-group',
-  templateUrl: './RdsListGroup.component.html',
-  styleUrls: ['./RdsListGroup.component.scss'],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class RdsListGroupComponent {
+export class AppComponent {
   title = 'rds-list-group';
    @Input() flush = false;
   @Input() listType: 'list' | 'button' = 'list';
