@@ -1,0 +1,8 @@
+<ul class="nav" [ngClass]="classes">
+  <li class="nav-item"  *ngFor="let item of navtabsItems; index as i">
+    <a *ngIf="activepage===i" class="nav-link" [class.active]="true" aria-current="page"
+    href="#"  (click)="onClick(i)" [class.disabled]="item.disabled" [ngClass]="class1">{{item.label}}</a>
+    <a *ngIf="activepage!=i" class="nav-link"
+      href="#" (click)="  onClick(i)" [class.disabled]="item.disabled" [ngClass]="class1">{{item.label}}</a>
+  </li>
+</ul>

@@ -1,10 +1,27 @@
-import { AfterViewInit, ChangeDetectorRef, Component, Input, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, Input, SimpleChanges } from '@angular/core';
+import Chart from 'chart.js/auto';
+
+
+export interface chartlabel {
+  labelname: Array<string>;
+
+}
+export interface chartDataset {
+  label: string,
+  data: Array<number>;
+  fill: boolean,
+  borderColor: string,
+  tension: number,
+  backgroundColor: Array<string>;
+  borderWidth: number;
+}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent implements AfterViewInit {
   title = 'rds-radar-chart';
 

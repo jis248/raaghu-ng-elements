@@ -1,0 +1,33 @@
+<!-- <nav  [ngClass]="classes" [ngStyle]="{'background-color':backgroundColor}">
+  <div class="container-fluid">
+  <ng-container [ngTemplateOutlet]="navabarheader"></ng-container>
+  <div class="collapse navbar-collapse" [id]="navbarId">
+  <ul class="navbar-nav">
+    <ng-container  *ngFor="let item of navbarItems">
+      <ng-container [ngTemplateOutlet]="navebarcontent" [ngTemplateOutletContext]="{ $implicit: item}">
+      
+      </ng-container>
+    </ng-container>
+  </ul>
+  </div>
+</div>
+</nav> -->
+<nav  [ngClass]="classes" [ngStyle]="{'background-color':backgroundColor}" >
+  <div class="container-fluid">
+    <ng-container [ngTemplateOutlet]="navbarheader"> </ng-container>
+   
+    <div class="collapse navbar-collapse" [id]="navbarId">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ng-container  *ngFor="let item of navbarItems" >
+          <ng-container [ngTemplateOutlet]="navbarcontent" [ngTemplateOutletContext]="{$implicit: item}">
+
+          </ng-container>
+          </ng-container>
+      
+       
+      </ul>
+    
+    </div>
+ 
+  </div>
+</nav>
