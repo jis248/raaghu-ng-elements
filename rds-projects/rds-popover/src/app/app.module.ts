@@ -3,21 +3,21 @@ import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent as RdsPopoverComponent } from './app.component';
 @NgModule({
   declarations: [
-    AppComponent
+    RdsPopoverComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [environment.localDev ? AppComponent : []]
+  bootstrap: [environment.localDev ? RdsPopoverComponent : []]
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(AppComponent, {
+    const micro = createCustomElement(RdsPopoverComponent, {
       injector: this.injector,
     });
     customElements.define('rds-popover', micro);

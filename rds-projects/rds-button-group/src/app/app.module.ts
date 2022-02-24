@@ -1,20 +1,20 @@
 import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent as RdsButtonGroupComponent } from './app.component';
 import { environment } from '../environments/environment.prod';
 import { createCustomElement } from '@angular/elements';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [RdsButtonGroupComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  entryComponents: [AppComponent],
-  bootstrap: [environment.localDev ? AppComponent : []],
+  entryComponents: [RdsButtonGroupComponent],
+  bootstrap: [environment.localDev ? RdsButtonGroupComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(AppComponent, {
+    const micro = createCustomElement(RdsButtonGroupComponent, {
       injector: this.injector,
     });
     customElements.define('rds-button-group', micro);

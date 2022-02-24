@@ -1,16 +1,16 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AppComponent } from './app.component'
+import { AppComponent as RdsOffcanvasComponent } from './app.component'
 
 export default {
   title: 'Elements/Offcanvas',
-  component: AppComponent,
+  component: RdsOffcanvasComponent,
   argTypes: {
     onShow:{ click: "clicked"},
     onClose:{ click: "clicked"},
 
   },
   } as Meta;
-  const Template: Story<AppComponent> = (args: AppComponent) => ({
+  const Template: Story<RdsOffcanvasComponent> = (args: RdsOffcanvasComponent) => ({
   props: args,
   template: `
   <button

@@ -3,21 +3,21 @@ import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent as RdsOffcanvasComponent } from './app.component';
 @NgModule({
   declarations: [
-    AppComponent
+    RdsOffcanvasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [environment.localDev ? AppComponent : []]
+  bootstrap: [environment.localDev ? RdsOffcanvasComponent : []]
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(AppComponent, {
+    const micro = createCustomElement(RdsOffcanvasComponent, {
       injector: this.injector,
     });
     customElements.define('rds-offcanvas', micro);
