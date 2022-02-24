@@ -1,32 +1,30 @@
 import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
+import { environment } from '../environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent as RdsCard } from './app.component';
-import { environment } from '../environments/environment.prod';
-import { createCustomElement } from '@angular/elements';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    RdsCard
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  entryComponents: [RdsCard],
-  bootstrap: [environment.localDev ? RdsCard : []]
+  entryComponents: [AppComponent],
+  bootstrap: [environment.localDev ? AppComponent : []],
 })
-
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(RdsCard, {
+    const micro = createCustomElement(AppComponent, {
       injector: this.injector,
     });
-    customElements.define('rds-card', micro);
+    customElements.define('rds-icon', micro);
   }
 
-  ngDoBootstrap(appRef: ApplicationRef): void {
-  }
+  ngDoBootstrap(appRef: ApplicationRef): void {}
 }
