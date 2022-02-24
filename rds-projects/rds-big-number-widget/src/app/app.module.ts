@@ -3,22 +3,22 @@ import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 import { AppRoutingModule } from './app-routing.module';
-import { RdsBigNumberWidgetComponent } from './rds-big-number-widget.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    RdsBigNumberWidgetComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [environment.localDev ? RdsBigNumberWidgetComponent : []],
+  bootstrap: [environment.localDev ? AppComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(RdsBigNumberWidgetComponent, {
+    const micro = createCustomElement(AppComponent, {
       injector: this.injector,
     });
     customElements.define('rds-big-number-widget', micro);

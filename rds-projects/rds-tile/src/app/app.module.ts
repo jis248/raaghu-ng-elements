@@ -4,23 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
-import { RdsTileComponent } from './rds-tile.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    RdsTileComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  entryComponents: [RdsTileComponent],
-  bootstrap: [environment.localDev ? RdsTileComponent : []],
+  entryComponents: [AppComponent],
+  bootstrap: [environment.localDev ? AppComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(RdsTileComponent, {
+    const micro = createCustomElement(AppComponent, {
       injector: this.injector,
     });
     customElements.define('rds-tile', micro);

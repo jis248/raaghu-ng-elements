@@ -1,17 +1,17 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsBigNumberWidgetComponent } from './rds-big-number-widget.component';
+import { AppComponent } from './app.component';
 
 export default {
 
-  title: 'ELEMENTS/rds-big-number-widget',
+  title: 'ELEMENTS/Big Number Widget',
 
-  component: RdsBigNumberWidgetComponent,
+  component: AppComponent,
 
 } as Meta
 
 
 
-const Template: Story<RdsBigNumberWidgetComponent> = (args: RdsBigNumberWidgetComponent) => ({
+const Template: Story<AppComponent> = (args: AppComponent) => ({
 
 });
 

@@ -1,17 +1,17 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsAddNewBoxComponent } from './rds-add-new-box.component';
+import { AppComponent } from './app.component';
 
 export default {
 
-  title: 'ELEMENTS/rds-add-new-box',
+  title: 'ELEMENTS/Add New Box',
 
-  component: RdsAddNewBoxComponent,
+  component: AppComponent,
 
 } as Meta
 
 
 
-const Template: Story<RdsAddNewBoxComponent> = (args: RdsAddNewBoxComponent) => ({
+const Template: Story<AppComponent> = (args: AppComponent) => ({
 
 });
 

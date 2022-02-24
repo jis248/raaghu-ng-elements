@@ -1,20 +1,20 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsTileComponent } from './rds-tile.component';
+import { AppComponent } from './app.component';
 
 
 
 
 export default {
 
-  title: 'ELEMENTS/rds-tile',
+  title: 'ELEMENTS/Tile',
 
-  component: RdsTileComponent,
+  component: AppComponent,
 
 } as Meta
 
 
 
-const Template: Story<RdsTileComponent> = (args: RdsTileComponent) => ({
+const Template: Story<AppComponent> = (args: AppComponent) => ({
 
 });
 
