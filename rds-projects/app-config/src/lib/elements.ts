@@ -1,1 +1,1 @@
-export const elements: string[] = ['rds-button','rds-carousel','rds-color-picker','rds-accordians','rds-input-group','rds-validation']
+export const elements: string[] = ['rds-carousel','rds-color-picker','rds-accordians','rds-input-group','rds-validation','rds-alert','rds-floating-labels','rds-input','rds-radar-chart']

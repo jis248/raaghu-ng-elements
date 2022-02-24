@@ -3,7 +3,7 @@ import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
-import { RdsListGroupComponent } from './RdsListGroup.component';
+import { AppComponent as RdsListGroupComponent } from './app.component';
 @NgModule({
   declarations: [
     RdsListGroupComponent

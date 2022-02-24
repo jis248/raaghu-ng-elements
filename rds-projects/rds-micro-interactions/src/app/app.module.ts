@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { MicroInteractionsComponent } from './microInteractions.component';
-
+import {AppComponent as MicroInteractionsComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -16,4 +15,4 @@ import { MicroInteractionsComponent } from './microInteractions.component';
   providers: [],
   bootstrap: [MicroInteractionsComponent]
 })
-export class AppModule { }
+export class AppModule {}
