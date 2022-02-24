@@ -2,12 +2,12 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AppComponent } from './rds-button.component';
+import { AppComponent as RdsbuttonComponent } from './app.component';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
   title: 'Elements/Button',
-  component: AppComponent,
+  component: RdsbuttonComponent,
 
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
   argTypes: {
@@ -27,7 +27,7 @@ export default {
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
-const Template: Story<AppComponent> = (args: AppComponent) => ({
+const Template: Story<RdsbuttonComponent> = (args: RdsbuttonComponent) => ({
   props: args,
 });
 

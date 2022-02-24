@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AppComponent } from './app.component';
+import {AppComponent as RdsAddNewBoxComponent } from './app.component';
 
 export default {
 

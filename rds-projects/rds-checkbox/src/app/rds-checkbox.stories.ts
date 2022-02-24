@@ -1,15 +1,15 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AppComponent } from './app.component';
+import { AppComponent as RdsCheckbox } from './app.component';
 
 export default {
     title: 'Elements/Checkbox',
-    component:AppComponent ,
+    component:RdsCheckbox ,
     argTypes: {
          
     }
 } as Meta
 
-const Template: Story<AppComponent> = (args:AppComponent) => ({
+const Template: Story<RdsCheckbox> = (args:RdsCheckbox) => ({
     props: args,
   });
 

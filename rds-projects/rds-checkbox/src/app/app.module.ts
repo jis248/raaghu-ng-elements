@@ -1,20 +1,20 @@
 import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent as RdsCheckbox } from './app.component';
 import { environment } from '../environments/environment.prod';
 import { createCustomElement } from '@angular/elements';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [RdsCheckbox],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  entryComponents: [AppComponent],
-  bootstrap: [environment.localDev ? AppComponent : []],
+  entryComponents: [RdsCheckbox],
+  bootstrap: [environment.localDev ? RdsCheckbox : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(AppComponent, {
+    const micro = createCustomElement(RdsCheckbox, {
       injector: this.injector,
     });
     customElements.define('rds-checkbox', micro);
