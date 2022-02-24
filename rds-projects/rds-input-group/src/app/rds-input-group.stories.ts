@@ -1,43 +1,9 @@
-// import { APP_BASE_HREF } from '@angular/common';
-// import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-// import { moduleMetadata } from '@storybook/angular';
-// import { Story, Meta } from '@storybook/angular/types-6-0';
-// import { AppComponent } from './app.component';
-
-// export default {
-//     title: 'Elements/Input Group',
-//     decorators: [
-//         moduleMetadata({
-//             imports: [],
-//             schemas: [CUSTOM_ELEMENTS_SCHEMA],
-//             providers: [
-//                 { provide: APP_BASE_HREF, useValue: "/" }
-//             ]
-//         }),
-//     ],
-//     component: AppComponent,
-//     argTypes: {
-
-//     }
-// } as Meta
-
-// const Template: Story<AppComponent> = (args: AppComponent) => ({
-//     props: args,
-// });
-
-// export const InputGroup = Template.bind({})
-
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent as RdsInputGroupComponent } from './app.component';
 import { AppComponent as RdsInputComponent } from '../../../rds-input/src/app/app.component';
 import { AppComponent as RdsSelectListComponent } from '../../../rds-select-list/src/app/app.component';
-import { AppComponent as RdsButtonComponent } from '../../../rds-button/src/app/app.component';
-import { AppComponent as RdsRadioButtonComponent } from '../../../rds-radio-buttons/src/app/app.component';
-import { AppComponent as RdsCheckboxComponent } from '../../../rds-checkbox/src/app/app.component';
-
-
 
 export default {
 
@@ -45,7 +11,7 @@ export default {
     component: RdsInputGroupComponent,
     decorators: [
         moduleMetadata({
-            declarations: [RdsInputComponent,RdsSelectListComponent,RdsButtonComponent,RdsRadioButtonComponent,RdsCheckboxComponent],
+            declarations: [RdsInputComponent,RdsSelectListComponent],
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
             // providers: [
             //     { provide: APP_BASE_HREF, useValue: "/" }
