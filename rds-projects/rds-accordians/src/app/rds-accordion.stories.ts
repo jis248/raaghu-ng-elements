@@ -45,7 +45,7 @@ export const Basic: Story<AppComponent> = (args) => ({
 export const withFlush: Story<AppComponent> = (args) => ({
   props: args,
   template: `
-    <rds-accordion [flush] = "true">
+    <rds-accordion [flush]= "true">
       <accordion-item title="Section 1 title" (onClose)="onClose($event)" (onShow)="onShow($event)" [content]="content">
       <ng-template #content>
       this is content updated
