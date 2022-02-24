@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { environment } from '../environments/environment.prod';
 import { createCustomElement } from '@angular/elements';
-import { RdsNavbarComponent } from './RdsNavbar.component';
+import { AppComponent as RdsNavbarComponent } from './app.component';
 
 @NgModule({
   declarations: [RdsNavbarComponent],
