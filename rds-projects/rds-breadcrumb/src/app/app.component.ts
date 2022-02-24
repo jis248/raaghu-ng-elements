@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { BreadcrumbsItems } from './breadcrumb-item';
-import { BreadcrumbsService } from './breadcrumbsItems.service';
+import { BreadcrumbsItems } from './service/breadcrumb-item';
+import { BreadcrumbsService } from './service/breadcrumbsItems.service';
 
 @Component({
   selector: 'app-root',
