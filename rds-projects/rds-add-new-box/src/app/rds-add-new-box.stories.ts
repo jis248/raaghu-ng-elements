@@ -3,7 +3,7 @@ import {AppComponent as RdsAddNewBoxComponent } from './app.component';
 
 export default {
 
-  title: 'ELEMENTS/rds-add-new-box',
+  title: 'ELEMENTS/Add New Box',
 
   component: RdsAddNewBoxComponent,
 
