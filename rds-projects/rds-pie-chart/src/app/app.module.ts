@@ -1,27 +1,29 @@
 import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
+
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent as RdsModal} from './app.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    RdsModal
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [environment.localDev ? RdsModal : []]
+  entryComponents: [AppComponent],
+  bootstrap: [environment.localDev ? AppComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(RdsModal, {
+    const micro = createCustomElement(AppComponent, {
       injector: this.injector,
     });
-    customElements.define('rds-modal', micro);
+    customElements.define('rds-pie-chart', micro);
   }
 
   ngDoBootstrap(appRef: ApplicationRef): void {
