@@ -6,6 +6,7 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
+  // Rds Button component
 export class AppComponent {
 
   // Add the inputs and outputs for the component here
