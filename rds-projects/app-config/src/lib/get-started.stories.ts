@@ -1,5 +1,5 @@
 import { AppConfigComponent } from './app-config.component';
-import mdx from './get-started.stories.mdx';
+import mdx from './get-started.stories.md';
 
 export default {
   title: 'Demo/Button',

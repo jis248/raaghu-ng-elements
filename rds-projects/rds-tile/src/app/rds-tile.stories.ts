@@ -8,13 +8,13 @@ export default {
 
   title: 'ELEMENTS/Tile',
 
-  component: AppComponent,
+  component: RdsTileComponent,
 
 } as Meta
 
 
 
-const Template: Story<AppComponent> = (args: AppComponent) => ({
+const Template: Story<RdsTileComponent> = (args: RdsTileComponent) => ({
 
 });
 

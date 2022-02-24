@@ -5,13 +5,13 @@ export default {
 
   title: 'ELEMENTS/Big Number Widget',
 
-  component: AppComponent,
+  component: RdsBigNumberWidgetComponent,
 
 } as Meta
 
 
 
-const Template: Story<AppComponent> = (args: AppComponent) => ({
+const Template: Story<RdsBigNumberWidgetComponent> = (args: RdsBigNumberWidgetComponent) => ({
 
 });
 

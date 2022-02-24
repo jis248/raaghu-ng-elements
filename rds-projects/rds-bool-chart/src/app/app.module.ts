@@ -4,22 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent as RdsBoolChartComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    RdsBoolChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [environment.localDev ? AppComponent : []],
+  bootstrap: [environment.localDev ? RdsBoolChartComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(AppComponent, {
+    const micro = createCustomElement(RdsBoolChartComponent, {
       injector: this.injector,
     });
     customElements.define('rds-bool-chart', micro);

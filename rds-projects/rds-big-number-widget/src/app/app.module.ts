@@ -7,18 +7,18 @@ import { AppComponent as RdsBigNumberWidgetComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    RdsBigNumberWidgetComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [environment.localDev ? AppComponent : []],
+  bootstrap: [environment.localDev ? RdsBigNumberWidgetComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(AppComponent, {
+    const micro = createCustomElement(RdsBigNumberWidgetComponent, {
       injector: this.injector,
     });
     customElements.define('rds-big-number-widget', micro);

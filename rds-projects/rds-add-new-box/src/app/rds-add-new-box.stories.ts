@@ -5,13 +5,13 @@ export default {
 
   title: 'ELEMENTS/Add New Box',
 
-  component: AppComponent,
+  component: RdsAddNewBoxComponent,
 
 } as Meta
 
 
 
-const Template: Story<AppComponent> = (args: AppComponent) => ({
+const Template: Story<RdsAddNewBoxComponent> = (args: RdsAddNewBoxComponent) => ({
 
 });
 

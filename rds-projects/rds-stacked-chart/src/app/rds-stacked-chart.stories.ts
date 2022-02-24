@@ -1,10 +1,10 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AppComponent } from './app.component';
+import { AppComponent as RdsStackedChartComponent } from './app.component';
 export default {
 
   title: 'ELEMENTS/Stacked Chart',
 
-  component: AppComponent,
+  component: RdsStackedChartComponent,
   argTypes: {
     canvasBackgroundColor: { control: 'color' },
     ChartStyle: {
@@ -15,7 +15,7 @@ export default {
 
 } as Meta;
 
-const Template: Story<AppComponent> = (args: AppComponent) => ({
+const Template: Story<RdsStackedChartComponent> = (args: RdsStackedChartComponent) => ({
   props: args,
 
 });

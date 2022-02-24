@@ -8,19 +8,19 @@ import {AppComponent as RdsTileComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    RdsTileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  entryComponents: [AppComponent],
-  bootstrap: [environment.localDev ? AppComponent : []],
+  entryComponents: [RdsTileComponent],
+  bootstrap: [environment.localDev ? RdsTileComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(AppComponent, {
+    const micro = createCustomElement(RdsTileComponent, {
       injector: this.injector,
     });
     customElements.define('rds-tile', micro);
