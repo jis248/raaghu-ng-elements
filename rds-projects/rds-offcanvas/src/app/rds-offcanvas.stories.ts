@@ -32,5 +32,7 @@ export default {
 
   export const offcanvas = Template.bind({});
   offcanvas.args ={
-    offId:'canvas1'
+    offId:'canvas1',
+    placement: 'bottom ',
+    backDrop: 'Scrolling',
   }
