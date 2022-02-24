@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsChartingComponent } from './rdsCharting.component';
+import { AppComponent as RdsChartingComponent } from './app.component';
 
 
 export default {

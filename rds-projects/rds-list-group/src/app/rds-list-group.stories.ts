@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsListGroupComponent } from './RdsListGroup.component';
+import { AppComponent as RdsListGroupComponent } from './app.component';
 export default {
 
   title: 'Elements/List Group',

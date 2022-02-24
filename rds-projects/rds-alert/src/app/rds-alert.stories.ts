@@ -1,16 +1,16 @@
 
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AppComponent } from './app.component';
+import { AppComponent as RdsAlert } from './app.component';
 
 export default {
   title: 'Elements/Alert',
-  component: AppComponent,
+  component: RdsAlert,
   argTypes: {
     backgroundColor: { control: 'color' },
     color: { control: 'color' }
   },
 } as Meta;
-const Template: Story<AppComponent> = (args: AppComponent) => ({
+const Template: Story<RdsAlert> = (args: RdsAlert) => ({
   props: args,
 });
 export const Basic = Template.bind({});
