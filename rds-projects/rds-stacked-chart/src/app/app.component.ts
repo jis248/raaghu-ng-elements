@@ -7,7 +7,7 @@ import Chart from 'chart.js/auto';
   styleUrls: ['./app.component.scss']
 })
 //export class AppComponent {
-//  title = 'rds-bool-chart';
+//  title = 'rds-stacked-chart';
 //}
 export class AppComponent implements AfterViewInit {
   static count = 0;
