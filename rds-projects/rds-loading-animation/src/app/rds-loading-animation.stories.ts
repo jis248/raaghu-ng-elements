@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsLoadingAnimationComponent } from './rdsLoadingAnimation.component';
+import {AppComponent as  RdsLoadingAnimationComponent } from './app.component';
 
 
 export default {

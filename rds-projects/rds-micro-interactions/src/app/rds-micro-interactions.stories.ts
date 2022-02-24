@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { MicroInteractionsComponent } from './microInteractions.component';
+import {AppComponent as MicroInteractionsComponent } from './app.component';
 
 
 export default {

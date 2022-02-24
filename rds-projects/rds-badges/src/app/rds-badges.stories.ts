@@ -3,7 +3,7 @@ import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 //import { ButtonComponent } from '../button/button.component';
 
-import { RdsBadgesComponent } from './Rdsbadges.component';
+import {AppComponent as RdsBadgesComponent } from './app.component';
 
 
 export default {
