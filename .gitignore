@@ -12,8 +12,7 @@ npm-debug.log
 yarn-error.log
 
 # IDEs and editors
-.vc/*
-/.vc
+/.vs
 .idea/
 .project
 .classpath
@@ -23,7 +22,6 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
 /.vscode
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -46,4 +44,4 @@ Thumbs.db
 
 # Storybook Document
 /storybook-static
-/documentation.json
+documentation.json

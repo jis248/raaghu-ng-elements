@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { environment } from 'rds-projects/rds-datepicker/src/environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
-import { RdsChartingComponent } from './rdsCharting.component';
+import {AppComponent as RdsChartingComponent } from './app.component';
 
 @NgModule({
   declarations: [

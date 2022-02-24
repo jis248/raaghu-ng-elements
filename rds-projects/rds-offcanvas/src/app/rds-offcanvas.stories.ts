@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsOffcanvasComponent } from './rdsOffcanvascomponent'
+import { AppComponent as RdsOffcanvasComponent } from './app.component'
 
 export default {
   title: 'Elements/Offcanvas',
@@ -32,5 +32,7 @@ export default {
 
   export const offcanvas = Template.bind({});
   offcanvas.args ={
-    offId:'canvas1'
+    offId:'canvas1',
+    placement: 'bottom ',
+    backDrop: 'Scrolling',
   }
