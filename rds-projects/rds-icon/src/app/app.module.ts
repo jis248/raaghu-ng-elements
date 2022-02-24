@@ -23,7 +23,7 @@ export class AppModule implements DoBootstrap {
     const micro = createCustomElement(AppComponent, {
       injector: this.injector,
     });
-    customElements.define('rds-form', micro);
+    customElements.define('rds-icon', micro);
   }
 
   ngDoBootstrap(appRef: ApplicationRef): void {}
