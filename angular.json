@@ -5813,7 +5813,7 @@
         }
       }
     },
-    "rds-illustration": {
+    "rds-text-editor": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -5823,25 +5823,25 @@
           "strict": true
         }
       },
-      "root": "rds-projects/rds-illustration",
-      "sourceRoot": "rds-projects/rds-illustration/src",
+      "root": "rds-projects/rds-text-editor",
+      "sourceRoot": "rds-projects/rds-text-editor/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "ngx-build-plus:build",
           "options": {
-            "outputPath": "dist/rds-illustration",
-            "index": "rds-projects/rds-illustration/src/index.html",
-            "main": "rds-projects/rds-illustration/src/main.ts",
-            "polyfills": "rds-projects/rds-illustration/src/polyfills.ts",
-            "tsConfig": "rds-projects/rds-illustration/tsconfig.app.json",
+            "outputPath": "dist/rds-text-editor",
+            "index": "rds-projects/rds-text-editor/src/index.html",
+            "main": "rds-projects/rds-text-editor/src/main.ts",
+            "polyfills": "rds-projects/rds-text-editor/src/polyfills.ts",
+            "tsConfig": "rds-projects/rds-text-editor/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "rds-projects/rds-illustration/src/favicon.ico",
-              "rds-projects/rds-illustration/src/assets"
+              "rds-projects/rds-text-editor/src/favicon.ico",
+              "rds-projects/rds-text-editor/src/assets"
             ],
             "styles": [
-              "rds-projects/rds-illustration/src/styles.scss"
+              "rds-projects/rds-text-editor/src/styles.scss"
             ],
             "scripts": []
           },
@@ -5861,8 +5861,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "rds-projects/rds-illustration/src/environments/environment.ts",
-                  "with": "rds-projects/rds-illustration/src/environments/environment.prod.ts"
+                  "replace": "rds-projects/rds-text-editor/src/environments/environment.ts",
+                  "with": "rds-projects/rds-text-editor/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -5882,10 +5882,10 @@
           "builder": "ngx-build-plus:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "rds-illustration:build:production"
+              "browserTarget": "rds-text-editor:build:production"
             },
             "development": {
-              "browserTarget": "rds-illustration:build:development"
+              "browserTarget": "rds-text-editor:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -5893,23 +5893,23 @@
         "extract-i18n": {
           "builder": "ngx-build-plus:extract-i18n",
           "options": {
-            "browserTarget": "rds-illustration:build"
+            "browserTarget": "rds-text-editor:build"
           }
         },
         "test": {
           "builder": "ngx-build-plus:karma",
           "options": {
-            "main": "rds-projects/rds-illustration/src/test.ts",
-            "polyfills": "rds-projects/rds-illustration/src/polyfills.ts",
-            "tsConfig": "rds-projects/rds-illustration/tsconfig.spec.json",
-            "karmaConfig": "rds-projects/rds-illustration/karma.conf.js",
+            "main": "rds-projects/rds-text-editor/src/test.ts",
+            "polyfills": "rds-projects/rds-text-editor/src/polyfills.ts",
+            "tsConfig": "rds-projects/rds-text-editor/tsconfig.spec.json",
+            "karmaConfig": "rds-projects/rds-text-editor/karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "rds-projects/rds-illustration/src/favicon.ico",
-              "rds-projects/rds-illustration/src/assets"
+              "rds-projects/rds-text-editor/src/favicon.ico",
+              "rds-projects/rds-text-editor/src/assets"
             ],
             "styles": [
-              "rds-projects/rds-illustration/src/styles.scss"
+              "rds-projects/rds-text-editor/src/styles.scss"
             ],
             "scripts": []
           }
