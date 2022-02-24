@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { environment } from 'rds-projects/rds-badges/src/environments/environment';
 import { createCustomElement } from '@angular/elements';
-import { AppComponent as RdsBadgesComponent } from './app.component';
+import {RdsBadgesComponent } from './RdsBadges.component';
 
 
 @NgModule({
