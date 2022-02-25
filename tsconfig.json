@@ -6,6 +6,9 @@
       "app-config": [
         "dist/app-config/app-config",
         "dist/app-config"
+      ],
+      "rds-breadcrumb": [
+        "rds-projects/rds-breadcrumb/src/public-api"
       ]
     },
     "baseUrl": "./",

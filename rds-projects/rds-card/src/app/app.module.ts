@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent as RdsCard } from './app.component';
-import { environment } from 'rds-projects/rds-button/src/environments/environment';
+import { environment } from '../environments/environment.prod';
 import { createCustomElement } from '@angular/elements';
 
 @NgModule({

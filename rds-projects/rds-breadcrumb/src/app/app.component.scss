@@ -1,0 +1,223 @@
+.breadcrumb-item + .breadcrumb-item::before { content: " / ";
+}
+.breadcrumb-item2 + .breadcrumb-item2::before {
+    content: " > ";
+    padding-left: 7px;
+    color: #0d6efd !important;
+}
+.Advanced li.breadcrumb-item.active {
+    padding-left: 35px !important;
+}
+.Advanced .breadcrumb-item + .breadcrumb-item.active {
+    padding: 5px 15px 5px 35px !important;
+}
+.Advanced li.breadcrumb-item.active:first-child {
+    padding: 5px 15px 5px 20px !important;
+}
+.Advanced .breadcrumb-item:last-child {
+    color: #5C82E3;
+}
+.basic .breadcrumb-item:last-child{
+    color: #5C82E3;
+}
+
+li.breadcrumb-item2:last-child a{
+    color: #5C82E3 !important;
+}
+.breadcrumb-item2:last-child{
+    color: #5C82E3 !important;  
+}
+// li.breadcrumb-item2 a:last-child{
+//     color: blue !important;
+// }
+.container-fluid{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.lm{
+    padding-right: 80px;
+}
+h5{
+    padding-bottom: 30px;
+}
+h6{
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+.dark-mode {
+    padding-top: 40px;
+    background-color: #232933;
+    padding-bottom: 40px;
+}
+.dark-mode h6, .dark-mode h5{
+    color: #fff;
+}
+// .breadcrumb-item2 + .breadcrumb-item2::before {
+//     content: " > ";
+//     color: #0d6efd;
+// }
+.dark-mode .breadcrumb-item2 + .breadcrumb-item2::before {
+    color: #fff;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #fff;
+}
+.dark-mode .breadcrumb-item.active {
+    color: #fff;
+}
+.dark-mode li.breadcrumb-item2.active{
+    color: #fff;
+}
+
+// breadcrumbs new variations css
+li.breadcrumb-item3 {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0 5px 40px;
+    background: brown;
+    background: #4EA1FF;
+    position: relative;
+    display: block;
+    float: left;
+}
+.flat li a:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid white;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}
+.flat{
+    overflow: hidden;
+}
+.flat li a:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #4EA1FF;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
+.flat a{
+    color: #fff;
+    text-decoration: none;
+}
+.flat li:nth-child(1){
+    padding-left: 20px;
+}
+// new css
+ol.arrows {
+    width: fit-content;
+    padding: 0px 0px 0px 0px;
+    border-top: 1px solid #6666668f !important;
+    border-left: 1px solid #6666668f !important;
+    border-bottom: 1px solid #6666668f !important;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+}
+ol.single-arr{
+    width: 82px;
+}
+.single-arr li{
+    padding-left: 0px !important;
+}
+ol.two-arr{
+    width: 179px;
+}
+.two-arr li:nth-child(1){
+    padding-left: 0px !important;
+}
+.arrows li {
+    display: inline-block;
+    line-height: 26px;
+    padding: 5px 10px 5px 0px;
+    position: relative;
+}
+.arrows li a{
+    text-decoration: none;
+    padding-left: 13px;
+    color: #666666;
+}
+.arrows li::before, .arrows li::after {
+    border-right: 1px solid #666666;
+    content: '';
+    display: block;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: -9px;
+    top: 0;
+    z-index: -1;
+    transform: skewX(45deg);
+}
+.arrows li::after {
+    bottom: 0;
+    top: auto;
+    transform: skewX(
+-45deg);
+}
+
+.dark-mode .flat li a:before {
+    border-left: 30px solid black;
+}
+
+li.breadcrumb-item2 a{
+    color: #000 !important;
+}
+.dark-mode li.breadcrumb-item2 a{
+    color: #fff !important;
+}
+.dark-mode li.breadcrumb-item2 {
+    color: #fff !important;
+}
+a{
+    text-decoration: none;
+}
+.breadcrumb-item+.breadcrumb-item {
+    padding: 5px 15px 5px 20px;
+}
+.basic .breadcrumb-item {
+    padding: 5px 15px 5px 20px;
+}        
+
+/* // media queries */
+
+/* //iphone 5 */
+@media only screen and (max-width: 699px){
+    .arrows li {
+        font-size: 14px;
+        line-height: 16px;
+        display: inherit;
+    }
+    .breadcrumb-item + .breadcrumb-item {
+        padding: 5px 15px 5px 15px;
+    }
+    ol.breadcrumb.arrows.Advanced{
+        display: flex;
+        flex-wrap: inherit;
+    }
+  }
+  
+  // ipad pro
+  @media (min-width: 767px) and (max-width: 1365px){
+    .arrows li {
+        font-size: 14px;
+    }
+    .breadcrumb-item + .breadcrumb-item {
+        padding: 5px 15px 5px 15px;
+    }
+  }

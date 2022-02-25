@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent as RdsCard  } from './app.component';
 
 export default {
-  title: 'Elements/rds-card/Basic',
+  title: 'Elements/Card',
   component: RdsCard,
   argTypes: {
   backgroundColor: { control: 'color' },

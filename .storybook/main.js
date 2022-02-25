@@ -1,6 +1,6 @@
 module.exports = {
   "stories": [
-    "../rds-projects/**/*.stories.mdx",
+   // "../rds-projects/**/*.stories.mdx",
     "../rds-projects/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   "addons": [
