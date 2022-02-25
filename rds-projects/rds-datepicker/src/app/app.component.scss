@@ -824,10 +824,11 @@
   .theme-dark-blue .bs-datepicker-body table td.week span {
     display: none;
   }
-  .bs-datepicker-body {
-    padding: 0px;
-    border: 0px solid;
-  }
+.bs-datepicker-body {
+  padding: 0px;
+  border: 0px solid;
+  background: ivory !important;
+}
   .bs-datepicker {
     margin-left: 10px;
     margin-top: -36px;
@@ -835,13 +836,13 @@
   .bs-datepicker-head button:hover {
     background-color: transparent;
   }
-  .bs-datepicker-body table.days span.in-range:not(.select-start):before {
-    background: #b1c3f2;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
+.bs-datepicker-body table.days span.in-range:not(.select-start):before {
+  background: #486dcf;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
   .bs-datepicker-body table td span:before {
     left: -8px;
   }
