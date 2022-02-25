@@ -6018,6 +6018,109 @@
           }
         }
       }
+    },
+    "rds-collapse": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "rds-projects/rds-collapse",
+      "sourceRoot": "rds-projects/rds-collapse/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/rds-collapse",
+            "index": "rds-projects/rds-collapse/src/index.html",
+            "main": "rds-projects/rds-collapse/src/main.ts",
+            "polyfills": "rds-projects/rds-collapse/src/polyfills.ts",
+            "tsConfig": "rds-projects/rds-collapse/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "rds-projects/rds-collapse/src/favicon.ico",
+              "rds-projects/rds-collapse/src/assets"
+            ],
+            "styles": [
+              "rds-projects/rds-collapse/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "rds-projects/rds-collapse/src/environments/environment.ts",
+                  "with": "rds-projects/rds-collapse/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "rds-collapse:build:production"
+            },
+            "development": {
+              "browserTarget": "rds-collapse:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "ngx-build-plus:extract-i18n",
+          "options": {
+            "browserTarget": "rds-collapse:build"
+          }
+        },
+        "test": {
+          "builder": "ngx-build-plus:karma",
+          "options": {
+            "main": "rds-projects/rds-collapse/src/test.ts",
+            "polyfills": "rds-projects/rds-collapse/src/polyfills.ts",
+            "tsConfig": "rds-projects/rds-collapse/tsconfig.spec.json",
+            "karmaConfig": "rds-projects/rds-collapse/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "rds-projects/rds-collapse/src/favicon.ico",
+              "rds-projects/rds-collapse/src/assets"
+            ],
+            "styles": [
+              "rds-projects/rds-collapse/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }
