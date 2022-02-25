@@ -1,3 +1,5 @@
-<label for="exampleColorInput" class="form-label">Color picker</label>
-<input type="color" class="form-control form-control-color" id="exampleColorInput" [value]="value" title="Choose your color" (input)="changedValue($event)">
-    
+<div class="form-group d-flex">
+    <input type="color" class="form-control w-5 p-1" [disabled]="disabled" id="exampleColorInput" 
+    [value]="value" [title]="title" (input)="changedValue($event)">
+    <label for="exampleColorInput" class="form-label ms-2">{{label}}</label>
+</div>
