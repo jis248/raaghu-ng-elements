@@ -1,0 +1,40 @@
+h5{
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #000;
+    padding-bottom: 15px;
+    padding-top: 35px;
+}
+.ml-2{
+    margin-left: 10px;
+}
+h6{
+    color: #000;
+    padding-bottom: 10px;
+}
+.pt-10{
+    padding-top: 40px;
+}
+.mtm{
+    margin-left: 5px;
+}
+.light-mode{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+// dark mode
+
+.dark-mode {
+    padding-top: 40px;
+    background-color: #232933;
+    padding-bottom: 40px;
+}
+.dark-mode h5, .dark-mode h6{
+    color: #fff;
+}
+.dark-mode .card{
+    background-color: #343B46;
+    border: 1px solid #6c757d4d;
+    color: #fff;
+}
