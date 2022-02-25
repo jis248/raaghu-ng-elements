@@ -1,0 +1,184 @@
+<!-- <nav style="--bs-breadcrumb-divider: '>';"  aria-label="breadcrumb" >
+    <ol class="breadcrumb arrows two-arr">
+      <li (click)="test.emit($event)" [ngClass]="{'active':last}" aria-current="page" *ngFor='let item of breadcrumbsitems;let last=last'  class="breadcrumb-item" >
+            <ng-container *ngIf="!last">
+            <i [ngClass]="[item.iconClass]"  class="mx-1"></i>
+        <a [routerLink] = item.route>{{item.name}}</a>
+        <span  [ngStyle]="{'--bs-breadcrumb-divider': '>'}"></span>
+      </ng-container>
+      <span [ngStyle]="{'color': color }" *ngIf="last">{{item.name}}</span>
+    </li>
+    </ol>
+  </nav> -->
+  <div [ngSwitch]="role">
+    <div *ngSwitchCase="'Advanced'">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb arrows Advanced">
+          <li class="breadcrumb-item" [ngClass]="{'active': activepage === i}" aria-current="page" *ngFor="let item of breadcrumbsitems; index as i" (click)="onClick(item,i)">
+            <i [ngClass]="item.iconClass" *ngIf="iconShow" [ngStyle]="{'color': color }" class="mx-1"></i>
+            <a routerLink = "item.name" *ngIf="activepage!=i">{{item.name}}</a>
+            <span *ngIf="activepage === i ">{{item.name}}</span>
+          </li>
+         </ol>
+      </nav>
+    </div>
+  <div *ngSwitchCase="'basic'">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb basic">
+        <li class="breadcrumb-item" [ngClass]="{'active': activepage === i}" aria-current="page" *ngFor="let item of breadcrumbsitems; index as i" (click)="onClick(item,i)">
+          <i [ngClass]="item.iconClass" *ngIf="iconShow"  [ngStyle]="{'color': color }" class="mx-1"></i>
+          <a routerLink = "item.name" *ngIf="activepage!=i">{{item.name}}</a>
+          <span *ngIf="activepage === i ">{{item.name}}</span>
+        </li>
+       </ol>
+    </nav>
+  </div>
+  <div *ngSwitchCase="'withDivider'">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb withDivider">
+        <li class="breadcrumb-item2" [ngClass]="{'active': activepage === i}" aria-current="page" *ngFor="let item of breadcrumbsitems; index as i" (click)="onClick(item,i)">
+          <i [ngClass]="item.iconClass" *ngIf="iconShow"  [ngStyle]="{'color': color }" class="mx-1"></i>
+          <a routerLink = "item.name" *ngIf="activepage!=i">{{item.name}}</a>
+          <span *ngIf="activepage === i ">{{item.name}}</span>
+        </li>
+       </ol>
+    </nav>
+  </div>
+  </div>
+
+
+
+<!-- new style breadcrumbs -->
+<!-- <ol class="arrows single-arr">
+  <li><a href="#">Home</a></li>
+</ol>
+
+<ol class="arrows two-arr">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+</ol>
+
+<ol class="arrows">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Clients</a></li>
+</ol> -->
+
+<!--
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li *ngFor="let item of breadcrumbsItems; let i = index;" class="breadcrumb-item" [ngClass]="{'active': activepage === i}">
+      <a [hidden]="i == (breadcrumbsItems.length - 1)" *ngIf="activepage!=i">{{item.name}}</a>
+      <span [hidden]="i != (breadcrumbsItems.length - 1)" *ngIf="activepage === i ">
+        <b>{{item.name}}</b>
+      </span>
+    </li>
+  </ol>
+</nav> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 lm">
+      <!-- <h5>light mode</h5> -->
+
+      <!-- default breadcrumbs -->
+      <!-- <div class="placement">
+        <h6>default breadcrumbs</h6>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+          </ol>
+        </nav>
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+          </ol>
+        </nav>
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+          </ol>
+        </nav>
+      </div> -->
+
+      <!-- Dividers breadcrumbs-->
+      <!-- <div class="placement">
+        <h6>Dividers breadcrumbs</h6>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item2"><a href="#">Home</a></li>
+            <li class="breadcrumb-item2 active" aria-current="page">Library</li>
+          </ol>
+        </nav>
+      </div> -->
+    </div>
+
+    <!-- <div class="col-md-6 dark-mode"> -->
+      <!-- <h5>dark mode</h5> -->
+
+      <!-- default breadcrumbs -->
+      <!-- <div class="placement">
+        <h6>default breadcrumbs</h6>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+          </ol>
+        </nav>
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+          </ol>
+        </nav>
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+          </ol>
+        </nav>
+      </div> -->
+
+      <!-- Dividers breadcrumbs-->
+      <!-- <div class="placement">
+        <h6>Dividers breadcrumbs</h6>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item2"><a href="#">Home</a></li>
+            <li class="breadcrumb-item2 active" aria-current="page">Library</li>
+          </ol>
+        </nav>
+      </div> -->
+
+      <!-- <nav aria-label="breadcrumb">
+        <ol class="breadcrumb flat">
+          <li class="breadcrumb-item3" [ngClass]="{'active': activepage === i}" aria-current="page" *ngFor="let item of breadcrumbsItems; index as i" (click)="onClick(item,i)">
+            <i  [ngStyle]="{'color': color }" class="mx-1"></i>
+            <a *ngIf="activepage!=i" href="#">{{item.label}}
+            </a>
+            <span *ngIf="activepage === i ">{{item.label}}</span>
+          </li>
+         </ol>
+      </nav> -->
+
+      <!-- <nav aria-label="breadcrumb">
+        <ol class="breadcrumb flat">
+          <li class="breadcrumb-item3" [ngClass]="{'active': activepage === i}" aria-current="page" *ngFor="let item of breadcrumbsItems; index as i" (click)="onClick(item,i)">
+            <i  [ngStyle]="{'color': color }" class="mx-1"></i>
+            <a *ngIf="activepage!=i" href="#">{{item.label}}
+            </a>
+            <span *ngIf="activepage === i ">{{item.label}}</span>
+          </li>
+         </ol>
+      </nav> -->
+
+  <!-- </div> -->
+</div>
+

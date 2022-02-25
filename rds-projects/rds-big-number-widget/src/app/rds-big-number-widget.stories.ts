@@ -3,7 +3,7 @@ import {AppComponent as RdsBigNumberWidgetComponent } from './app.component';
 
 export default {
 
-  title: 'ELEMENTS/rds-big-number-widget',
+  title: 'ELEMENTS/Big Number Widget',
 
   component: RdsBigNumberWidgetComponent,
 
