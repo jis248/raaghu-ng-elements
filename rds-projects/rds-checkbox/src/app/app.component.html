@@ -1,7 +1,7 @@
 <div [ngClass]="classes">
-  <input   class="form-check-input" type="checkbox"  [value]="label"  [checked]="checked" [id]="id"
-  [disabled]="disabled" (input)="getValue($event)">
-  <label class="form-check-label" [for]="id">
+  <input class="form-check-input" type="checkbox"
+  [value]="label" [checked]="checked" [id]="id" [disabled]="disabled">
+  <label class="form-check-label" [for]="id" *ngIf="withLabel" [ngClass]="{'ms-2': isInputGroup}" [ngStyle]="{'color': textColor ? textColor : '#000'}">
       {{label}}
   </label> 
 </div>

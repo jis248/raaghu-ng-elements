@@ -19,5 +19,6 @@ const Template: Story<AppComponent> = (args:AppComponent) => ({
   switch:false,
   inline:false,
   name:'Name for Radio Button',
-  id:"Checkid"
+  id:"Checkid",
+  isInputGroup: true
 }
