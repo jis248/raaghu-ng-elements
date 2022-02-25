@@ -5503,6 +5503,109 @@
           }
         }
       }
+    },
+    "get-started": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "rds-projects/get-started",
+      "sourceRoot": "rds-projects/get-started/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/get-started",
+            "index": "rds-projects/get-started/src/index.html",
+            "main": "rds-projects/get-started/src/main.ts",
+            "polyfills": "rds-projects/get-started/src/polyfills.ts",
+            "tsConfig": "rds-projects/get-started/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "rds-projects/get-started/src/favicon.ico",
+              "rds-projects/get-started/src/assets"
+            ],
+            "styles": [
+              "rds-projects/get-started/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "rds-projects/get-started/src/environments/environment.ts",
+                  "with": "rds-projects/get-started/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "get-started:build:production"
+            },
+            "development": {
+              "browserTarget": "get-started:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "ngx-build-plus:extract-i18n",
+          "options": {
+            "browserTarget": "get-started:build"
+          }
+        },
+        "test": {
+          "builder": "ngx-build-plus:karma",
+          "options": {
+            "main": "rds-projects/get-started/src/test.ts",
+            "polyfills": "rds-projects/get-started/src/polyfills.ts",
+            "tsConfig": "rds-projects/get-started/tsconfig.spec.json",
+            "karmaConfig": "rds-projects/get-started/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "rds-projects/get-started/src/favicon.ico",
+              "rds-projects/get-started/src/assets"
+            ],
+            "styles": [
+              "rds-projects/get-started/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }

@@ -4,25 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent as RdsGetingStartedComponent } from './app.component';
+import { AppComponent as GetStartedComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    RdsGetingStartedComponent
+    GetStartedComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [environment.localDev ? RdsGetingStartedComponent : []],
+   bootstrap: [environment.localDev ? GetStartedComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(RdsGetingStartedComponent, {
+    const micro = createCustomElement(GetStartedComponent, {
       injector: this.injector,
     });
-    customElements.define('rds-geting-started', micro);
+    customElements.define('get-started', micro);
   }
 
   ngDoBootstrap(appRef: ApplicationRef): void {

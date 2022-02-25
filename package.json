@@ -29,6 +29,7 @@
     "chart.js": "^3.7.1",
     "ngx-bootstrap": "^8.0.0",
     "ngx-build-plus": "^13.0.1",
+    "ngx-markdown": "^13.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
