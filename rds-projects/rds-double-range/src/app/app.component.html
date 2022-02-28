@@ -1,0 +1,21 @@
+
+<div class="wapper">
+  <ng-container *ngIf="custstyle1 === 'style1'">
+    <span id="range1" class="custtooltip_1" [attr.data-tooltip]="val1"></span>
+    <span id="range2" class="custtooltip_1" [attr.data-tooltip]="val2"></span>
+  </ng-container>
+  <ng-container *ngIf="custstyle1 === 'style2'">
+    <span id="range1" class="custtooltip_2" [attr.data-tooltip]="val1"></span>
+    <span id="range2" class="custtooltip_2" [attr.data-tooltip]="val2"></span>
+  </ng-container>
+  <ng-container *ngIf="custstyle1 === 'style3'">
+    <span id="range1" class="custtooltip_3" [attr.data-tooltip]="val1"></span>
+    <span id="range2" class="custtooltip_3" [attr.data-tooltip]="val2"></span>
+  </ng-container>
+
+  <div class="slider-track"></div>
+  <input id=slider1 type="range" [min]="min" [ngClass]="style" [max]="max" value="val1" (input)="rangeone()">
+  <input id=slider2 type="range" [min]="min" [ngClass]="style" [max]="max" value="val2" (input)="rangetwo()">
+</div>
+
+
