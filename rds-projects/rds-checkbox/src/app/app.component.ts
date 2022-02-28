@@ -21,7 +21,7 @@ export class AppComponent implements OnInit ,ControlValueAccessor{
   onChange!:(value:string) => void;
   onTouched!:() => void
 
- 
+
 
   @Input()
   label?:string
@@ -38,14 +38,14 @@ export class AppComponent implements OnInit ,ControlValueAccessor{
   inline= false
 
   @Input()
-  id?:string
+    id?:string
 
   @Input()
    state :'checkbox'|'Indeterminate'|'errorcheckbox'='checkbox';
-   
+
    @Output()
    onClick = new EventEmitter<{evnt:any,item:string}>();
-   
+
   constructor() { }
   writeValue(obj: any): void {
     this.value = obj
@@ -61,7 +61,7 @@ export class AppComponent implements OnInit ,ControlValueAccessor{
   }
 
   ngOnInit(): void {
-    
+
   }
 
   public get classes():string[]{
@@ -88,10 +88,10 @@ export class AppComponent implements OnInit ,ControlValueAccessor{
 
   getValue(event:any){
     this.onClick.emit({evnt:event,item:event.target.value});
-  
+
       this.onChange(event.target.value)
       this.onTouched()
-      
+
   }
 
 }
