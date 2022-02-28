@@ -1,38 +1,33 @@
-import { APP_BASE_HREF } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { moduleMetadata } from '@storybook/angular';
+
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AppComponent } from './app.component';
+import { AppComponent as RdsInputGroupComponent } from './app.component';
+
 
 export default {
+
     title: 'Elements/Input Group',
-    decorators: [
-        moduleMetadata({
-            imports: [],
-            schemas: [CUSTOM_ELEMENTS_SCHEMA],
-            providers: [
-                { provide: APP_BASE_HREF, useValue: "/" }
-            ]
-        }),
-    ],
-    component: AppComponent,
+    component: RdsInputGroupComponent,
+    // decorators: [
+    //     moduleMetadata({
+    //         declarations: [RdsInputComponent, RdsSelectListComponent],
+    //         schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    //     }),
+    // ],
     argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as Meta;
 
-    }
-} as Meta
-
-const Template: Story<AppComponent> = (args: AppComponent) => ({
+export const inputGroup: Story<RdsInputGroupComponent> = (args) => ({
     props: args,
+
+    template: `<rds-input-group>
+    <input   type="text" class="form-control"  id="Errormessage" placeholder="placeholder">    
+    <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>  
+    </rds-input-group>`
+
 });
 
-export const InputGroup = Template.bind({})
-
-// InputGroup.args = {
-//     inpuGroupSize: 'sm',
-//     inputGroupItem: [
-//         {
-//             type: 'button',
-//         }
-//     ]
-
-// }
+inputGroup.args = {
+    inpuGroupSize: 'md',
+}

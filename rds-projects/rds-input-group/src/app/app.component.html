@@ -1,19 +1,3 @@
-<div class="input-group" [ngClass]="classes">
-  <!-- <ng-container *ngFor="let item of inputGroupItem">
-    <ng-container [ngSwitch]="item.type">
-      <ng-container *ngSwitchCase="'button'" >
-        <rds-button>
-        </rds-button>
-      </ng-container>
-      <ng-container *ngSwitchCase="'select'">
-        <rds-select-list></rds-select-list>
-      </ng-container>
-      <ng-container *ngSwitchDefault>
-        <rds-input  [inputType]="item.type"></rds-input>
-      </ng-container>
-    </ng-container>
-  </ng-container> -->
-  <ng-content>
-
-  </ng-content>
+<div class="input-group mb-2" [ngClass]="classes">
+  <ng-content></ng-content>
 </div>

@@ -40,6 +40,7 @@ export class AppComponent implements OnInit {
 
   @Output()
    onClick = new EventEmitter<any>();
+  @Input() isInputGroup = false;
 
   constructor() { }
   writeValue(obj: any): void {
@@ -58,6 +59,9 @@ export class AppComponent implements OnInit {
   }
   public get classes():string[]{
     var classes = ['form-check']
+    if (this.isInputGroup === true) {
+      classes = ['input-group-text'];
+    }
     if(this.switch === true){
       classes.push('form-switch')
       return classes

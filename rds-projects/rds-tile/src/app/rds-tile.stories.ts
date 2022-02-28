@@ -6,7 +6,7 @@ import {AppComponent as RdsTileComponent } from './app.component';
 
 export default {
 
-  title: 'ELEMENTS/rds-tile',
+  title: 'ELEMENTS/Tile',
 
   component: RdsTileComponent,
 
