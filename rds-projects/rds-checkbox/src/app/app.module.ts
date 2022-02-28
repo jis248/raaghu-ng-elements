@@ -4,10 +4,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent as RdsCheckbox } from './app.component';
 import { environment } from '../environments/environment.prod';
 import { createCustomElement } from '@angular/elements';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [RdsCheckbox],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   entryComponents: [RdsCheckbox],
   bootstrap: [environment.localDev ? RdsCheckbox : []],

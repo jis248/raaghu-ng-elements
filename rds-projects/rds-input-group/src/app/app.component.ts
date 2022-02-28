@@ -8,8 +8,6 @@ import { Component, EventEmitter, Input, Output, TemplateRef } from '@angular/co
 export class AppComponent {
   title = 'rds-input-group';
   @Input() inpuGroupSize: 'sm' | 'md' | 'lg' = 'sm';
-  @Input() inputGroupItems!: TemplateRef<any>
-
   get classes() {
     return `input-group-${this.inpuGroupSize}`;
   }

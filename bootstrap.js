@@ -14,6 +14,7 @@ const buildAllProjects = async (directories, projectToBuild) => {
         await exec(`npm run build --project="${projectToBuild}" --href=/${projectToBuild}/`, { cwd: path.join(__dirname) });
     } else {
         for (const dir of directories) {
+            if (dir === 'app-config') continue;
             console.log('building ' + dir + '...')
             await exec(`npm run build --project="${dir}" --href=/${dir}/`, { cwd: path.join(__dirname) });
         }
