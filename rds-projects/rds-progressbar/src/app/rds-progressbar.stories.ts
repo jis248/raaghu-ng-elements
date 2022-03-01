@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent } from './app.component';
 
 export default {
-    title: 'Elements/Progressbar/Progressbar',
+    title: 'Elements/Progress bar',
     component:AppComponent ,
     argTypes: {
       progressIndicatorColor: {
