@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'rds-buuton-group',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'rds-button-group',
+  templateUrl: './rds-btn-group.component.html',
+  styleUrls: ['./rds-btn-group.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class AppComponent {
+export class RdsButtonGroupComponent {
   /**
    * What background color to use
    */

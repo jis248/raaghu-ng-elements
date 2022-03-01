@@ -1,4 +1,3 @@
-
 <div [ngSwitch]="role">
   <div *ngSwitchCase="'radio'">
     <div [class]="classes" role="group" aria-label="Basic example">
@@ -23,7 +22,7 @@
         [ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor , 'color':color}">
           <i [class]="item.iconClass"></i> 
           {{item.label}}
-        </label>
+      </label>
       </ng-container>
     </div>
   </div>
@@ -32,10 +31,8 @@
       <button type="button" *ngFor=" let item of buttonGroupItem;let i=index" [class]="itemClass"
         [ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor , 'color':color}"
         (click)="onClick.emit(i+1)">
-
         <i [class]="item.iconClass"></i> {{item.label}}</button>
       <ng-content></ng-content>
     </div>
   </div>
 </div>
- 
