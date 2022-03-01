@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsOffcanvasComponent } from './rds-offcanvas.component'
+import { RdsOffcanvasComponent } from './rds-offcanvas.component';
 
 export default {
   title: 'Elements/Offcanvas',
