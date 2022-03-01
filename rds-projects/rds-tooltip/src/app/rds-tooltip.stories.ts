@@ -24,7 +24,7 @@ export const TooltipWithLink: Story<RdsTooltipComponent> = (args) => ({
   template:
       `
       <rds-tooltip [tooltipTitle] = "tooltipTitle" [tooltipPosition] = "tooltipPosition">
-      <a href = "#" data-bs-toggle="tooltip" [attr.data-bs-placement]="tooltipPosition" [title]="tooltipTitle">hello links with tooltips</a>
+      <a class="d-inline-block" href = "#" data-bs-toggle="tooltip" [attr.data-bs-placement]="tooltipPosition" [title]="tooltipTitle">hello links with tooltips</a>
       </rds-tooltip>
       `,
 });
