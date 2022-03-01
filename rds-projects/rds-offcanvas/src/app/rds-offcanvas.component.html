@@ -1,4 +1,13 @@
-
+<button
+  class="btn btn-primary"
+  type="button"
+  data-bs-toggle="offcanvas"
+  [attr.data-bs-target]="'#' + offId"
+  [attr.aria-controls]="offId"
+  (click) = "onShow.emit($event)"
+>
+  {{buttonTitle}}
+</button>
 
 <div
   [class]="classes"

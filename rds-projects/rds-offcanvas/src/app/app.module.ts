@@ -3,7 +3,7 @@ import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent as RdsOffcanvasComponent } from './app.component';
+import { RdsOffcanvasComponent } from './rds-offcanvas.component';
 @NgModule({
   declarations: [
     RdsOffcanvasComponent
