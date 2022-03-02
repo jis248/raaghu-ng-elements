@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent } from './button.component';
+import { AddNewBoxComponent } from './add-new-box.component';
 
 @NgModule({
-  declarations: [ButtonComponent],
+  declarations: [AddNewBoxComponent],
   imports: [CommonModule, FormsModule],
-  exports: [ButtonComponent],
+  exports: [AddNewBoxComponent],
 })
-export class ButtonModule { }
+export class AddNewBoxModule { }

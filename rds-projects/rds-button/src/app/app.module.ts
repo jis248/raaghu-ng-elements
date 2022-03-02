@@ -5,8 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment.prod';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './button/button.component';
 import { ButtonModule } from './button/button.module';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [AppComponent],
