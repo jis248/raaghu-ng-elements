@@ -1,0 +1,33 @@
+<button
+  class="btn btn-primary"
+  type="button"
+  data-bs-toggle="offcanvas"
+  [attr.data-bs-target]="'#' + offId"
+  [attr.aria-controls]="offId"
+  (click) = "onShow.emit($event)"
+>
+  {{buttonTitle}}
+</button>
+
+<div
+  [class]="classes"
+  [attr.data-bs-scroll]="scroll"
+  [attr.data-bs-backdrop]="backdrop"
+  tabindex="-1"
+  [id]="offId"
+  [attr.aria-labelledby]="'canvas' + offId"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" [id]="'canvas' + offId">{{ canvasTitle }}</h5>
+    <button
+      type="button"
+      (click) = "onClose.emit($event)"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <ng-content></ng-content>
+  </div>
+</div>

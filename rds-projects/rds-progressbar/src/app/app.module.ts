@@ -4,12 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment.prod';
 import { createCustomElement } from '@angular/elements';
+import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { ProgressbarModule } from './progressbar/progressbar.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,ProgressbarModule],
   providers: [],
-  entryComponents: [AppComponent],
+  entryComponents: [ProgressbarComponent],
   bootstrap: [environment.localDev ? AppComponent : []],
 })
 export class AppModule implements DoBootstrap {

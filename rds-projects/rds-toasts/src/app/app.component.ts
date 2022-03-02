@@ -41,6 +41,7 @@ export class AppComponent implements AfterViewInit {
   
     @Input()
   position: 'Top-Left' | 'Top-Center' | 'Top-Right' | 'Middle-Left' | 'Middle-Center' | 'Middle-Right' | 'Bottom-Left' | 'Bottom-Center' | 'Bottom-Right' = 'Bottom-Right';
+  positionClass = this.position;
 
   clicked=false;
   

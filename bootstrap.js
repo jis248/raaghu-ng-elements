@@ -8,16 +8,11 @@ const projectRootFolder = 'rds-projects';
 const distPath = path.join(__dirname, 'dist');
 const elementsFilePath = path.join(__dirname, 'rds-projects', 'app-config', 'src', 'lib', 'elements.ts')
 
-const buildAllProjects = async (directories, projectToBuild) => {
-    if (projectToBuild) {
-        console.log('building ' + projectToBuild + '...')
-        await exec(`npm run build --project="${projectToBuild}" --href=/${projectToBuild}/`, { cwd: path.join(__dirname) });
-    } else {
-        for (const dir of directories) {
-            if (dir === 'app-config') continue;
-            console.log('building ' + dir + '...')
-            await exec(`npm run build --project="${dir}" --href=/${dir}/`, { cwd: path.join(__dirname) });
-        }
+const buildAllProjects = async (directories, projectToBuildArray) => {
+    for (const dir of (projectToBuildArray || directories)) {
+        if (dir === 'app-config') continue;
+        console.log('building ' + dir + '...')
+        await exec(`npm run build --project="${dir}" --href=/${dir}/`, { cwd: path.join(__dirname) });
     }
 }
 
@@ -74,16 +69,16 @@ async function start() {
         const directories = await getDirectories(path.join(__dirname, projectRootFolder));
         const projectToBuild = args?.project;
         if (projectToBuild) {
-            if (!directories.includes(projectToBuild)) {
+            if (projectToBuild.split(',').find(r => !directories.includes(r))) {
                 console.log("invalid project name");
                 return;
             }
-            await buildAllProjects(directories, projectToBuild);
+            await buildAllProjects(directories, projectToBuild.split(','));
         } else {
             await fs.rm(path.join(__dirname, 'dist'), { recursive: true, force: true });
             await fs.mkdir(path.join(__dirname, 'dist'));
             console.log('Building projects from ' + projectRootFolder);
-            await buildAllProjects(directories, projectToBuild);
+            await buildAllProjects(directories, projectToBuild.split(','));
         }
     }
     await updateElementsTsFile();
