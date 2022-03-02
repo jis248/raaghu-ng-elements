@@ -1,5 +1,14 @@
 .breadcrumb-item + .breadcrumb-item::before { content: " / ";
 }
+.breadcrumb-item:hover {
+  color: #5C82E3;
+}
+.breadcrumb-item2:hover {
+  color: #5C82E3;
+}
+.cursor {
+  cursor: pointer;
+}
 .breadcrumb-item2 + .breadcrumb-item2::before {
     content: " > ";
     padding-left: 7px;
@@ -78,7 +87,7 @@ li.breadcrumb-item3 {
     background: #4EA1FF;
     position: relative;
     display: block;
-    float: left;
+    float: left;   
 }
 .flat li a:before {
     content: " ";

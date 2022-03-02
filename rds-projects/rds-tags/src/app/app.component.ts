@@ -26,11 +26,11 @@ export class AppComponent implements OnInit {
   Tagarray: Array<string> = [];
 
   showtag: boolean=true;
- // @Input()
- // Border?: number;
+  @Input()
+  Border?: number;
 
- // @Input()
-  //Borderstyle?: string;
+  @Input()
+  Borderstyle?: string;
 
   @Input() roles : 'Basic' | 'TagWithScroll' = 'Basic';
 
