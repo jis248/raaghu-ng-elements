@@ -1,11 +1,12 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'rds-offcanvas',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './rds-offcanvas.component.html',
+  styleUrls: ['./rds-offcanvas.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class RdsOffcanvasComponent {
 
 
   scroll = false;

@@ -4,11 +4,11 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'rds-tooltip',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  templateUrl: './rds-tooltip.component.html',
+  styleUrls: ['./rds-tooltip.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class RdsTooltipComponent implements OnInit, AfterViewInit {
 
   constructor(
 

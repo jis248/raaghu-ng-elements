@@ -1,14 +1,12 @@
 import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
+import { MarkdownModule } from 'ngx-markdown';
 import { environment } from '../environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent as GetStartedComponent } from './app.component';
-import 'prismjs';
-import 'prismjs/components/prism-typescript.min.js';
-import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
-import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
+
 @NgModule({
   declarations: [
     GetStartedComponent
@@ -16,7 +14,7 @@ import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MarkdownModule.forRoot(),
+    MarkdownModule
   ],
   providers: [],
    bootstrap: [environment.localDev ? GetStartedComponent : []],

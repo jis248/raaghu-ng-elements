@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { RdsBadgesComponent } from './RdsBadges.component';
+import { AppComponent } from './app.component';
+
 export default {
 
   title: 'Elements/Badge',
 
-  component: RdsBadgesComponent,
+  component: AppComponent,
   decorators: [
     moduleMetadata({
       imports: [CommonModule],
@@ -24,10 +25,10 @@ export default {
 
 } as Meta;
 
-const Template: Story<RdsBadgesComponent> = (args: RdsBadgesComponent) => ({
+const Template: Story<AppComponent> = (args: AppComponent) => ({
   props: args,
 });
-export const Basic: Story<RdsBadgesComponent> = (args) => ({
+export const Basic: Story<AppComponent> = (args) => ({
   props: args,
 });
 Basic.args = {
@@ -36,7 +37,7 @@ Basic.args = {
   label: 'new'
 };
 
-export const BadgeButton: Story<RdsBadgesComponent> = (args) => ({
+export const BadgeButton: Story<AppComponent> = (args) => ({
   props: args,
   template:
     `<button type="button" class="btn btn-primary">
@@ -58,7 +59,7 @@ BadgeButton.args = {
   size: 'smallest',
 
 };
-export const BadgePositioned: Story<RdsBadgesComponent> = (args) => ({
+export const BadgePositioned: Story<AppComponent> = (args) => ({
   props: args,
   template:
     `<button type="button" class="btn btn-ligh position-relative">
@@ -82,7 +83,7 @@ BadgePositioned.args = {
   label: '99+'
 };
 
-export const BadgeIcon: Story<RdsBadgesComponent> = (args) => ({
+export const BadgeIcon: Story<AppComponent> = (args) => ({
   props: args,
   template:
     `<button
