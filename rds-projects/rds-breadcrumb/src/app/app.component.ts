@@ -36,6 +36,42 @@ export class AppComponent {
   @Input() color ?: string;
   @Input() role : 'basic' | 'Advanced' | 'withDivider'=  'basic';
   @Input() iconShow : boolean = false;
+  @Input()
+  colorType?: string;
+
+  @Input()
+  submit = false;
+
+  @Input()
+  backgroundColor?: string;
+
+  @Input()
+  borderColor?: string;
+
+ 
+  @Input()
+  block = false;
+
+  @Input()
+  size?: string;
+
+  @Input()
+  disabled = false;
+
+  @Input()
+  outlineButton = false;
+
+  @Input()
+  roundedButton = false;
+
+  @Input()
+  toggleButton = false;
+
+  @Input()
+  iconClass?: string;
+
+  @Input()
+  label?: string;
 
  @Output() onNavigation = new EventEmitter<Event>();
 
