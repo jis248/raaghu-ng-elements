@@ -2,13 +2,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
+  selector: 'rds-colorpicker',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, ControlValueAccessor {
-  title = 'rds-color-picker';
+  title1 = 'rds-color-picker';
   @Input() value = '';
+  @Input() label: string;
+  @Input() disabled: boolean;
+  @Input() title: string;
 
   @Output() onItemClick = new EventEmitter<any>();
 
@@ -28,6 +31,7 @@ export class AppComponent implements OnInit, ControlValueAccessor {
 
   changedValue(event: any) {
     this.onItemClick.emit({ evnt: event, item: event.target.value });
+    console.log(event.target.value);
     // this.onChange(event.target.value)
     // this.onTouched()
 

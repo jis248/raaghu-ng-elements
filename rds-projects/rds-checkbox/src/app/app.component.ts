@@ -15,57 +15,52 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 
 })
-export class AppComponent implements OnInit ,ControlValueAccessor{
+export class AppComponent implements OnInit{
   value=''
+  // onChange!:(value:string) => void;
+  // onTouched!:() => void
+  @Input() label?: string;
 
-  onChange!:(value:string) => void;
-  onTouched!:() => void
+  @Input() checked: boolean;
+  @Input() disabled: boolean;
 
- 
+   @Input() switch: boolean;
 
-  @Input()
-  label?:string
+  @Input() inline: boolean;
 
-  @Input()
-  checked = false
-  @Input()
-  disabled=false
+  @Input() id?: string
+  @Input() withLabel: boolean;
+  @Input() textColor: string;
+  @Output() onCheck: EventEmitter<void> = new EventEmitter<void>();
+  @Output() onUncheck: EventEmitter<void> = new EventEmitter<void>();
+  @Input() check: boolean;
+  @Input() isInputGroup: boolean;
 
-   @Input()
-  switch= false
-
-  @Input()
-  inline= false
-
-  @Input()
-  id?:string
-
-  @Input()
-   state :'checkbox'|'Indeterminate'|'errorcheckbox'='checkbox';
+  @Input() state :'checkbox'|'Indeterminate'|'errorcheckbox'='checkbox';
    
-   @Output()
-   onClick = new EventEmitter<{evnt:any,item:string}>();
+  @Output() onClick = new EventEmitter<{evnt:any,item:string}>();
    
   constructor() { }
   writeValue(obj: any): void {
     this.value = obj
     //throw new Error('Method not implemented.');
   }
-  registerOnChange(fn: any): void {
-    this.onChange = fn
-    //throw new Error('Method not implemented.');
-  }
-  registerOnTouched(fn: any): void {
-    this.onTouched = fn
-    //throw new Error('Method not implemented.');
-  }
+  // registerOnChange(fn: any): void {
+  //   this.onChange = fn
+  //   //throw new Error('Method not implemented.');
+  // }
+  // registerOnTouched(fn: any): void {
+  //   this.onTouched = fn
+  //   //throw new Error('Method not implemented.');
+  // }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void { }
 
-  public get classes():string[]{
+  public get classes(): string[] {
     var classes = ['form-check']
+    if (this.isInputGroup === true) {
+      classes = ['input-group-text'];
+    }
     if(this.switch === true){
       classes.push('form-switch')
       return classes
@@ -89,9 +84,13 @@ export class AppComponent implements OnInit ,ControlValueAccessor{
   getValue(event:any){
     this.onClick.emit({evnt:event,item:event.target.value});
   
-      this.onChange(event.target.value)
-      this.onTouched()
+      // this.onChange(event.target.value)
+      // this.onTouched()
       
+  }
+  stateChanged() {
+    console.log('clicked')
+    this.checked ? this.onCheck.emit() : this.onUncheck.emit();
   }
 
 }

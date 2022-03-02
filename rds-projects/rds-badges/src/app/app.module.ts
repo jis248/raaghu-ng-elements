@@ -5,24 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { environment } from 'rds-projects/rds-badges/src/environments/environment';
 import { createCustomElement } from '@angular/elements';
-import {RdsBadgesComponent } from './RdsBadges.component';
-
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  entryComponents: [RdsBadgesComponent],
+  entryComponents: [AppComponent],
   providers: [],
-  bootstrap: [environment.localDev ? RdsBadgesComponent: []]
+  bootstrap: [environment.localDev ? AppComponent : []]
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(RdsBadgesComponent, {
+    const micro = createCustomElement(AppComponent, {
       injector: this.injector,
     });
     customElements.define('rds-badges', micro);

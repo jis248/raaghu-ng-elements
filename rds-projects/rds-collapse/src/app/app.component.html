@@ -1,0 +1,11 @@
+<button [class]="collapsebutton" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#'+collapseId" [attr.aria-expanded]="expanded" [attr.aria-controls]="collapseId" [ngStyle]="{'border-color': button_borderColor , 'background-color':button_backgroundColor , 'color':button_Color}" (click)="toggleExpanded()">
+  {{label}}
+</button>
+
+<div [class]="collapsewrapper" [id]="collapseId" class="mt-2">
+  <ng-container>
+    <div class="card card-body" [ngStyle]="{'width': width, 'border-color': borderColor , 'background-color':backgroundColor , 'color':Color}">
+      {{content}}
+    </div>
+  </ng-container>
+</div>

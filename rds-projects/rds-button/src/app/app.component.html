@@ -1,14 +1,2 @@
-<!-- Template for the micro front end component -->
-<!-- <button class="btn" [ngClass]="classes" (click)="click.emit()">{{ label || 'Button' }}</button> -->
-<button [type]="buttonType" [class]="classes" (click)="onClick.emit($event)"
-[ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor , 'color':color}"
-[disabled]="disabled"
-[ngClass]= "width"
->
 
-<ng-content select="[left]"></ng-content>
-<i [class] = "iconClass"></i>
-{{label}}
-<ng-content></ng-content>
-<ng-content select="[right]"></ng-content>
-</button>
+<button ></button>

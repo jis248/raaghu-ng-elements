@@ -2,32 +2,32 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AppComponent as RdsbuttonComponent } from './app.component';
+import { ButtonComponent } from './button/button.component';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
   title: 'Elements/Button',
-  component: RdsbuttonComponent,
+  component: ButtonComponent,
 
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-    borderColor: { control: 'color' },
-    color: { control: 'color' },
-    click: { action: 'clicked'},
-    colorType: {
-      options: ['primary', 'secondary','success','danger','warning','info','light','dark'],
-      control: { type: 'select' }
-    },
-    size: {
-      options: ['small', 'large', 'medium'],
-      control:{ type: 'select' }
-    }
-  },
+  // argTypes: {
+  //   backgroundColor: { control: 'color' },
+  //   borderColor: { control: 'color' },
+  //   color: { control: 'color' },
+  //   click: { action: 'clicked'},
+  //   colorType: {
+  //     options: ['primary', 'secondary','success','danger','warning','info','light','dark'],
+  //     control: { type: 'select' }
+  //   },
+  //   size: {
+  //     options: ['small', 'large', 'medium'],
+  //     control:{ type: 'select' }
+  //   }
+  // },
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
-const Template: Story<RdsbuttonComponent> = (args: RdsbuttonComponent) => ({
+const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
   props: args,
 });
 
@@ -69,28 +69,28 @@ Outline.args = {
 
 export const CloseButton = Template.bind({});
 CloseButton.args = {
-    iconClass: 'bi bi-x-lg',
-    colorType: 'primary',
-    label: '',
-    size: 'medium'
+  iconClass: 'bi bi-x-lg',
+  colorType: 'primary',
+  label: '',
+  size: 'medium'
 };
 
 export const With_Icon = Template.bind({});
 With_Icon.args = {
-   roundedButton: false,
-   iconClass: 'bi bi-pencil-fill',
-   colorType: 'primary',
-   label: '',
-   size: 'medium'
+  roundedButton: false,
+  iconClass: 'bi bi-pencil-fill',
+  colorType: 'primary',
+  label: '',
+  size: 'medium'
 };
 
 export const Icon_With_label = Template.bind({});
 Icon_With_label.args = {
-   roundedButton: false,
-   iconClass: 'bi bi-pencil-fill',
-   colorType: 'primary',
-   label: 'button',
-   size: 'medium'
+  roundedButton: false,
+  iconClass: 'bi bi-pencil-fill',
+  colorType: 'primary',
+  label: 'button',
+  size: 'medium'
 };
 
 // export const Toggle = Template.bind({});
