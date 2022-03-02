@@ -1,6 +1,7 @@
 import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
+import { MarkdownModule } from 'ngx-markdown';
 import { environment } from '../environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +13,8 @@ import { AppComponent as GetStartedComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MarkdownModule
   ],
   providers: [],
    bootstrap: [environment.localDev ? GetStartedComponent : []],
