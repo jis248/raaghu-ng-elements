@@ -1,25 +1,26 @@
 import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent as RdsAccordion } from './app.component';
 import { environment } from '../environments/environment.prod';
 import { createCustomElement } from '@angular/elements';
-import { AccordionItemComponent } from './accordion-item/accordion-item.component';
+
+import { AppComponent } from './app.component';
+import { AccordianModule } from './accordian/accordian.module';
+import { AccordianComponent } from './accordian/accordian.component';
 
 @NgModule({
-  declarations: [RdsAccordion,AccordionItemComponent],
-  imports: [BrowserModule, AppRoutingModule],
-  exports: [AccordionItemComponent],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, AccordianModule],
   providers: [],
-  entryComponents: [RdsAccordion],
-  bootstrap: [environment.localDev ? RdsAccordion : []],
+  entryComponents: [AccordianComponent],
+  bootstrap: [environment.localDev ? AppComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const micro = createCustomElement(RdsAccordion, {
+    const micro = createCustomElement(AccordianComponent, {
       injector: this.injector,
     });
-    customElements.define('rds-accordians', micro);
+    customElements.define('rds-accordian', micro);
   }
 
   ngDoBootstrap(appRef: ApplicationRef): void {

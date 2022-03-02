@@ -1,12 +1,12 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'rds-accordian',
+  templateUrl: './accordian.component.html',
+  styleUrls: ['./accordian.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AccordianComponent {
 
   @Input()
   flush = false;
@@ -16,7 +16,7 @@ export class AppComponent {
   title: any;
 
   public get classes(): string {
-    const mode = this.flush ? 'accordion accordion-flush' : 'accordion';
+    const mode = this.flush ? 'accordian accordian-flush' : 'accordian';
 
     return mode;
    }

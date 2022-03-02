@@ -6,12 +6,20 @@ export default {
   title: 'Elements/Breadcrumbs',
 
   component: AppComponent ,
-
   argTypes: {
-    color: { control: 'color' }
-
+    backgroundColor: { control: 'color' },
+    borderColor: { control: 'color' },
+    color: { control: 'color' },
+    //click: { action: 'clicked' },
+    //colorType: {
+    //  options: ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'],
+    //  control: { type: 'select' }
+    //},
+    //size: {
+    //  options: ['small', 'large', 'medium'],
+    //  control: { type: 'select' }
+    //}
   },
-
 } as Meta;
 
 const Template: Story<AppComponent > = (args: AppComponent ) => ({
@@ -37,4 +45,5 @@ export const withDivider  = Template.bind({});
 withDivider.args={
  role: 'withDivider',
  iconShow: true,
+
 }

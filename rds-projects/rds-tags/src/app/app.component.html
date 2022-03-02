@@ -3,14 +3,14 @@
     <div *ngSwitchCase="'Basic'">
         <div class="container binding-tags">
             <div class="row">
-                <div class="res-class"
-                    style="float:left; border: 1px solid  #ced4da;;border-radius: 5px;padding: 5px; width: 60%">
+                <div class="res-class" [ngStyle]="{'border-color': inputBorderColor , 'background-color':inputBackgroundColor}"
+                    style="float:left; border: 1px solid  #ced4da; border-radius: 5px;padding: 5px; width: 60%">
                     <div style="float:left">
                         <ng-template [ngIf]="showtag">
                             <ul style="margin-bottom: 0;padding-left: 0;">
                                 <li *ngFor=" let item of Tagarray">
                                     <div [class]="classes">
-                                        <div [ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor}"
+                                        <div [ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor, 'border-style':Borderstyle}"
                                             class="toast align-items-center fade show" role="alert"
                                             aria-live="assertive" aria-atomic="true">
                                             <div class="d-flex">
@@ -34,7 +34,7 @@
                         </ng-template>
                     </div>
                     <div class="formshadow" style="float: left"><input type="text" class="form-control" name="inputText"
-                            [(ngModel)]="inputText" (keydown.enter)="onKeyDownEvent($event)" placeholder="+Tag"
+                            [(ngModel)]="inputText" (keydown.enter)="onKeyDownEvent($event)" placeholder="+ Add Tag"
                             aria-label="+Tag" aria-describedby="basic-addon1" /></div>
 
                 </div>
@@ -44,14 +44,14 @@
     <div *ngSwitchCase="'TagWithScroll'">
         <div class="container binding-tags2">
             <div class="row">
-                <div class="scroll-type res-class"
-                    style="float:left; border: 1px solid  #ced4da;;border-radius: 5px;padding: 5px; width: 60%">
+                <div class="scroll-type res-class" [ngStyle]="{'border-color': inputBorderColor , 'background-color':inputBackgroundColor}"
+                    style="float:left; border: 1px solid  #ced4da; border-radius: 5px;padding: 5px; width: 60%">
                     <div style="float:left">
                         <ng-template [ngIf]="showtag">
                             <ul style="margin-bottom: 0;padding-left: 0;">
                                 <li *ngFor=" let item of Tagarray">
                                     <div [class]="classes">
-                                        <div [ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor}"
+                                        <div [ngStyle]="{'border-color': borderColor , 'background-color':backgroundColor, 'border-style':Borderstyle}"
                                             class="toast align-items-center fade show" role="alert"
                                             aria-live="assertive" aria-atomic="true">
                                             <div class="d-flex">
@@ -75,7 +75,7 @@
                         </ng-template>
                     </div>
                     <div class="formshadow" style="float: left"><input type="text" class="form-control" name="inputText"
-                            [(ngModel)]="inputText" (keydown.enter)="onKeyDownEvent($event)" placeholder="+Tag"
+                            [(ngModel)]="inputText" (keydown.enter)="onKeyDownEvent($event)" placeholder="+Add Tag"
                             aria-label="+Tag" aria-describedby="basic-addon1" /></div>
                 </div>
             </div>
