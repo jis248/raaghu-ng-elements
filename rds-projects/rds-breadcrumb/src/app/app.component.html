@@ -11,13 +11,13 @@
     </ol>
   </nav> -->
   <div [ngSwitch]="role">
-    <div *ngSwitchCase="'Advanced'">
+    <div *ngSwitchCase="'Advanced'" class="border p-5">
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb arrows Advanced">
-          <li class="breadcrumb-item" [ngClass]="{'active': activepage === i}" aria-current="page" *ngFor="let item of breadcrumbsitems; index as i" (click)="onClick(item,i)">
-            <i [ngClass]="item.iconClass" *ngIf="iconShow" [ngStyle]="{'color': color }" class="mx-1"></i>
-            <a routerLink = "item.name" *ngIf="activepage!=i">{{item.name}}</a>
-            <span *ngIf="activepage === i ">{{item.name}}</span>
+        <ol class="breadcrumb arrows Advanced" [ngStyle]="{'border-color': borderColor  }">
+          <li  class="breadcrumb-item cursor" [ngStyle]="{'background-color':backgroundColor,'border-color': borderColor  }" [ngClass]="{'active': activepage === i}" aria-current="page" *ngFor="let item of breadcrumbsitems; index as i" (click)="onClick(item,i)">
+            <i href="#" [ngClass]="item.iconClass" *ngIf="iconShow" class="mx-1"></i>
+            <a routerLink = "item.name" [ngStyle]="{'color': color }" *ngIf="activepage!=i">{{item.name}}</a>
+            <span [ngStyle]="{'color': color }" *ngIf="activepage === i ">{{item.name}}</span>
           </li>
          </ol>
       </nav>
@@ -25,10 +25,10 @@
   <div *ngSwitchCase="'basic'">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb basic">
-        <li class="breadcrumb-item" [ngClass]="{'active': activepage === i}" aria-current="page" *ngFor="let item of breadcrumbsitems; index as i" (click)="onClick(item,i)">
-          <i [ngClass]="item.iconClass" *ngIf="iconShow"  [ngStyle]="{'color': color }" class="mx-1"></i>
-          <a routerLink = "item.name" *ngIf="activepage!=i">{{item.name}}</a>
-          <span *ngIf="activepage === i ">{{item.name}}</span>
+        <li class="breadcrumb-item cursor" [ngClass]="{'active': activepage === i}" aria-current="page" *ngFor="let item of breadcrumbsitems; index as i" (click)="onClick(item,i)">
+          <i href="#" [ngClass]="item.iconClass" *ngIf="iconShow"  [ngStyle]="{'color': color }" class="mx-1"></i>
+          <a routerLink = "item.name" [ngStyle]="{'color': color }" *ngIf="activepage!=i">{{item.name}}</a>
+          <span [ngStyle]="{'color': color }" *ngIf="activepage === i ">{{item.name}}</span>
         </li>
        </ol>
     </nav>
@@ -36,10 +36,10 @@
   <div *ngSwitchCase="'withDivider'">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb withDivider">
-        <li class="breadcrumb-item2" [ngClass]="{'active': activepage === i}" aria-current="page" *ngFor="let item of breadcrumbsitems; index as i" (click)="onClick(item,i)">
-          <i [ngClass]="item.iconClass" *ngIf="iconShow"  [ngStyle]="{'color': color }" class="mx-1"></i>
-          <a routerLink = "item.name" *ngIf="activepage!=i">{{item.name}}</a>
-          <span *ngIf="activepage === i ">{{item.name}}</span>
+        <li class="breadcrumb-item2 cursor" [ngClass]="{'active': activepage === i}" aria-current="page" *ngFor="let item of breadcrumbsitems; index as i" (click)="onClick(item,i)">
+          <i href="#" [ngClass]="item.iconClass" *ngIf="iconShow"  [ngStyle]="{'color': color }" class="mx-1"></i>
+          <a routerLink = "item.name" [ngStyle]="{'color': color }" *ngIf="activepage!=i">{{item.name}}</a>
+          <span [ngStyle]="{'color': color }" *ngIf="activepage === i ">{{item.name}}</span>
         </li>
        </ol>
     </nav>

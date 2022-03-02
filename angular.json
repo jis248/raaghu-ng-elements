@@ -79,6 +79,10 @@
           },
           "defaultConfiguration": "production"
         },
+        "scripts": [
+          "+",
+          "node_modules/marked/marked.min.js"
+        ],
         "serve": {
           "builder": "ngx-build-plus:dev-server",
           "configurations": {

@@ -5,14 +5,18 @@ import { environment } from '../environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent as GetStartedComponent } from './app.component';
-
+import 'prismjs';
+import 'prismjs/components/prism-typescript.min.js';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
+import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
 @NgModule({
   declarations: [
     GetStartedComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [],
    bootstrap: [environment.localDev ? GetStartedComponent : []],
