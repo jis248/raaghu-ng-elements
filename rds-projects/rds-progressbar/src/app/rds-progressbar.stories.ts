@@ -5,22 +5,23 @@ export default {
     title: 'Elements/Progress bar',
     component:AppComponent ,
     argTypes: {
-      progressIndicatorColor: {
+      colorType: {
           options: ['bg-info', 'bg-warning','bg-success','bg-danger','default'],
           control: { type: 'select' }
         },
-        
-        customIndicatorColor: {control: { type: 'color' }},
+
+        customColor: {control: { type: 'color' }},
           striped:{
             options:['default','progress-bar-striped'],
             control: { type: 'radio' }
           },
-        
-          width:{control: { type: 'text' }},
+
+          progressWidth:{control: { type: 'text' }},
           animation:{control: { type: 'boolean' }},
           label:{control: { type: 'boolean' }},
           height:{control: { type: 'text' }},
-          //showMulitplebar:{control: { type: 'boolean' }}       
+          progressbar_MaxWidth:{control: { type: 'text' }},
+          //showMulitplebar:{control: { type: 'boolean' }}
     }
   } as Meta;
 
@@ -30,13 +31,29 @@ export default {
 
 export const Progressbar = Template.bind({});
 Progressbar.args = {
-  progressIndicatorColor:'',
+  colorType:'default',
   striped:'default',
-  customIndicatorColor:'', 
-  width:'25%',
+  customColor:'',
+  progressWidth:'400',
   animation: false,
   label:false,
-  height:'default', 
+  height:'15',
+  role:'single',
+  progressbar_MaxWidth:'800'
 };
 
+export const multi_Progressbar = Template.bind({});
+multi_Progressbar.args = {
+  colorType:'default',
+  striped:'default',
+  customColor:'',
+  progressWidth:'25',
+  animation: false,
+  label:false,
+  height:'15',
+  role:'multiple',
+  progressvalues : [{progressWidth:"50%",background:'bg-success',stripe:'progress-bar-striped',
+     animation:'progress-bar-animated'},{progressWidth:"20%",background:'bg-danger'}],
+     progressbar_MaxWidth:'400'
+};
 
