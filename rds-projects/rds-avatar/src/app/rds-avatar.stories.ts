@@ -13,13 +13,4 @@ const Template: Story<RdsAvatarComponent> = (args:RdsAvatarComponent) => ({
     props: args,
   });
 
-export const avatar = Template.bind({})
-// Checkbox.args = {
-//  label:'default checkbox',
-//  checked:false,
-//  disabled:false,
-//  switch:false,
-//  inline:false,
-//  state:'checkbox',
-//  id:"checkboxid"
-// }
+export const avatar = Template.bind({});
