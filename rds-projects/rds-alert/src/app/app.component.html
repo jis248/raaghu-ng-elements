@@ -1,7 +1,2 @@
-<div id="alert" *ngIf="alertOpen" [class]="classes" [ngStyle]="{'background-color':backgroundColor , 'color': color }" role="alert">
-  <h2 *ngIf=" heading !== '' "> {{ heading }}</h2>
-  <span><i [class]="icon" class="fs-6"></i> {{ label }}</span>
-  <ng-content></ng-content>
-  <button (click)="closeAlert()" type="button" class="btn-close" [ngClass]="withDismiss" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
 
+<router-outlet></router-outlet>
