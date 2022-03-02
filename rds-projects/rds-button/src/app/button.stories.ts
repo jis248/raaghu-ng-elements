@@ -1,6 +1,4 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
-import { APP_BASE_HREF } from '@angular/common';
-import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { ButtonComponent } from './button/button.component';
 
@@ -10,20 +8,20 @@ export default {
   component: ButtonComponent,
 
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
-  // argTypes: {
-  //   backgroundColor: { control: 'color' },
-  //   borderColor: { control: 'color' },
-  //   color: { control: 'color' },
-  //   click: { action: 'clicked'},
-  //   colorType: {
-  //     options: ['primary', 'secondary','success','danger','warning','info','light','dark'],
-  //     control: { type: 'select' }
-  //   },
-  //   size: {
-  //     options: ['small', 'large', 'medium'],
-  //     control:{ type: 'select' }
-  //   }
-  // },
+  argTypes: {
+    backgroundColor: { control: 'color' },
+    borderColor: { control: 'color' },
+    color: { control: 'color' },
+    click: { action: 'clicked' },
+    colorType: {
+      options: ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'],
+      control: { type: 'select' }
+    },
+    size: {
+      options: ['small', 'large', 'medium'],
+      control: { type: 'select' }
+    }
+  }
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
@@ -67,13 +65,13 @@ Outline.args = {
   size: 'medium'
 };
 
-export const CloseButton = Template.bind({});
-CloseButton.args = {
-  iconClass: 'bi bi-x-lg',
-  colorType: 'primary',
-  label: '',
-  size: 'medium'
-};
+// export const CloseButton = Template.bind({});
+// CloseButton.args = {
+//   iconClass: 'bi bi-x-lg',
+//   colorType: 'primary',
+//   label: '',
+//   size: 'medium'
+// };
 
 export const With_Icon = Template.bind({});
 With_Icon.args = {
